@@ -20,8 +20,8 @@ import (
 )
 
 var (
-	errNoEnv = errors.New("Failed to find the current environment")
-	errNoURL = errors.New("RANCHER_URL environment or --url is not set, run `config`")
+	errNoEnv = errors.New(T("error.noEnv"))
+	errNoURL = errors.New(T("error.noURL"))
 )
 
 func GetRawClient(ctx *cli.Context) (*client.RancherClient, error) {
@@ -43,7 +43,7 @@ func GetRawClient(ctx *cli.Context) (*client.RancherClient, error) {
 func lookupConfig(ctx *cli.Context) (Config, error) {
 	path := ctx.GlobalString("config")
 	if path == "" {
-		path = os.ExpandEnv("${HOME}/.rancher/cli.json")
+		path = defaultConfigPath()
 	}
 
 	config, err := LoadConfig(path)
@@ -114,7 +114,7 @@ func GetEnvironment(def string, c *client.RancherClient) (*client.Project, error
 			names = append(names, fmt.Sprintf("%s(%s)", p.Name, p.Id))
 		}
 
-		idx := selectFromList("Environments:", names)
+		idx := selectFromList(T("environments")+":", names)
 		return &resp.Data[idx], nil
 	}
 
@@ -324,7 +324,7 @@ func selectFromList(header string, choices []string) int {
 		for i, choice := range choices {
 			fmt.Printf("[%d] %s\n", i+1, choice)
 		}
-		fmt.Print("Select: ")
+		fmt.Print(T("select") + ": ")
 
 		text, _ := reader.ReadString('\n')
 		text = strings.TrimSpace(text)
@@ -334,6 +334,20 @@ func selectFromList(header string, choices []string) int {
 		}
 	}
 	return selected - 1
+}
+
+func defaultConfigPath() string {
+	preferred := os.ExpandEnv("${HOME}/.pasturestack/cli.json")
+	if _, err := os.Stat(preferred); err == nil {
+		return preferred
+	}
+
+	legacy := os.ExpandEnv("${HOME}/.rancher/cli.json")
+	if _, err := os.Stat(legacy); err == nil {
+		return legacy
+	}
+
+	return preferred
 }
 
 func processExitCode(err error) error {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/PastureStack/cli/monitor"
 	"github.com/Sirupsen/logrus"
-	"github.com/rancher/cli/monitor"
 	"github.com/rancher/go-rancher/v2"
 	"github.com/urfave/cli"
 )
@@ -15,7 +15,7 @@ func EventsCommand() cli.Command {
 		Name:        "events",
 		ShortName:   "event",
 		Usage:       "Displays resource change events",
-		Description: "\nOnly events that are actively occuring in Rancher are listed.\n",
+		Description: "\nOnly events that are actively occurring in the compatible control platform are listed.\n",
 		ArgsUsage:   "None",
 		Action:      events,
 		Flags: []cli.Flag{

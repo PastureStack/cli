@@ -13,7 +13,7 @@ func PsCommand() cli.Command {
 	return cli.Command{
 		Name:        "ps",
 		Usage:       "Show services/containers",
-		Description: "\nLists all services or containers in the current $RANCHER_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher ps\n\t$ rancher ps -c\n\t$ rancher --env 1a5 ps\n",
+		Description: "\nLists all services or containers in the current $PLATFORM_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack ps\n\t$ pasturestack ps -c\n\t$ pasturestack --env 1a5 ps\n",
 		ArgsUsage:   "None",
 		Action:      servicePs,
 		Flags: []cli.Flag{

@@ -152,28 +152,28 @@ func hostCreate(ctx *cli.Context) error {
 		},
 		cli.StringFlag{
 			Name:   "config,c",
-			Usage:  "Client configuration file (default ${HOME}/.rancher/cli.json)",
-			EnvVar: "RANCHER_CLIENT_CONFIG",
+			Usage:  "Client configuration file (default ${HOME}/.pasturestack/cli.json)",
+			EnvVar: "PASTURESTACK_CLIENT_CONFIG,PLATFORM_CLIENT_CONFIG,RANCHER_CLIENT_CONFIG",
 		},
 		cli.StringFlag{
 			Name:   "environment,env",
 			Usage:  "Environment name or ID",
-			EnvVar: "RANCHER_ENVIRONMENT",
+			EnvVar: "PASTURESTACK_ENVIRONMENT,PLATFORM_ENVIRONMENT,RANCHER_ENVIRONMENT",
 		},
 		cli.StringFlag{
 			Name:   "url",
-			Usage:  "Specify the Rancher API endpoint URL",
-			EnvVar: "RANCHER_URL",
+			Usage:  "Specify the compatible API endpoint URL",
+			EnvVar: "PASTURESTACK_URL,PLATFORM_URL,RANCHER_URL",
 		},
 		cli.StringFlag{
 			Name:   "access-key",
-			Usage:  "Specify Rancher API access key",
-			EnvVar: "RANCHER_ACCESS_KEY",
+			Usage:  "Specify the API access key",
+			EnvVar: "PASTURESTACK_ACCESS_KEY,PLATFORM_ACCESS_KEY,RANCHER_ACCESS_KEY",
 		},
 		cli.StringFlag{
 			Name:   "secret-key",
-			Usage:  "Specify Rancher API secret key",
-			EnvVar: "RANCHER_SECRET_KEY",
+			Usage:  "Specify the API secret key",
+			EnvVar: "PASTURESTACK_SECRET_KEY,PLATFORM_SECRET_KEY,RANCHER_SECRET_KEY",
 		},
 		cli.StringFlag{
 			Name:   "host",
@@ -182,7 +182,7 @@ func hostCreate(ctx *cli.Context) error {
 		},
 		cli.StringFlag{
 			Name:  "rancher-file,r",
-			Usage: "Specify an alternate Rancher compose file (default: rancher-compose.yml)",
+			Usage: "Specify an alternate compatibility Compose file (default: rancher-compose.yml)",
 		},
 		cli.StringFlag{
 			Name:  "env-file,e",

@@ -31,18 +31,18 @@ func StackCommand() cli.Command {
 		Action:    defaultAction(stackLs),
 		Flags:     stackLsFlags,
 		Subcommands: []cli.Command{
-			cli.Command{
+			{
 				Name:        "ls",
 				Usage:       "List stacks",
-				Description: "\nLists all stacks in the current $RANCHER_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher stacks ls\n\t$ rancher --env 1a5 stacks ls\n",
+				Description: "\nLists all stacks in the current $PLATFORM_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack stacks ls\n\t$ pasturestack --env 1a5 stacks ls\n",
 				ArgsUsage:   "None",
 				Action:      stackLs,
 				Flags:       stackLsFlags,
 			},
-			cli.Command{
+			{
 				Name:        "create",
 				Usage:       "Create a stacks",
-				Description: "\nCreate all stack in the current $RANCHER_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher stacks create\n\t$ rancher --env 1a5 stacks ls\n",
+				Description: "\nCreates a stack in the current $PLATFORM_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack stacks create\n\t$ pasturestack --env 1a5 stacks ls\n",
 				ArgsUsage:   "None",
 				Action:      stackCreate,
 				Flags: []cli.Flag{
@@ -69,7 +69,7 @@ func StackCommand() cli.Command {
 					},
 					cli.StringFlag{
 						Name:  "rancher-compose,r",
-						Usage: "Rancher Compose file",
+						Usage: "Compatibility Compose settings file",
 						Value: "rancher-compose.yml",
 					},
 					//cli.StringFlag{

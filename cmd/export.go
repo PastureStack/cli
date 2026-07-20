@@ -21,10 +21,10 @@ func ExportCommand() cli.Command {
 Exports the docker-compose.yml and rancher-compose.yml for the specified stack as a tar archive.
 
 Example:
-    $ rancher export mystack
-	$ rancher export -f files.tar mystack
+    $ pasturestack export mystack
+	$ pasturestack export -f files.tar mystack
 	# Export the entire environment, including system stacks
-    $ rancher export --system mystack
+    $ pasturestack export --system mystack
 `,
 		ArgsUsage: "[STACKNAME STACKID...]",
 		Action:    exportService,

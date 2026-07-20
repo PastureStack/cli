@@ -14,7 +14,7 @@ func ScaleCommand() cli.Command {
 		Name:        "scale",
 		Usage:       "Set number of containers to run for a service",
 		Action:      serviceScale,
-		Description: "\nNumbers are specified in the form `service=num` as arguments.\n\nExample:\n\t$ rancher scale web=2 worker=3\n",
+		Description: "\nNumbers are specified in the form `service=num` as arguments.\n\nExample:\n\t$ pasturestack scale web=2 worker=3\n",
 		ArgsUsage:   "[SERVICE=NUM...]",
 	}
 }

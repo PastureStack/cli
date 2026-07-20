@@ -1,16 +1,76 @@
-FROM golang:1.10.3
-RUN apt-get update && \
-    apt-get install -y xz-utils zip rsync
-RUN go get github.com/rancher/trash && go get golang.org/x/lint/golint
-RUN curl -sL https://get.docker.com/builds/Linux/x86_64/docker-1.9.1 > /usr/bin/docker && \
-    chmod +x /usr/bin/docker
-ENV PATH /go/bin:$PATH
-ENV DAPPER_SOURCE /go/src/github.com/rancher/cli
-ENV DAPPER_OUTPUT bin build/bin dist
-ENV DAPPER_DOCKER_SOCKET true
-ENV DAPPER_ENV TAG REPO GOOS CROSS DRONE_TAG
-ENV GO15VENDOREXPERIMENT 1
-ENV TRASH_CACHE ${DAPPER_SOURCE}/.trash-cache
+FROM ubuntu:26.04
+
+ARG DAPPER_HOST_ARCH=amd64
+ARG GO_VERSION=1.26.4
+ARG DOCKER_VERSION=29.4.2
+ARG UBUNTU_MIRROR=http://archive.ubuntu.com/ubuntu
+ARG GO_LINUX_AMD64_SHA256=1153d3d50e0ac764b447adfe05c2bcf08e889d42a02e0fe0259bd47f6733ad7f
+ARG GO_LINUX_ARM64_SHA256=ef758ae7c6cf9267c9c0ef080b8965f453d89ab2d25d9eb22de4405925238768
+
+ENV HOST_ARCH=${DAPPER_HOST_ARCH} \
+    ARCH=${DAPPER_HOST_ARCH} \
+    DEBIAN_FRONTEND=noninteractive
+
+RUN set -eux; \
+    find /etc/apt -type f \( -name '*.list' -o -name '*.sources' \) -exec sed -i \
+        -e "s|http://security.ubuntu.com/ubuntu|${UBUNTU_MIRROR}|g" \
+        -e "s|http://archive.ubuntu.com/ubuntu|${UBUNTU_MIRROR}|g" {} +; \
+    printf 'Acquire::Retries "5";\nAcquire::http::Timeout "30";\nAcquire::https::Timeout "30";\nAcquire::http::Pipeline-Depth "0";\n' > /etc/apt/apt.conf.d/80pasturestack-retries; \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+        bash \
+        ca-certificates \
+        curl \
+        file \
+        gcc \
+        git \
+        libc6-dev \
+        make \
+        rsync \
+        tar \
+        xz-utils \
+        zip && \
+    rm -rf /var/lib/apt/lists/* && \
+    rm -f /usr/bin/pebble && \
+    rm -f /bin/sh && ln -s /bin/bash /bin/sh
+
+ENV GOPATH=/go \
+    PATH=/go/bin:/usr/local/go/bin:${PATH} \
+    SHELL=/bin/bash \
+    GO111MODULE=off \
+    GO15VENDOREXPERIMENT=1 \
+    GOCACHE=/tmp/go-build-cache \
+    GOTELEMETRY=off \
+    XDG_CONFIG_HOME=/tmp/go-config \
+    GIT_CONFIG_GLOBAL=/tmp/gitconfig
+
+RUN set -eux; \
+    case "${DAPPER_HOST_ARCH}" in \
+        amd64) go_arch=amd64; docker_arch=x86_64; go_sha="${GO_LINUX_AMD64_SHA256}" ;; \
+        arm64) go_arch=arm64; docker_arch=aarch64; go_sha="${GO_LINUX_ARM64_SHA256}" ;; \
+        *) echo "unsupported DAPPER_HOST_ARCH=${DAPPER_HOST_ARCH}" >&2; exit 1 ;; \
+    esac; \
+    curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 --connect-timeout 10 --max-time 300 \
+        -o /tmp/go.tgz "https://go.dev/dl/go${GO_VERSION}.linux-${go_arch}.tar.gz"; \
+    echo "${go_sha}  /tmp/go.tgz" | sha256sum -c -; \
+    tar -xzf /tmp/go.tgz -C /usr/local; \
+    rm -f /tmp/go.tgz; \
+    docker_tgz=/tmp/docker.tgz; \
+    curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 --connect-timeout 10 --max-time 300 \
+        -o "${docker_tgz}" "https://download.docker.com/linux/static/stable/${docker_arch}/docker-${DOCKER_VERSION}.tgz"; \
+    tar xzf "${docker_tgz}" -C /usr/bin --strip-components=1 docker/docker; \
+    rm -f "${docker_tgz}"; \
+    chmod +x /usr/bin/docker; \
+    go version; \
+    docker --version
+
+ENV DAPPER_SOURCE=/go/src/github.com/PastureStack/cli
+ENV DAPPER_OUTPUT="bin build/bin dist"
+ENV DAPPER_DOCKER_SOCKET=true
+ENV DAPPER_ENV="TAG REPO IMAGE_NAME GOOS CROSS VERSION_OVERRIDE DOCKER_BUILD_NETWORK UBUNTU_MIRROR"
 WORKDIR ${DAPPER_SOURCE}
+
+RUN git config --system --add safe.directory '*'
+
 ENTRYPOINT ["./scripts/entry"]
 CMD ["ci"]

@@ -31,18 +31,18 @@ func SecretCommand() cli.Command {
 		Action:    defaultAction(secretLs),
 		Flags:     secretLsFlags,
 		Subcommands: []cli.Command{
-			cli.Command{
+			{
 				Name:        "ls",
 				Usage:       "List secrets",
-				Description: "\nLists all secrets in the current $RANCHER_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher secrets ls\n\t$ rancher --env 1a5 secrets ls\n",
+				Description: "\nLists all secrets in the current $PLATFORM_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack secrets ls\n\t$ pasturestack --env 1a5 secrets ls\n",
 				ArgsUsage:   "None",
 				Action:      secretLs,
 				Flags:       secretLsFlags,
 			},
-			cli.Command{
+			{
 				Name:        "create",
 				Usage:       "Create a secret",
-				Description: "\nCreate all secret in the current $RANCHER_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher secret create my-name file-with-secret\n",
+				Description: "\nCreates a secret in the current $PLATFORM_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack secret create my-name file-with-secret\n",
 				ArgsUsage:   "NAME [FILE|-]",
 				Action:      secretCreate,
 				Flags:       []cli.Flag{},

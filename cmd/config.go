@@ -72,10 +72,10 @@ func (c Config) Write() error {
 		return err
 	}
 
-	logrus.Infof("Saving config to %s", c.Path)
+	logrus.Infof(T("config.saved"), c.Path)
 	p := c.Path
 	c.Path = ""
-	output, err := os.Create(p)
+	output, err := os.OpenFile(p, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
 	if err != nil {
 		return err
 	}
@@ -143,7 +143,11 @@ func configSetup(ctx *cli.Context) error {
 	}
 
 	if ctx.Bool("print") {
-		return json.NewEncoder(os.Stdout).Encode(config)
+		safeConfig := config
+		if safeConfig.SecretKey != "" {
+			safeConfig.SecretKey = "[redacted]"
+		}
+		return json.NewEncoder(os.Stdout).Encode(safeConfig)
 	}
 
 	reader := bufio.NewReader(os.Stdin)

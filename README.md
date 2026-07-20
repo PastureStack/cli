@@ -1,69 +1,31 @@
-Rancher CLI
-===========
+# PastureStack CLI
 
-The Rancher Command Line Interface (CLI)is a unified tool to manage your Rancher server. With this tool, you can control your services, containers and hosts within a Rancher environment and automate them through scripts. 
+CLI manages compatible environments, hosts, stacks, services, containers, volumes, secrets, catalogs, and accounts through the preserved API.
 
-## Version Compatibility
-Rancher CLI v0.2.0+ is only compatible with Rancher Server v1.2.0+. 
+PastureStack is an independent community effort to preserve, audit, and modernize the Rancher 1.6 ecosystem. It is not affiliated with or endorsed by Rancher Labs or SUSE.
 
-## Running
+**Upstream:** [`rancher/cli`](https://github.com/rancher/cli). This GitHub fork preserves upstream history, authorship, dates, tags, licenses, and bundled dependency notices. PastureStack maintenance is consolidated into one commit after the preserved upstream boundary.
 
-You can check the [releases page](https://github.com/rancher/cli/releases) for direct downloads of the binary or [build your own](#building). 
+## Project status
 
-## Setting up Rancher CLI with Rancher Server 
+This is a migration proof of concept based on the latest reviewed upstream `v1.6` branch. Existing Ubuntu 26.04, Go 1.26.4, modern Docker, non-root packaging, dependency, shell, and test maintenance is retained. The maintained binary and image name is `pasturestack`.
 
-To enable the CLI to connect to Rancher server, you can configure the environment variables needed. The environment variables that are required are `RANCHER_URL`, `RANCHER_ACCESS_KEY` and `RANCHER_SECRET_KEY`. 
+No CI/CD, binary publication, image publication, release, deployment, or production-readiness claim is enabled.
 
-The access key and secret key should be an [account API key](http://docs.rancher.com/rancher/latest/en/api/api-keys/#account-api-keys). In your Rancher setup, you can create an account API key under the **API** tab and expand the **Advanced Options**. 
+## Configuration
 
-You can run `rancher config` to set these environment variables for the CLI. 
+Use `PASTURESTACK_URL`, `PASTURESTACK_ACCESS_KEY`, and `PASTURESTACK_SECRET_KEY`. Generic `PLATFORM_*` names, historical environment-variable names, and the existing on-disk configuration are read as migration aliases so established installations and scripts continue to work. Set `PASTURESTACK_LOCALE=en-US` or `zh-TW` for operator messages.
 
-```
-$ rancher --url http://<RANCHER_SERVER_URL> config
-URL [http://<RANCHER_SERVER_URL>]: 
-Access Key [http://<RANCHER_SERVER_URL>]: <ACCESS_KEY>
-Secret Key [http://<RANCHER_SERVER_URL>]: <SECRET_KEY>
-INFO[0102] Saving config to /Users/<username>/.rancher/cli.json 
+## Build and test
+
+```sh
+make build
+make test
+make package
 ```
 
-> Note: The `<RANCHER_SERVER_URL>` includes whatever port was exposed when installing Rancher server. If you had followed the installation instructions, your URL would be `http://<server_ip>:8080/`.
+Packaging is local only and does not publish an image. See [COMPATIBILITY.md](COMPATIBILITY.md), [SECURITY.md](SECURITY.md), and [ORIGIN.md](ORIGIN.md).
 
-## Building
+## License and attribution
 
-The binaries will be located in `/bin`.
-
-### Linux binary
-
-Run `make`.
-
-### Mac binary
-
-Run `CROSS=1 make build`
-
-### Docker image
-
-Run `docker run --rm -it rancher/cli [ARGS]`  You can pass in credentials by bind mounting in a config file or setting env vars.  You can also use the wrapper script in `./contrib/rancher` that will make the process a bit easier.
-
-To build `rancher/cli` just run `make`.  To use a custom Docker repository do `REPO=custom make` and it will producte `custom/cli` image.
-
-## Contact
-
-For bugs, questions, comments, corrections, suggestions, etc., open an issue in
-[rancher/rancher](//github.com/rancher/rancher/issues) with a title starting with `[cli] `.
-
-Or just [click here](//github.com/rancher/rancher/issues/new?title=%5Bcli%5D%20) to create a new issue.
-
-## License
-Copyright (c) 2014-2016 [Rancher Labs, Inc.](http://rancher.com)
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+The inherited project remains licensed under [Apache License 2.0](LICENSE). Copyright and attribution for inherited work and bundled dependencies remain with their respective authors and contributors. PastureStack contributors claim authorship only for their own changes.

@@ -40,26 +40,26 @@ func CatalogCommand() cli.Command {
 		Action: defaultAction(catalogLs),
 		Flags:  catalogLsFlags,
 		Subcommands: []cli.Command{
-			cli.Command{
+			{
 				Name:        "ls",
 				Usage:       "List catalog templates",
-				Description: "\nList all catalog templates in the current $RANCHER_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher --env k8slab catalog ls\n",
+				Description: "\nList all catalog templates in the current $PLATFORM_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack --env k8slab catalog ls\n",
 				ArgsUsage:   "None",
 				Action:      catalogLs,
 				Flags:       catalogLsFlags,
 			},
-			cli.Command{
+			{
 				Name:        "show",
 				Usage:       "Show catalog template versions",
-				Description: "\nShow all catalog template versions in the current $RANCHER_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher --env k8slab catalog show <TEMPLATE_ID>\n",
+				Description: "\nShow all catalog template versions in the current $PLATFORM_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack --env k8slab catalog show <TEMPLATE_ID>\n",
 				ArgsUsage:   "[TEMPLATE_ID]...",
 				Action:      catalogShow,
 				Flags:       catalogLsFlags,
 			},
-			cli.Command{
+			{
 				Name:        "install",
 				Usage:       "Install catalog template",
-				Description: "\nInstall a catalog template in the current $RANCHER_ENVIRONMENT. \nUse `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher --env k8slab catalog install <TEMPLATE_VERSION_ID>\n",
+				Description: "\nInstall a catalog template in the current $PLATFORM_ENVIRONMENT. \nUse `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack --env k8slab catalog install <TEMPLATE_VERSION_ID>\n",
 				Action:      catalogInstall,
 				ArgsUsage:   "[TEMPLATE_VERSION_ID]...",
 				Flags: []cli.Flag{
@@ -80,7 +80,7 @@ func CatalogCommand() cli.Command {
 			cli.Command{
 				Name:        "upgrade",
 				Usage:       "Upgrade stack with new catalog template version",
-				Description: "\nUpgrade stack with new catalog template version in the current $RANCHER_ENVIRONMENT. \nUse `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher --env k8slab catalog upgrade <TEMPLATE_VERSION_ID> --stack id\n",
+				Description: "\nUpgrade a stack with a new catalog template version in the current $PLATFORM_ENVIRONMENT. \nUse `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack --env k8slab catalog upgrade <TEMPLATE_VERSION_ID> --stack id\n",
 				Action:      catalogUpgrade,
 				ArgsUsage:   "[TEMPLATE_VERSION_ID]...",
 				Flags: []cli.Flag{
@@ -619,7 +619,7 @@ func (c *CatalogOperator) getCatalogClient() error {
 		Url:       c.config.URL,
 	})
 	if err != nil {
-		return fmt.Errorf("Failed to get rancher catalog client %s %s", c.config.URL, err)
+		return fmt.Errorf("failed to get catalog client %s: %s", c.config.URL, err)
 	}
 
 	return err
@@ -630,7 +630,7 @@ func (c *CatalogOperator) getConfig() error {
 
 	c.config, err = lookupConfig(c.context)
 	if err != nil {
-		return fmt.Errorf("Failed to get rancher config %s", err)
+		return fmt.Errorf("failed to get platform configuration: %s", err)
 	}
 
 	return err
@@ -641,7 +641,7 @@ func (c *CatalogOperator) getClient() error {
 
 	c.client, err = GetClient(c.context)
 	if err != nil {
-		return fmt.Errorf("Failed to get rancher client %s", err)
+		return fmt.Errorf("failed to get platform client: %s", err)
 	}
 
 	return err
@@ -652,7 +652,7 @@ func (c *CatalogOperator) getProject() error {
 
 	c.project, err = GetEnvironment(c.config.Environment, c.client)
 	if err != nil {
-		return fmt.Errorf("Failed to get rancher environment %s %s", c.config.Environment, err)
+		return fmt.Errorf("failed to get platform environment %s: %s", c.config.Environment, err)
 	}
 
 	return err

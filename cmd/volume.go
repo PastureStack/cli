@@ -29,18 +29,18 @@ func VolumeCommand() cli.Command {
 		Action:    defaultAction(volumeLs),
 		Flags:     volumeLsFlags,
 		Subcommands: []cli.Command{
-			cli.Command{
+			{
 				Name:   "ls",
 				Usage:  "List volumes",
 				Action: volumeLs,
 				Flags:  volumeLsFlags,
 			},
-			cli.Command{
+			{
 				Name:   "rm",
 				Usage:  "Delete volume",
 				Action: volumeRm,
 			},
-			cli.Command{
+			{
 				Name:   "create",
 				Usage:  "Create volume",
 				Action: volumeCreate,

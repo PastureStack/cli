@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+config_dir="${PASTURESTACK_HOME:-${HOME}/.pasturestack}"
+config_file="${PLATFORM_CLIENT_CONFIG:-${config_dir}/cli.json}"
+image="${IMAGE:-ghcr.io/pasturestack/cli}"
+
+mkdir -p "${config_dir}" "${HOME}/.ssh"
+touch "${HOME}/.ssh/known_hosts"
+if [ ! -e "${config_file}" ]; then
+  umask 077
+  printf '%s\n' '{"accessKey":"","secretKey":"","url":"","environment":""}' > "${config_file}"
+fi
+
+exec docker run --rm -it --net host \
+  -v "${config_file}:/home/pasturestack/.pasturestack/cli.json:ro" \
+  -v "${HOME}/.ssh/known_hosts:/home/pasturestack/.ssh/known_hosts:ro" \
+  -v "$(pwd):/mnt" \
+  "${image}" "$@"
