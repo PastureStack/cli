@@ -1,9 +1,10 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -euo pipefail
 
-cd $(dirname $0)
+cd "$(dirname "$0")"
 
 ./build
 ./test
 ./validate
+./check-pasturestack-source
 ./package

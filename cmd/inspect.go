@@ -16,10 +16,10 @@ func InspectCommand() cli.Command {
 		Name:  "inspect",
 		Usage: "View details for " + replaceTypeNames(strings.Join(inspectTypes, ", ")),
 		Description: `
-Inspect resources by ID or name in the current $RANCHER_ENVIRONMENT.  Use '--env <envID>' or '--env <envName>' to select a different environment.
+Inspect resources by ID or name in the current $PLATFORM_ENVIRONMENT. Use '--env <envID>' or '--env <envName>' to select a different environment.
 
 Example:
-	$ rancher inspect 1s70
+	$ pasturestack inspect 1s70
 `,
 		ArgsUsage: "[ID NAME...]",
 		Action:    inspectResources,

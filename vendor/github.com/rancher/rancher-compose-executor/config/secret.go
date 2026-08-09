@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/docker/libcompose/utils"
+	"github.com/PastureStack/cli/composecompat/utils"
 	"github.com/rancher/rancher-compose-executor/yaml"
 )
 

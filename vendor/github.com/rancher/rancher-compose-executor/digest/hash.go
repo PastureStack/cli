@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/docker/libcompose/utils"
+	"github.com/PastureStack/cli/composecompat/utils"
 	"github.com/rancher/go-rancher/v2"
 	rUtils "github.com/rancher/rancher-compose-executor/utils"
 )

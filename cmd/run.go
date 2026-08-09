@@ -385,7 +385,7 @@ func serviceRun(ctx *cli.Context) error {
 			value = parts[1]
 
 			if parts[0] == "" {
-				errMsg := fmt.Sprintf("invalid argument \"%s\" for e: invalid environment variable: %s\nSee 'rancher run --help'.", env, env)
+				errMsg := fmt.Sprintf("invalid argument \"%s\" for e: invalid environment variable: %s\nSee 'pasturestack run --help'.", env, env)
 				return cli.NewExitError(errMsg, 1)
 			}
 		} else if len(parts) == 1 {

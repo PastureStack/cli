@@ -16,7 +16,7 @@ func StartCommand() cli.Command {
 		Name:        "start",
 		ShortName:   "activate",
 		Usage:       "Start or activate " + strings.Join(startTypes, ", "),
-		Description: "\nStart resources by ID or name in the current $RANCHER_ENVIRONMENT.  Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher start 1s70\n\t$ rancher --env 1a5 start stackName/serviceName \n",
+		Description: "\nStart resources by ID or name in the current $PLATFORM_ENVIRONMENT. Use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ pasturestack start 1s70\n\t$ pasturestack --env 1a5 start stackName/serviceName \n",
 		ArgsUsage:   "[ID NAME...]",
 		Action:      startResources,
 		Flags: []cli.Flag{

@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/docker/docker/pkg/urlutil"
-	"github.com/docker/libcompose/utils"
+	"github.com/PastureStack/cli/composecompat/utils"
 	"github.com/fatih/structs"
 	"github.com/rancher/go-rancher/v2"
 	"github.com/rancher/rancher-compose-executor/template"

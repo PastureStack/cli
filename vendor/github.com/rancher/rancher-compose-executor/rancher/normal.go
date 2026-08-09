@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/libcompose/utils"
+	"github.com/PastureStack/cli/composecompat/utils"
 	"github.com/rancher/go-rancher/v2"
 	"github.com/rancher/rancher-compose-executor/digest"
 )

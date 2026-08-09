@@ -1,78 +1,90 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -euo pipefail
 
-source $(dirname $0)/version
+source "$(dirname "$0")/version"
+cd "$(dirname "$0")/.."
 
-cd $(dirname $0)/..
+DIST="$(pwd)/dist/artifacts"
+SOURCE_DATE_EPOCH="${SOURCE_DATE_EPOCH:-$(git show -s --format=%ct HEAD)}"
+export SOURCE_DATE_EPOCH TZ=UTC
 
-DIST=$(pwd)/dist/artifacts
+rm -rf build/archive "${DIST}/${VERSION}" "${DIST}/latest"
+mkdir -p "${DIST}/${VERSION}" "${DIST}/latest"
 
-mkdir -p $DIST/${VERSION} $DIST/latest
+for binary in build/bin/*; do
+    [ -e "${binary}" ] || continue
 
-for i in build/bin/*; do
-    if [ ! -e $i ]; then
-        continue
+    base_name="$(basename "${binary}")"
+    platform="${base_name#pasturestack_}"
+    extension=
+    if [[ "${platform}" == windows-* ]]; then
+        extension=.exe
+        platform="${platform%.exe}"
     fi
 
-    BASE=build/archive
-    DIR=${BASE}/rancher-${VERSION}
+    archive_root="build/archive/${platform}"
+    directory_name="pasturestack-${VERSION}"
+    archive_directory="${archive_root}/${directory_name}"
+    rm -rf "${archive_root}"
+    mkdir -p "${archive_directory}"
+    install -m 0755 "${binary}" "${archive_directory}/pasturestack${extension}"
+    touch -d "@${SOURCE_DATE_EPOCH}" "${archive_directory}/pasturestack${extension}" "${archive_directory}" "${archive_root}"
 
-    rm -rf $BASE
-    mkdir -p $BASE $DIR
+    binary_directory="${DIST}/${VERSION}/binaries/${platform}"
+    latest_binary_directory="${DIST}/latest/binaries/${platform}"
+    mkdir -p "${binary_directory}" "${latest_binary_directory}"
+    install -m 0755 "${binary}" "${binary_directory}/pasturestack${extension}"
+    install -m 0755 "${binary}" "${latest_binary_directory}/pasturestack${extension}"
 
-    EXT=
-    if [[ $i =~ .*windows.* ]]; then
-        EXT=.exe
+    archive_base="pasturestack-${platform}"
+    if [ -z "${extension}" ]; then
+        gzip -n -9 -c "${binary}" > "${binary_directory}/pasturestack.gz"
+        xz -T1 -9e -c "${binary}" > "${binary_directory}/pasturestack.xz"
+        cp "${binary_directory}/pasturestack.gz" "${latest_binary_directory}/pasturestack.gz"
+        cp "${binary_directory}/pasturestack.xz" "${latest_binary_directory}/pasturestack.xz"
+
+        tar --sort=name --owner=0 --group=0 --numeric-owner --mtime="@${SOURCE_DATE_EPOCH}" \
+            -C "${archive_root}" -cf - "${directory_name}" \
+            | gzip -n -9 > "${DIST}/${VERSION}/${archive_base}-${VERSION}.tar.gz"
+        tar --sort=name --owner=0 --group=0 --numeric-owner --mtime="@${SOURCE_DATE_EPOCH}" \
+            -C "${archive_root}" -cf - "${directory_name}" \
+            | xz -T1 -9e > "${DIST}/${VERSION}/${archive_base}-${VERSION}.tar.xz"
+        cp "${DIST}/${VERSION}/${archive_base}-${VERSION}.tar.gz" "${DIST}/latest/${archive_base}.tar.gz"
+        cp "${DIST}/${VERSION}/${archive_base}-${VERSION}.tar.xz" "${DIST}/latest/${archive_base}.tar.xz"
+    else
+        (
+            cd "${archive_root}"
+            zip -X -9 -q "${DIST}/${VERSION}/${archive_base}-${VERSION}.zip" "${directory_name}/pasturestack.exe"
+        )
+        cp "${DIST}/${VERSION}/${archive_base}-${VERSION}.zip" "${DIST}/latest/${archive_base}.zip"
     fi
-
-    cp $i ${DIR}/rancher${EXT}
-
-    arch=$(echo $i | cut -f2 -d_)
-    mkdir -p $DIST/${VERSION}/binaries/$arch
-    mkdir -p $DIST/latest/binaries/$arch
-    cp $i $DIST/${VERSION}/binaries/$arch/rancher${EXT}
-    if [ -z "${EXT}" ]; then
-        gzip -c $i > $DIST/${VERSION}/binaries/$arch/rancher.gz
-        xz -c $i > $DIST/${VERSION}/binaries/$arch/rancher.xz
-    fi
-
-    rm -rf $DIST/latest/binaries/$arch
-    mkdir -p $DIST/latest/binaries
-    cp -rf $DIST/${VERSION}/binaries/$arch $DIST/latest/binaries
-
-    (
-        cd $BASE
-        NAME=$(basename $i | sed 's/_/-/g')
-        if [ -z "$EXT" ]; then
-            tar cvzf $DIST/${VERSION}/${NAME}-${VERSION}.tar.gz .
-            cp $DIST/${VERSION}/${NAME}-${VERSION}.tar.gz $DIST/latest/${NAME}.tar.gz
-
-            tar cvJf $DIST/${VERSION}/${NAME}-${VERSION}.tar.xz .
-            cp $DIST/${VERSION}/${NAME}-${VERSION}.tar.xz $DIST/latest/${NAME}.tar.xz
-        else
-            NAME=$(echo $NAME | sed 's/'${EXT}'//g')
-            zip -r $DIST/${VERSION}/${NAME}-${VERSION}.zip *
-            cp $DIST/${VERSION}/${NAME}-${VERSION}.zip $DIST/latest/${NAME}.zip
-        fi
-    )
 done
 
-
-ARCH=${ARCH:-"amd64"}
-SUFFIX=""
-[ "${ARCH}" != "amd64" ] && SUFFIX="_${ARCH}"
-
-cd package
-
-TAG=${TAG:-${VERSION}${SUFFIX}}
-REPO=${REPO:-rancher}
-
-if echo $TAG | grep -q dirty; then
-    TAG=dev
+if [ "${SKIP_IMAGE_BUILD:-false}" = "true" ]; then
+    exit 0
 fi
 
-cp ../bin/rancher .
-docker build -t ${REPO}/cli:${TAG} .
+architecture="${ARCH:-amd64}"
+suffix=
+[ "${architecture}" = "amd64" ] || suffix="_${architecture}"
+tag="${TAG:-${VERSION}${suffix}}"
+image_name="${IMAGE_NAME:-${REPO:-ghcr.io/pasturestack}/cli}"
+if [[ "${tag}" == *dirty* ]]; then
+    tag=dev
+fi
 
-echo ${REPO}/cli:${TAG} > ../dist/images
-echo Built ${REPO}/cli:${TAG}
+docker_build_network_arg=()
+if [ -n "${DOCKER_BUILD_NETWORK:-}" ]; then
+    docker_build_network_arg=(--network="${DOCKER_BUILD_NETWORK}")
+fi
+
+image="${image_name}:${tag}"
+DOCKER_BUILDKIT=1 docker build "${docker_build_network_arg[@]}" \
+    --build-arg IMAGE_VERSION="${tag}" \
+    --file package/Dockerfile \
+    --tag "${image}" \
+    .
+
+mkdir -p dist
+printf '%s\n' "${image}" > dist/images
+printf 'Built %s\n' "${image}"

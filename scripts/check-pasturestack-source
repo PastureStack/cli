@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+fail()
+{
+    printf 'PASTURESTACK_CLI_SOURCE_GATE_FAIL reason=%s\n' "$1" >&2
+    exit 1
+}
+
+require_line()
+{
+    local file=$1
+    local line=$2
+    grep -Fx -- "$line" "$file" >/dev/null || fail "required_line_missing:${file}:${line}"
+}
+
+git diff --check
+git diff --quiet || fail tracked_worktree_changes
+git diff --cached --quiet || fail staged_changes
+bash -n scripts/build
+bash -n scripts/package
+bash -n scripts/version
+test ! -d vendor/github.com/docker/libcompose || fail archived_compose_vendor_tree_present
+
+if grep -R -n --include='*.go' --fixed-strings 'github.com/docker/libcompose' cmd composecompat vendor; then
+    fail archived_compose_import_present
+fi
+if grep -n --fixed-strings 'github.com/docker/libcompose' \
+    vendor.conf vendor/github.com/rancher/rancher-compose-executor/vendor.conf; then
+    fail archived_compose_manifest_entry_present
+fi
+
+require_line Dockerfile.dapper 'FROM ubuntu:26.04@sha256:678c6550cc43645e08669028bc177f50be4e7c5b8cca677067b1914d4afc7a03'
+require_line Dockerfile.dapper 'ARG GO_VERSION=1.26.5'
+require_line Dockerfile.dapper 'ARG DOCKER_VERSION=29.6.2'
+require_line package/Dockerfile 'FROM ubuntu:26.04@sha256:678c6550cc43645e08669028bc177f50be4e7c5b8cca677067b1914d4afc7a03'
+require_line ubuntu-apt.lock "UBUNTU_APT_SNAPSHOT='20260808T000000Z'"
+require_line scripts/build 'build_flags=(-trimpath -buildvcs=false -ldflags="-buildid= -s -w -X main.VERSION=${VERSION}")'
+require_line scripts/package '        gzip -n -9 -c "${binary}" > "${binary_directory}/pasturestack.gz"'

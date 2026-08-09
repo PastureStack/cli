@@ -20,7 +20,7 @@ func SSHCommand() cli.Command {
 	return cli.Command{
 		Name:            "ssh",
 		Usage:           "SSH into host",
-		Description:     "\nFor any hosts created through Rancher using docker-machine, you can SSH into the host. This is not supported for any custom hosts. If the host is not in the current $RANCHER_ENVIRONMENT, use `--env <envID>` or `--env <envName>` to select a different environment.\n\nExample:\n\t$ rancher ssh 1h1\n\t$ rancher --env 1a5 ssh 1h5\n",
+		Description:     "\nFor hosts created through the compatible docker-machine workflow, you can SSH into the host. This is not supported for custom hosts. If the host is not in the current $PLATFORM_ENVIRONMENT, use `--env <envID>` or `--env <envName>`.\n\nExample:\n\t$ pasturestack ssh 1h1\n\t$ pasturestack --env 1a5 ssh 1h5\n",
 		ArgsUsage:       "[HOSTID HOSTNAME...]",
 		Action:          hostSSH,
 		Flags:           []cli.Flag{},

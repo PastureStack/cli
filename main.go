@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
+	"github.com/PastureStack/cli/cmd"
 	"github.com/Sirupsen/logrus"
-	"github.com/rancher/cli/cmd"
 	"github.com/urfave/cli"
 )
 
@@ -27,7 +27,7 @@ Run '{{.Name}} COMMAND --help' for more information on a command.
 
 var CommandHelpTemplate = `{{.Usage}}
 {{if .Description}}{{.Description}}{{end}}
-Usage: rancher [global options] {{.Name}} {{if .Flags}}[OPTIONS] {{end}}{{if ne "None" .ArgsUsage}}{{if ne "" .ArgsUsage}}{{.ArgsUsage}}{{else}}[arg...]{{end}}{{end}}
+Usage: pasturestack [global options] {{.Name}} {{if .Flags}}[OPTIONS] {{end}}{{if ne "None" .ArgsUsage}}{{if ne "" .ArgsUsage}}{{.ArgsUsage}}{{else}}[arg...]{{end}}{{end}}
 
 {{if .Flags}}Options:{{range .Flags}}
 	 {{.}}{{end}}{{end}}
@@ -44,16 +44,17 @@ func mainErr() error {
 	cli.CommandHelpTemplate = CommandHelpTemplate
 
 	app := cli.NewApp()
-	app.Name = "rancher"
-	app.Usage = "Rancher CLI, managing containers one UTF-8 character at a time"
+	app.Name = "pasturestack"
+	app.Usage = cmd.T("app.usage")
 	app.Before = func(ctx *cli.Context) error {
+		cmd.SetLocale(ctx.GlobalString("locale"))
 		if ctx.GlobalBool("debug") {
 			logrus.SetLevel(logrus.DebugLevel)
 		}
 		return nil
 	}
 	app.Version = VERSION
-	app.Author = "Rancher Labs, Inc."
+	app.Author = "Original contributors and PastureStack maintainers"
 	app.Email = ""
 	app.Flags = []cli.Flag{
 		cli.BoolFlag{
@@ -62,33 +63,33 @@ func mainErr() error {
 		},
 		cli.StringFlag{
 			Name:   "config,c",
-			Usage:  "Client configuration file (default ${HOME}/.rancher/cli.json)",
-			EnvVar: "RANCHER_CLIENT_CONFIG",
+			Usage:  cmd.T("flag.config"),
+			EnvVar: "PASTURESTACK_CLIENT_CONFIG,PLATFORM_CLIENT_CONFIG,RANCHER_CLIENT_CONFIG",
 		},
 		cli.StringFlag{
 			Name:   "environment,env",
 			Usage:  "Environment name or ID",
-			EnvVar: "RANCHER_ENVIRONMENT",
+			EnvVar: "PASTURESTACK_ENVIRONMENT,PLATFORM_ENVIRONMENT,RANCHER_ENVIRONMENT",
 		},
 		cli.StringFlag{
 			Name:   "url",
-			Usage:  "Specify the Rancher API endpoint URL",
-			EnvVar: "RANCHER_URL",
+			Usage:  cmd.T("flag.url"),
+			EnvVar: "PASTURESTACK_URL,PLATFORM_URL,RANCHER_URL",
 		},
 		cli.StringFlag{
 			Name:   "access-key",
-			Usage:  "Specify Rancher API access key",
-			EnvVar: "RANCHER_ACCESS_KEY",
+			Usage:  cmd.T("flag.accessKey"),
+			EnvVar: "PASTURESTACK_ACCESS_KEY,PLATFORM_ACCESS_KEY,RANCHER_ACCESS_KEY",
 		},
 		cli.StringFlag{
 			Name:   "secret-key",
-			Usage:  "Specify Rancher API secret key",
-			EnvVar: "RANCHER_SECRET_KEY",
+			Usage:  cmd.T("flag.secretKey"),
+			EnvVar: "PASTURESTACK_SECRET_KEY,PLATFORM_SECRET_KEY,RANCHER_SECRET_KEY",
 		},
 		cli.StringFlag{
 			Name:   "host",
 			Usage:  "Host used for docker command",
-			EnvVar: "RANCHER_DOCKER_HOST",
+			EnvVar: "PASTURESTACK_DOCKER_HOST,PLATFORM_DOCKER_HOST,RANCHER_DOCKER_HOST",
 		},
 		cli.BoolFlag{
 			Name:  "wait,w",
@@ -103,7 +104,7 @@ func mainErr() error {
 			Name:  "wait-state",
 			Usage: "State to wait for (active, healthy, etc)",
 		},
-		// Below four flags are for rancher-compose code capability.  The users doesn't use them directly
+		// These hidden flags bridge the preserved Compose compatibility library.
 		cli.StringFlag{
 			Name:   "rancher-file",
 			Hidden: true,
@@ -111,6 +112,12 @@ func mainErr() error {
 		cli.StringFlag{
 			Name:   "env-file",
 			Hidden: true,
+		},
+		cli.StringFlag{
+			Name:   "locale",
+			Usage:  "Operator message locale: en-US or zh-TW",
+			EnvVar: "PASTURESTACK_LOCALE",
+			Value:  "en-US",
 		},
 		cli.StringSliceFlag{
 			Name:   "file,f",

@@ -11,7 +11,7 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	"github.com/docker/docker/api/types/container"
-	"github.com/docker/libcompose/labels"
+	"github.com/PastureStack/cli/composecompat/labels"
 	"github.com/gorilla/websocket"
 	"github.com/rancher/go-rancher/hostaccess"
 	"github.com/rancher/go-rancher/v2"

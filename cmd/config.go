@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"net/url"
 	"os"
@@ -72,10 +73,10 @@ func (c Config) Write() error {
 		return err
 	}
 
-	logrus.Infof("Saving config to %s", c.Path)
+	logrus.Infof(T("config.saved"), c.Path)
 	p := c.Path
 	c.Path = ""
-	output, err := os.Create(p)
+	output, err := os.OpenFile(p, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
 	if err != nil {
 		return err
 	}
@@ -136,6 +137,30 @@ func getConfig(reader *bufio.Reader, text, def string) (string, error) {
 	}
 }
 
+func getSecretConfig(reader *bufio.Reader, writer io.Writer, text, def string) (string, error) {
+	for {
+		if def == "" {
+			fmt.Fprintf(writer, "%s: ", text)
+		} else {
+			fmt.Fprintf(writer, "%s [configured]: ", text)
+		}
+
+		input, err := reader.ReadString('\n')
+		if err != nil {
+			return "", err
+		}
+		input = strings.TrimSpace(input)
+
+		if input != "" {
+			return input, nil
+		}
+
+		if def != "" {
+			return def, nil
+		}
+	}
+}
+
 func configSetup(ctx *cli.Context) error {
 	config, err := lookupConfig(ctx)
 	if err != nil && err != errNoURL {
@@ -143,7 +168,11 @@ func configSetup(ctx *cli.Context) error {
 	}
 
 	if ctx.Bool("print") {
-		return json.NewEncoder(os.Stdout).Encode(config)
+		safeConfig := config
+		if safeConfig.SecretKey != "" {
+			safeConfig.SecretKey = "[redacted]"
+		}
+		return json.NewEncoder(os.Stdout).Encode(safeConfig)
 	}
 
 	reader := bufio.NewReader(os.Stdin)
@@ -158,7 +187,7 @@ func configSetup(ctx *cli.Context) error {
 		return err
 	}
 
-	config.SecretKey, err = getConfig(reader, "Secret Key", config.SecretKey)
+	config.SecretKey, err = getSecretConfig(reader, os.Stdout, "Secret Key", config.SecretKey)
 	if err != nil {
 		return err
 	}

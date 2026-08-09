@@ -31,7 +31,7 @@ func ExecCommand() cli.Command {
 	return cli.Command{
 		Name:            "exec",
 		Usage:           "Run a command on a container",
-		Description:     "\nThe command will find the container on the host and use `docker exec` to access the container. Any options that `docker exec` uses can be passed as an option for `rancher exec`.\n\nExample:\n\t$ rancher exec -i -t 1i1\n",
+		Description:     "\nThe command finds the container on the host and uses `docker exec` to access it. Docker exec options can be passed to `pasturestack exec`.\n\nExample:\n\t$ pasturestack exec -i -t 1i1\n",
 		Action:          execCommand,
 		SkipFlagParsing: true,
 		Flags: []cli.Flag{

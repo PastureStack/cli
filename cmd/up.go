@@ -12,7 +12,7 @@ func UpCommand() cli.Command {
 	cmd.Flags = append(cmd.Flags, []cli.Flag{
 		cli.StringFlag{
 			Name:  "rancher-file",
-			Usage: "Specify an alternate Rancher compose file (default: rancher-compose.yml)",
+			Usage: "Specify an alternate compatibility Compose file (default: rancher-compose.yml)",
 		},
 		cli.StringFlag{
 			Name:  "env-file,e",

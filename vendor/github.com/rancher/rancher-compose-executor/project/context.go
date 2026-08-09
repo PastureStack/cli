@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/libcompose/logger"
+	logger "github.com/PastureStack/cli/composecompat/logging"
 	"github.com/rancher/rancher-compose-executor/config"
 )
 

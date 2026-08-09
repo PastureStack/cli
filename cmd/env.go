@@ -30,28 +30,28 @@ func EnvCommand() cli.Command {
 		Action:    defaultAction(envLs),
 		Flags:     envLsFlags,
 		Subcommands: []cli.Command{
-			cli.Command{
+			{
 				Name:        "ls",
 				Usage:       "List environments",
-				Description: "\nWith an account API key, all environments in Rancher will be listed. If you are using an environment API key, it will only list the environment of the API key. \n\nExample:\n\t$ rancher env ls\n",
+				Description: "\nWith an account API key, all compatible environments are listed. An environment API key lists only its own environment.\n\nExample:\n\t$ pasturestack env ls\n",
 				ArgsUsage:   "None",
 				Action:      envLs,
 				Flags:       envLsFlags,
 			},
-			cli.Command{
+			{
 				Name:  "create",
 				Usage: "Create an environment",
 				Description: `
-By default, an environment with cattle orchestration framework will be created. This command only works with Account API keys.
+By default, an environment with the built-in compatible orchestration framework is created. This command only works with account API keys.
 
 Example:
 
-	$ rancher env create newEnv
+	$ pasturestack env create newEnv
 
 To add an orchestration framework do TODO
-	$ rancher env create -t kubernetes newK8sEnv
-	$ rancher env create -t mesos newMesosEnv
-	$ rancher env create -t swarm newSwarmEnv
+	$ pasturestack env create -t kubernetes newK8sEnv
+	$ pasturestack env create -t mesos newMesosEnv
+	$ pasturestack env create -t swarm newSwarmEnv
 `,
 				ArgsUsage: "[NEWENVNAME...]",
 				Action:    envCreate,
@@ -63,21 +63,21 @@ To add an orchestration framework do TODO
 					},
 				},
 			},
-			cli.Command{
+			{
 				Name:      "templates",
 				ShortName: "template",
 				Usage:     "Interact with environment templates",
 				Action:    defaultAction(envTemplateLs),
 				Flags:     envLsFlags,
 				Subcommands: []cli.Command{
-					cli.Command{
+					{
 						Name:      "export",
 						Usage:     "Export an environment template to STDOUT",
 						ArgsUsage: "[TEMPLATEID TEMPLATENAME...]",
 						Action:    envTemplateExport,
 						Flags:     []cli.Flag{},
 					},
-					cli.Command{
+					{
 						Name:      "import",
 						Usage:     "Import an environment template to from file",
 						ArgsUsage: "[FILE FILE...]",
@@ -91,37 +91,37 @@ To add an orchestration framework do TODO
 					},
 				},
 			},
-			cli.Command{
+			{
 				Name:        "rm",
 				Usage:       "Remove environment(s)",
-				Description: "\nExample:\n\t$ rancher env rm 1a5\n\t$ rancher env rm newEnv\n",
+				Description: "\nExample:\n\t$ pasturestack env rm 1a5\n\t$ pasturestack env rm newEnv\n",
 				ArgsUsage:   "[ENVID ENVNAME...]",
 				Action:      envRm,
 				Flags:       []cli.Flag{},
 			},
-			cli.Command{
+			{
 				Name:  "deactivate",
 				Usage: "Deactivate environment(s)",
 				Description: `
 Deactivate an environment by ID or name
 
 Example:
-	$ rancher env deactivate 1a5
-	$ rancher env deactivate Default
+	$ pasturestack env deactivate 1a5
+	$ pasturestack env deactivate Default
 `,
 				ArgsUsage: "[ID NAME...]",
 				Action:    envDeactivate,
 				Flags:     []cli.Flag{},
 			},
-			cli.Command{
+			{
 				Name:  "activate",
 				Usage: "Activate environment(s)",
 				Description: `
 Activate an environment by ID or name
 
 Example:
-	$ rancher env activate 1a5
-	$ rancher env activate Default
+	$ pasturestack env activate 1a5
+	$ pasturestack env activate Default
 `,
 				ArgsUsage: "[ID NAME...]",
 				Action:    envActivate,

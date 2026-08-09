@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/docker/libcompose/utils"
+	"github.com/PastureStack/cli/composecompat/utils"
 	"github.com/rancher/rancher-catalog-service/model"
 	"github.com/rancher/rancher-compose-executor/config"
 	rUtils "github.com/rancher/rancher-compose-executor/utils"

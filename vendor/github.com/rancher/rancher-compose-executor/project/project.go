@@ -8,8 +8,8 @@ import (
 	"golang.org/x/net/context"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/docker/libcompose/logger"
-	"github.com/docker/libcompose/utils"
+	logger "github.com/PastureStack/cli/composecompat/logging"
+	"github.com/PastureStack/cli/composecompat/utils"
 	"github.com/rancher/rancher-compose-executor/config"
 	"github.com/rancher/rancher-compose-executor/lookup"
 	"github.com/rancher/rancher-compose-executor/project/events"

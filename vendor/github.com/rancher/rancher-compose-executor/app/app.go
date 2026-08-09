@@ -10,7 +10,7 @@ import (
 	"golang.org/x/net/context"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/libcompose/cli/logger"
+	logger "github.com/PastureStack/cli/composecompat/logging"
 	"github.com/rancher/rancher-compose-executor/lookup"
 	"github.com/rancher/rancher-compose-executor/project"
 	"github.com/rancher/rancher-compose-executor/project/options"

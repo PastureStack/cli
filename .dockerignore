@@ -3,3 +3,8 @@
 ./.dapper
 ./dist
 ./.trash-cache
+package/pasturestack
+package/LICENSE
+package/SECURITY.md
+package/ORIGIN.md
+package/COMPATIBILITY.md

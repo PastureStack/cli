@@ -8,11 +8,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/PastureStack/cli/monitor"
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/libcompose/cli/logger"
 	"github.com/gorilla/websocket"
 	"github.com/mitchellh/mapstructure"
-	"github.com/rancher/cli/monitor"
 	"github.com/rancher/go-rancher/v2"
 	"github.com/urfave/cli"
 )
@@ -24,13 +23,11 @@ type logOptions struct {
 	Since      string `json:"since"`
 }
 
-var loggerFactory = logger.NewColorLoggerFactory()
-
 func LogsCommand() cli.Command {
 	return cli.Command{
 		Name:        "logs",
 		Usage:       "Fetch the logs of a container",
-		Description: "\nExample:\n\t$ rancher logs web\n",
+		Description: "\nExample:\n\t$ pasturestack logs web\n",
 		ArgsUsage:   "[CONTAINERNAME CONTAINERID...] or [SERVICENAME SERVICEID...]",
 		Action:      logsCommand,
 		Flags: []cli.Flag{
