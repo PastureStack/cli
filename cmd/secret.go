@@ -4,12 +4,11 @@ import (
 	"encoding/base64"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/rancher/go-rancher/v2"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
+	"github.com/sirupsen/logrus"
 )
 
 func SecretCommand() cli.Command {
@@ -125,7 +124,7 @@ func secretCreate(ctx *cli.Context) error {
 		}
 	}
 
-	content, err := ioutil.ReadAll(input)
+	content, err := io.ReadAll(input)
 	if err != nil {
 		return err
 	}

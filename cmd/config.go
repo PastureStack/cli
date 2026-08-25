@@ -5,16 +5,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net/url"
 	"os"
 	"path"
 	"strings"
 
-	"github.com/rancher/go-rancher/v2"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/sirupsen/logrus"
 )
 
 type Config struct {
@@ -90,7 +89,7 @@ func LoadConfig(path string) (Config, error) {
 		Path: path,
 	}
 
-	content, err := ioutil.ReadFile(path)
+	content, err := os.ReadFile(path)
 	if os.IsNotExist(err) {
 		return config, nil
 	} else if err != nil {

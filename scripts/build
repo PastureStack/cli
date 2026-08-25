@@ -13,7 +13,7 @@ OS_ARCH_ARG[darwin]="amd64"
 build_flags=(-trimpath -buildvcs=false -ldflags="-buildid= -s -w -X main.VERSION=${VERSION}")
 
 mkdir -p bin
-CGO_ENABLED=0 go build "${build_flags[@]}" -o bin/pasturestack
+CGO_ENABLED=0 go build -mod=vendor "${build_flags[@]}" -o bin/pasturestack
 
 if [ -n "${CROSS:-}" ]; then
     rm -rf build/bin
@@ -26,7 +26,7 @@ if [ -n "${CROSS:-}" ]; then
             fi
             printf 'Building binary for %s/%s...\n' "${os_name}" "${architecture}"
             GOARCH="${architecture}" GOOS="${os_name}" CGO_ENABLED=0 \
-                go build "${build_flags[@]}" -o "${output}" ./
+                go build -mod=vendor "${build_flags[@]}" -o "${output}" ./
         done
     done
 fi

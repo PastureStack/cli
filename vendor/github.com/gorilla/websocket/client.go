@@ -6,12 +6,15 @@ package websocket
 
 import (
 	"bytes"
+	"context"
 	"crypto/tls"
 	"errors"
+	"fmt"
 	"io"
 	"io/ioutil"
 	"net"
 	"net/http"
+	"net/http/httptrace"
 	"net/url"
 	"strings"
 	"time"
@@ -46,10 +49,22 @@ func NewClient(netConn net.Conn, u *url.URL, requestHeader http.Header, readBufS
 }
 
 // A Dialer contains options for connecting to WebSocket server.
+//
+// It is safe to call Dialer's methods concurrently.
 type Dialer struct {
 	// NetDial specifies the dial function for creating TCP connections. If
 	// NetDial is nil, net.Dial is used.
 	NetDial func(network, addr string) (net.Conn, error)
+
+	// NetDialContext specifies the dial function for creating TCP connections. If
+	// NetDialContext is nil, NetDial is used.
+	NetDialContext func(ctx context.Context, network, addr string) (net.Conn, error)
+
+	// NetDialTLSContext specifies the dial function for creating TLS/TCP connections. If
+	// NetDialTLSContext is nil, NetDialContext is used.
+	// If NetDialTLSContext is set, Dial assumes the TLS handshake is done there and
+	// TLSClientConfig is ignored.
+	NetDialTLSContext func(ctx context.Context, network, addr string) (net.Conn, error)
 
 	// Proxy specifies a function to return a proxy for a given
 	// Request. If the function returns a non-nil error, the
@@ -59,15 +74,28 @@ type Dialer struct {
 
 	// TLSClientConfig specifies the TLS configuration to use with tls.Client.
 	// If nil, the default configuration is used.
+	// If either NetDialTLS or NetDialTLSContext are set, Dial assumes the TLS handshake
+	// is done there and TLSClientConfig is ignored.
 	TLSClientConfig *tls.Config
 
 	// HandshakeTimeout specifies the duration for the handshake to complete.
 	HandshakeTimeout time.Duration
 
-	// ReadBufferSize and WriteBufferSize specify I/O buffer sizes. If a buffer
+	// ReadBufferSize and WriteBufferSize specify I/O buffer sizes in bytes. If a buffer
 	// size is zero, then a useful default size is used. The I/O buffer sizes
 	// do not limit the size of the messages that can be sent or received.
 	ReadBufferSize, WriteBufferSize int
+
+	// WriteBufferPool is a pool of buffers for write operations. If the value
+	// is not set, then write buffers are allocated to the connection for the
+	// lifetime of the connection.
+	//
+	// A pool is most useful when the application has a modest volume of writes
+	// across a large number of connections.
+	//
+	// Applications should use a single pool for each unique value of
+	// WriteBufferSize.
+	WriteBufferPool BufferPool
 
 	// Subprotocols specifies the client's requested subprotocols.
 	Subprotocols []string
@@ -82,6 +110,11 @@ type Dialer struct {
 	// If Jar is nil, cookies are not sent in requests and ignored
 	// in responses.
 	Jar http.CookieJar
+}
+
+// Dial creates a new client connection by calling DialContext with a background context.
+func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Response, error) {
+	return d.DialContext(context.Background(), urlStr, requestHeader)
 }
 
 var errMalformedURL = errors.New("malformed ws or wss URL")
@@ -111,19 +144,20 @@ var DefaultDialer = &Dialer{
 }
 
 // nilDialer is dialer to use when receiver is nil.
-var nilDialer Dialer = *DefaultDialer
+var nilDialer = *DefaultDialer
 
-// Dial creates a new client connection. Use requestHeader to specify the
+// DialContext creates a new client connection. Use requestHeader to specify the
 // origin (Origin), subprotocols (Sec-WebSocket-Protocol) and cookies (Cookie).
 // Use the response.Header to get the selected subprotocol
 // (Sec-WebSocket-Protocol) and cookies (Set-Cookie).
+//
+// The context will be used in the request and in the Dialer.
 //
 // If the WebSocket handshake fails, ErrBadHandshake is returned along with a
 // non-nil *http.Response so that callers can handle redirects, authentication,
 // etcetera. The response body may not contain the entire response and does not
 // need to be closed by the application.
-func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Response, error) {
-
+func (d *Dialer) DialContext(ctx context.Context, urlStr string, requestHeader http.Header) (*Conn, *http.Response, error) {
 	if d == nil {
 		d = &nilDialer
 	}
@@ -153,7 +187,7 @@ func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Re
 	}
 
 	req := &http.Request{
-		Method:     "GET",
+		Method:     http.MethodGet,
 		URL:        u,
 		Proto:      "HTTP/1.1",
 		ProtoMajor: 1,
@@ -161,6 +195,7 @@ func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Re
 		Header:     make(http.Header),
 		Host:       u.Host,
 	}
+	req = req.WithContext(ctx)
 
 	// Set the cookies present in the cookie jar of the dialer
 	if d.Jar != nil {
@@ -201,23 +236,52 @@ func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Re
 	}
 
 	if d.EnableCompression {
-		req.Header.Set("Sec-Websocket-Extensions", "permessage-deflate; server_no_context_takeover; client_no_context_takeover")
+		req.Header["Sec-WebSocket-Extensions"] = []string{"permessage-deflate; server_no_context_takeover; client_no_context_takeover"}
 	}
 
-	var deadline time.Time
 	if d.HandshakeTimeout != 0 {
-		deadline = time.Now().Add(d.HandshakeTimeout)
+		var cancel func()
+		ctx, cancel = context.WithTimeout(ctx, d.HandshakeTimeout)
+		defer cancel()
 	}
 
 	// Get network dial function.
-	netDial := d.NetDial
+	var netDial func(network, add string) (net.Conn, error)
+
+	switch u.Scheme {
+	case "http":
+		if d.NetDialContext != nil {
+			netDial = func(network, addr string) (net.Conn, error) {
+				return d.NetDialContext(ctx, network, addr)
+			}
+		} else if d.NetDial != nil {
+			netDial = d.NetDial
+		}
+	case "https":
+		if d.NetDialTLSContext != nil {
+			netDial = func(network, addr string) (net.Conn, error) {
+				return d.NetDialTLSContext(ctx, network, addr)
+			}
+		} else if d.NetDialContext != nil {
+			netDial = func(network, addr string) (net.Conn, error) {
+				return d.NetDialContext(ctx, network, addr)
+			}
+		} else if d.NetDial != nil {
+			netDial = d.NetDial
+		}
+	default:
+		return nil, nil, errMalformedURL
+	}
+
 	if netDial == nil {
-		netDialer := &net.Dialer{Deadline: deadline}
-		netDial = netDialer.Dial
+		netDialer := &net.Dialer{}
+		netDial = func(network, addr string) (net.Conn, error) {
+			return netDialer.DialContext(ctx, network, addr)
+		}
 	}
 
 	// If needed, wrap the dial function to set the connection deadline.
-	if !deadline.Equal(time.Time{}) {
+	if deadline, ok := ctx.Deadline(); ok {
 		forwardDial := netDial
 		netDial = func(network, addr string) (net.Conn, error) {
 			c, err := forwardDial(network, addr)
@@ -249,9 +313,19 @@ func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Re
 	}
 
 	hostPort, hostNoPort := hostPortNoPort(u)
+	trace := httptrace.ContextClientTrace(ctx)
+	if trace != nil && trace.GetConn != nil {
+		trace.GetConn(hostPort)
+	}
+
 	netConn, err := netDial("tcp", hostPort)
 	if err != nil {
 		return nil, nil, err
+	}
+	if trace != nil && trace.GotConn != nil {
+		trace.GotConn(httptrace.GotConnInfo{
+			Conn: netConn,
+		})
 	}
 
 	defer func() {
@@ -260,31 +334,54 @@ func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Re
 		}
 	}()
 
-	if u.Scheme == "https" {
+	if u.Scheme == "https" && d.NetDialTLSContext == nil {
+		// If NetDialTLSContext is set, assume that the TLS handshake has already been done
+
 		cfg := cloneTLSConfig(d.TLSClientConfig)
 		if cfg.ServerName == "" {
 			cfg.ServerName = hostNoPort
 		}
 		tlsConn := tls.Client(netConn, cfg)
 		netConn = tlsConn
-		if err := tlsConn.Handshake(); err != nil {
-			return nil, nil, err
+
+		if trace != nil && trace.TLSHandshakeStart != nil {
+			trace.TLSHandshakeStart()
 		}
-		if !cfg.InsecureSkipVerify {
-			if err := tlsConn.VerifyHostname(cfg.ServerName); err != nil {
-				return nil, nil, err
-			}
+		err := doHandshake(ctx, tlsConn, cfg)
+		if trace != nil && trace.TLSHandshakeDone != nil {
+			trace.TLSHandshakeDone(tlsConn.ConnectionState(), err)
+		}
+
+		if err != nil {
+			return nil, nil, err
 		}
 	}
 
-	conn := newConn(netConn, false, d.ReadBufferSize, d.WriteBufferSize)
+	conn := newConn(netConn, false, d.ReadBufferSize, d.WriteBufferSize, d.WriteBufferPool, nil, nil)
 
 	if err := req.Write(netConn); err != nil {
 		return nil, nil, err
 	}
 
+	if trace != nil && trace.GotFirstResponseByte != nil {
+		if peek, err := conn.br.Peek(1); err == nil && len(peek) == 1 {
+			trace.GotFirstResponseByte()
+		}
+	}
+
 	resp, err := http.ReadResponse(conn.br, req)
 	if err != nil {
+		if d.TLSClientConfig != nil {
+			for _, proto := range d.TLSClientConfig.NextProtos {
+				if proto != "http/1.1" {
+					return nil, nil, fmt.Errorf(
+						"websocket: protocol %q was given but is not supported;"+
+							"sharing tls.Config with net/http Transport can cause this error: %w",
+						proto, err,
+					)
+				}
+			}
+		}
 		return nil, nil, err
 	}
 
@@ -295,8 +392,8 @@ func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Re
 	}
 
 	if resp.StatusCode != 101 ||
-		!strings.EqualFold(resp.Header.Get("Upgrade"), "websocket") ||
-		!strings.EqualFold(resp.Header.Get("Connection"), "upgrade") ||
+		!tokenListContainsValue(resp.Header, "Upgrade", "websocket") ||
+		!tokenListContainsValue(resp.Header, "Connection", "upgrade") ||
 		resp.Header.Get("Sec-Websocket-Accept") != computeAcceptKey(challengeKey) {
 		// Before closing the network connection on return from this
 		// function, slurp up some of the response to aid application
@@ -327,4 +424,11 @@ func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Re
 	netConn.SetDeadline(time.Time{})
 	netConn = nil // to avoid close in defer.
 	return conn, resp, nil
+}
+
+func cloneTLSConfig(cfg *tls.Config) *tls.Config {
+	if cfg == nil {
+		return &tls.Config{}
+	}
+	return cfg.Clone()
 }

@@ -4,20 +4,20 @@ import (
 	"bufio"
 	"encoding/base64"
 	"encoding/json"
+	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 	"os/exec"
 	"reflect"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 	"github.com/containerd/console"
 	"github.com/gorilla/websocket"
-	"github.com/pkg/errors"
-	"github.com/rancher/go-rancher/v2"
-	"github.com/urfave/cli"
+	"github.com/sirupsen/logrus"
 )
 
 type execPayload struct {
@@ -88,7 +88,7 @@ func execCommandInternal(ctx *cli.Context) error {
 		return err
 	}
 
-	logrus.Debugf("websocket full URL: %s", wsURL)
+	logrus.Debug("websocket endpoint resolved")
 
 	conn, _, err := websocket.DefaultDialer.Dial(wsURL, http.Header{})
 	if nil != err {
@@ -132,9 +132,20 @@ func streamWebsocket(conn *websocket.Conn, errChannel chan<- error) {
 			return
 		}
 
-		p, err := ioutil.ReadAll(buf)
+		p, err := io.ReadAll(buf)
+		if err != nil {
+			errChannel <- err
+			return
+		}
 		data, err := base64.StdEncoding.DecodeString(string(p))
-		fmt.Print(string(data))
+		if err != nil {
+			errChannel <- err
+			return
+		}
+		if _, err := os.Stdout.Write(data); err != nil {
+			errChannel <- err
+			return
+		}
 	}
 }
 

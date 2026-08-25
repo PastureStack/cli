@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
+	"github.com/PastureStack/cli/internal/resourcecache"
 	"github.com/gorilla/websocket"
-	"github.com/patrickmn/go-cache"
-	"github.com/rancher/go-rancher/v2"
+	"github.com/sirupsen/logrus"
 )
 
 type Event struct {
@@ -23,7 +23,7 @@ type Event struct {
 type Monitor struct {
 	sync.Mutex
 	c             *client.RancherClient
-	cache         *cache.Cache
+	cache         *resourcecache.Cache
 	subCounter    int
 	subscriptions map[int]*Subscription
 }
@@ -58,7 +58,7 @@ type Subscription struct {
 func New(c *client.RancherClient) *Monitor {
 	return &Monitor{
 		c:             c,
-		cache:         cache.New(5*time.Minute, 30*time.Second),
+		cache:         resourcecache.New(5 * time.Minute),
 		subscriptions: map[int]*Subscription{},
 	}
 }
@@ -129,7 +129,7 @@ func (m *Monitor) put(resourceType, resourceID string, event *Event) {
 		return
 	}
 
-	m.cache.Replace(key(resourceType, resourceID), event.Data["resource"], cache.DefaultExpiration)
+	m.cache.Set(key(resourceType, resourceID), event.Data["resource"])
 
 	m.Lock()
 	defer m.Unlock()

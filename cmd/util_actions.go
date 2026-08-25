@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/rancher/go-rancher/v2"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 )
 
 func pickAction(resource *client.Resource, actions ...string) (string, error) {

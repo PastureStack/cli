@@ -4,8 +4,8 @@ import (
 	"os"
 
 	"github.com/PastureStack/cli/cmd"
-	"github.com/Sirupsen/logrus"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/sirupsen/logrus"
 )
 
 var VERSION = "dev"

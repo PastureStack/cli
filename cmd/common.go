@@ -3,6 +3,8 @@ package cmd
 import (
 	"bufio"
 	"bytes"
+	"crypto/rand"
+	"encoding/hex"
 	"errors"
 	"fmt"
 	"io"
@@ -12,11 +14,11 @@ import (
 	"strings"
 	"syscall"
 	"text/template"
+	"time"
 
-	"github.com/rancher/go-rancher/v2"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 
-	"github.com/docker/docker/pkg/namesgenerator"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
 )
 
 var (
@@ -170,7 +172,11 @@ func getHostByHostname(c *client.RancherClient, name string) (client.ResourceCol
 }
 
 func RandomName() string {
-	return strings.Replace(namesgenerator.GetRandomName(0), "_", "-", -1)
+	var random [6]byte
+	if _, err := rand.Read(random[:]); err == nil {
+		return "pasturestack-" + hex.EncodeToString(random[:])
+	}
+	return fmt.Sprintf("pasturestack-%d", time.Now().UnixNano())
 }
 
 func getServiceByName(c *client.RancherClient, name string) (client.ResourceCollection, error) {

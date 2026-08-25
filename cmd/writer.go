@@ -5,7 +5,7 @@ import (
 	"os"
 	"text/tabwriter"
 
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
 )
 
 type TableWriter struct {

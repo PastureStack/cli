@@ -8,12 +8,12 @@ import (
 	"sync"
 	"time"
 
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 	"github.com/PastureStack/cli/monitor"
-	"github.com/Sirupsen/logrus"
+	"github.com/go-viper/mapstructure/v2"
 	"github.com/gorilla/websocket"
-	"github.com/mitchellh/mapstructure"
-	"github.com/rancher/go-rancher/v2"
-	"github.com/urfave/cli"
+	"github.com/sirupsen/logrus"
 )
 
 type logOptions struct {

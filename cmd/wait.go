@@ -5,11 +5,10 @@ import (
 	"strings"
 	"time"
 
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 	"github.com/PastureStack/cli/monitor"
-	"github.com/Sirupsen/logrus"
-	"github.com/rancher/go-rancher/v2"
-	"github.com/rancher/rancher-compose-executor/project/options"
-	"github.com/urfave/cli"
+	"github.com/sirupsen/logrus"
 )
 
 var (
@@ -94,7 +93,7 @@ func (r ResourceID) Type() string {
 	return str[:strings.Index(str, ":")]
 }
 
-func (w *Waiter) Add(resources ...string) options.Waiter {
+func (w *Waiter) Add(resources ...string) *Waiter {
 	for _, resource := range resources {
 		fmt.Println(resource)
 		w.resources = append(w.resources, resource)
@@ -165,14 +164,15 @@ func (w *Waiter) Wait() error {
 	}
 
 	timeout := time.After(time.Duration(w.timeout) * time.Second)
-	every := time.Tick(10 * time.Second)
+	every := time.NewTicker(10 * time.Second)
+	defer every.Stop()
 	for len(watching) > 0 {
 		var event *monitor.Event
 		select {
 		case event = <-sub.C:
 		case <-timeout:
 			return fmt.Errorf("Timeout")
-		case <-every:
+		case <-every.C:
 			for resource := range watching {
 				ok, err := w.done(resource.Type(), resource.ID())
 				if err != nil {

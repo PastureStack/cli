@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo=$(cd "$(dirname "$0")/.." && pwd)
+version=${VERSION_OVERRIDE:-0.6.16}
+: "${SOURCE_DATE_EPOCH:?SOURCE_DATE_EPOCH must be set to the authoritative commit epoch}"
+
+workspace=$(mktemp -d)
+cleanup()
+{
+    rm -rf -- "$workspace"
+}
+trap cleanup EXIT
+
+for pass in first second; do
+    target="$workspace/$pass"
+    mkdir -p "$target"
+    cp -a "$repo/." "$target/"
+    rm -rf -- "$target/bin" "$target/build" "$target/dist"
+
+    (
+        cd "$target"
+        CROSS=1 VERSION_OVERRIDE="$version" bash ./scripts/build
+        SKIP_IMAGE_BUILD=true VERSION_OVERRIDE="$version" SOURCE_DATE_EPOCH="$SOURCE_DATE_EPOCH" bash ./scripts/package
+        cd "dist/artifacts/$version"
+        find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum > "$workspace/$pass.sha256"
+    )
+done
+
+diff -u "$workspace/first.sha256" "$workspace/second.sha256"
+printf 'PASTURESTACK_CLI_REPRODUCIBLE_ARTIFACTS_OK\n'
+cat "$workspace/first.sha256"

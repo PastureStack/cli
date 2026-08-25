@@ -1,13 +1,14 @@
 package cmd
 
 import (
+	"crypto/rand"
+	"encoding/hex"
 	"fmt"
-	"math/rand"
 	"time"
 
-	"github.com/Sirupsen/logrus"
-	rancher "github.com/rancher/go-rancher/v2"
-	apiproxy "github.com/rancher/rancher-docker-api-proxy"
+	apiproxy "github.com/PastureStack/cli/internal/dockerapiproxy"
+	rancher "github.com/PastureStack/cli/internal/rancherclient/v2"
+	"github.com/sirupsen/logrus"
 )
 
 const (
@@ -23,6 +24,9 @@ func getDockerHost(client *rancher.RancherClient, host string) (string, *apiprox
 }
 
 func getRandNPipe() string {
-	rand.Seed(time.Now().Unix())
-	return fmt.Sprintf(PipelineNamePrefix+"%09d", rand.Intn(1000000000))
+	var suffix [6]byte
+	if _, err := rand.Read(suffix[:]); err == nil {
+		return PipelineNamePrefix + hex.EncodeToString(suffix[:])
+	}
+	return fmt.Sprintf(PipelineNamePrefix+"%d", time.Now().UnixNano())
 }

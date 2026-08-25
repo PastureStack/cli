@@ -5,6 +5,6 @@ cd "$(dirname "$0")/.."
 
 echo Running tests
 
-PACKAGES=$(go list ./... | grep -Ev '(/vendor/)' || true)
+PACKAGES=$(go list -mod=vendor ./...)
 
-go test -race -cover -tags=test ${PACKAGES}
+go test -mod=vendor -race -cover -tags=test ${PACKAGES}

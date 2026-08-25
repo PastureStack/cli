@@ -4,9 +4,9 @@ CLI preserves API resource and action names, Compose and catalog fields, establi
 
 The product-facing executable, image, source path, help text, and new settings use PastureStack naming. Historical identifiers remain only as read-only or fallback compatibility contracts for existing scripts and servers.
 
-The checked-in Go vendor tree retains upstream module import paths, package declarations, source attribution, copyright notices, and licenses. Those paths identify third-party source and are required by the pre-module Go build graph; rewriting them would misstate provenance and break imports. They are not PastureStack product branding.
+The build now uses Go Modules and a checked-in vendor lock. The generated Rancher 1.6 API schema bindings are protocol compatibility code, not a maintained upstream dependency; the exact subset required by this product is retained under `internal/rancherclient` with its Apache-2.0 provenance. Its HTTP and WebSocket transports use maintained dependencies.
 
-The archived `docker/libcompose` tree is no longer part of that vendor set. Its required conversion, logger, and configuration-hash contracts are implemented by focused `composecompat` packages and exercised by regression and race tests; the bundled executor's API and Compose data model are unchanged.
+The archived `docker/libcompose` tree and the duplicated legacy executor are no longer part of this repository. Focused conversion, logger, and Compose-label contracts remain under `composecompat`. Full Compose reconciliation belongs to the dedicated `pasturestack-compose` product; `pasturestack up` delegates to that binary and preserves established flags and environment aliases.
 
 Operator lifecycle messages support `en-US` and `zh-TW`. Resource names, API payloads, Compose content, identifiers, and remote errors are not translated.
 

@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/pkg/errors"
-	"github.com/rancher/go-rancher/v2"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 )
 
 func PsCommand() cli.Command {
@@ -83,7 +82,7 @@ func servicePs(ctx *cli.Context) error {
 
 	collection, err := c.Service.List(defaultListOpts(ctx))
 	if err != nil {
-		return errors.Wrap(err, "service list failed")
+		return fmt.Errorf("service list failed: %w", err)
 	}
 
 	collectiondata := collection.Data

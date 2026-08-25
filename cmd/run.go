@@ -3,12 +3,12 @@ package cmd
 import (
 	"strings"
 
-	"github.com/rancher/go-rancher/v2"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 
 	"fmt"
 	"os"
 
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
 )
 
 /*

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
 )
 
 func typesStringFlag(def []string) cli.StringSliceFlag {

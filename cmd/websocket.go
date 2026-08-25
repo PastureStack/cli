@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/sirupsen/logrus"
 )
 
 type wsResponse struct {
@@ -40,7 +40,7 @@ func resolveWebsocketURL(
 		return "", err
 	}
 
-	bodyBytes, err := ioutil.ReadAll(res.Body)
+	bodyBytes, err := io.ReadAll(res.Body)
 	if nil != err {
 		return "", err
 	}

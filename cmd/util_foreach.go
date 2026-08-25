@@ -3,8 +3,8 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/rancher/go-rancher/v2"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 )
 
 func printErr(id string, oldErr, newErr error) error {

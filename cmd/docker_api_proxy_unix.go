@@ -4,15 +4,14 @@
 package cmd
 
 import (
-	"io/ioutil"
 	"os"
 
-	rancher "github.com/rancher/go-rancher/v2"
-	apiproxy "github.com/rancher/rancher-docker-api-proxy"
+	apiproxy "github.com/PastureStack/cli/internal/dockerapiproxy"
+	rancher "github.com/PastureStack/cli/internal/rancherclient/v2"
 )
 
 func getDockerHost(client *rancher.RancherClient, host string) (string, *apiproxy.Proxy, error) {
-	tempfile, err := ioutil.TempFile("", "docker-sock")
+	tempfile, err := os.CreateTemp("", "docker-sock")
 	if err != nil {
 		return "", nil, err
 	}

@@ -16,26 +16,48 @@ require_line()
     grep -Fx -- "$line" "$file" >/dev/null || fail "required_line_missing:${file}:${line}"
 }
 
-git diff --check
-git diff --quiet || fail tracked_worktree_changes
-git diff --cached --quiet || fail staged_changes
+git diff --check -- . ':(exclude)vendor/**'
 bash -n scripts/build
+bash -n scripts/check-reproducible-artifacts
 bash -n scripts/package
 bash -n scripts/version
-test ! -d vendor/github.com/docker/libcompose || fail archived_compose_vendor_tree_present
+bash -n scripts/test
+bash -n scripts/validate
+test -f go.mod || fail go_mod_missing
+test -f go.sum || fail go_sum_missing
+test -f vendor/modules.txt || fail vendor_modules_missing
+test ! -e vendor.conf || fail vendor_conf_present
+test -f internal/rancherclient/LICENSE || fail internal_client_license_missing
+test -f internal/rancherclient/README.md || fail internal_client_provenance_missing
 
-if grep -R -n --include='*.go' --fixed-strings 'github.com/docker/libcompose' cmd composecompat vendor; then
-    fail archived_compose_import_present
-fi
-if grep -n --fixed-strings 'github.com/docker/libcompose' \
-    vendor.conf vendor/github.com/rancher/rancher-compose-executor/vendor.conf; then
-    fail archived_compose_manifest_entry_present
+legacy_dependencies=$(
+    {
+        find . -type f \( -name '*.go' -o -name 'go.mod' -o -name 'go.sum' -o -name 'Dockerfile*' -o -name '*.sh' -o -name '*.yml' -o -name '*.yaml' \) \
+            -not -path './.git/*' -not -path './vendor/*' -print0 |
+            xargs -0 grep -nE 'github\.com/rancher/(go-rancher|rancher-compose-executor|rancher-docker-api-proxy)|github\.com/(pkg/errors|patrickmn/go-cache|mitchellh/mapstructure|Sirupsen/logrus)|github\.com/urfave/cli"|github\.com/docker/docker/pkg/namesgenerator|github\.com/awslabs/aws-sdk-go|gopkg\.in/yaml\.v2|golang\.org/x/crypto/ssh/terminal|GO111MODULE=off|GO15VENDOREXPERIMENT' || true
+        grep -nE 'github\.com/rancher/(go-rancher|rancher-compose-executor|rancher-docker-api-proxy)|github\.com/(pkg/errors|patrickmn/go-cache|mitchellh/mapstructure|Sirupsen/logrus)|github\.com/urfave/cli($|[[:space:]])|github\.com/docker/docker|github\.com/awslabs/aws-sdk-go|gopkg\.in/yaml\.v2|golang\.org/x/crypto' vendor/modules.txt || true
+    }
+)
+if [ -n "$legacy_dependencies" ]; then
+    printf '%s\n' "$legacy_dependencies" >&2
+    fail removed_eol_dependency_present
 fi
 
+module_packages=$(go list -mod=vendor -deps -f '{{with .Module}}{{.Path}} {{.Version}}{{end}}' ./... | LC_ALL=C sort -u)
+printf '%s\n' "$module_packages" | grep -Fx 'github.com/urfave/cli/v3 v3.11.0' >/dev/null || fail urfave_v3_missing
+printf '%s\n' "$module_packages" | grep -Fx 'github.com/gorilla/websocket v1.5.3' >/dev/null || fail websocket_version_mismatch
+printf '%s\n' "$module_packages" | grep -Fx 'github.com/go-viper/mapstructure/v2 v2.5.0' >/dev/null || fail mapstructure_v2_missing
+printf '%s\n' "$module_packages" | grep -Fx 'github.com/sirupsen/logrus v1.10.1' >/dev/null || fail logrus_version_mismatch
+
+require_line go.mod 'go 1.27.0'
 require_line Dockerfile.dapper 'FROM ubuntu:26.04@sha256:678c6550cc43645e08669028bc177f50be4e7c5b8cca677067b1914d4afc7a03'
-require_line Dockerfile.dapper 'ARG GO_VERSION=1.26.5'
-require_line Dockerfile.dapper 'ARG DOCKER_VERSION=29.6.2'
+require_line Dockerfile.dapper 'ARG GO_VERSION=1.27.0'
+require_line Dockerfile.dapper 'ARG DOCKER_VERSION=29.7.2'
+require_line Dockerfile.dapper '    GO111MODULE=on \'
+require_line Dockerfile.dapper '    GOFLAGS=-mod=vendor \'
 require_line package/Dockerfile 'FROM ubuntu:26.04@sha256:678c6550cc43645e08669028bc177f50be4e7c5b8cca677067b1914d4afc7a03'
 require_line ubuntu-apt.lock "UBUNTU_APT_SNAPSHOT='20260808T000000Z'"
 require_line scripts/build 'build_flags=(-trimpath -buildvcs=false -ldflags="-buildid= -s -w -X main.VERSION=${VERSION}")'
 require_line scripts/package '        gzip -n -9 -c "${binary}" > "${binary_directory}/pasturestack.gz"'
+
+printf 'PASTURESTACK_CLI_SOURCE_GATE_OK\n'

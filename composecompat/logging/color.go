@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"sync"
 
-	"golang.org/x/crypto/ssh/terminal"
+	"golang.org/x/term"
 )
 
 var colorOrder = []string{
@@ -32,7 +32,7 @@ type ColorLogger struct {
 
 // NewColorLoggerFactory creates a logger factory for the current terminal.
 func NewColorLoggerFactory() *ColorLoggerFactory {
-	return &ColorLoggerFactory{tty: terminal.IsTerminal(int(os.Stdout.Fd()))}
+	return &ColorLoggerFactory{tty: term.IsTerminal(int(os.Stdout.Fd()))}
 }
 
 func (factory *ColorLoggerFactory) CreateContainerLogger(name string) Logger {

@@ -2,12 +2,11 @@ package cmd
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 
-	"github.com/rancher/go-rancher/v2"
-	"github.com/urfave/cli"
-	"gopkg.in/yaml.v2"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
+	"gopkg.in/yaml.v3"
 )
 
 func EnvCommand() cli.Command {
@@ -305,7 +304,7 @@ func envTemplateImport(ctx *cli.Context) error {
 		template := client.ProjectTemplate{
 			IsPublic: ctx.Bool("public"),
 		}
-		content, err := ioutil.ReadFile(file)
+		content, err := os.ReadFile(file)
 		if err != nil {
 			return err
 		}

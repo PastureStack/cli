@@ -1,14 +1,13 @@
 package cmd
 
 import (
-	"io/ioutil"
+	"errors"
+	"fmt"
 	"os"
 	"strings"
 
-	"github.com/pkg/errors"
-	"github.com/rancher/go-rancher/v2"
-	"github.com/rancher/rancher-compose-executor/lookup"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 )
 
 func StackCommand() cli.Command {
@@ -161,18 +160,12 @@ func getFile(name string) (string, error) {
 	if name == "" {
 		return "", nil
 	}
-	bytes, err := ioutil.ReadFile(name)
+	bytes, err := os.ReadFile(name)
 	if os.IsNotExist(err) {
 		return "", nil
 
 	}
 	return string(bytes), err
-}
-
-func parseAnswers(ctx *cli.Context) (map[string]interface{}, error) {
-	file := ctx.String("answers")
-
-	return lookup.ParseEnvFile(file)
 }
 
 func stackCreate(ctx *cli.Context) error {
@@ -208,7 +201,7 @@ func stackCreate(ctx *cli.Context) error {
 
 			stack.RancherCompose, err = getFile(ctx.String("rancher-compose"))
 			if err != nil {
-				return errors.Wrap(err, "reading "+ctx.String("rancher-compose"))
+				return fmt.Errorf("reading %s: %w", ctx.String("rancher-compose"), err)
 			}
 
 			//stack.Answers, err = parseAnswers(ctx)

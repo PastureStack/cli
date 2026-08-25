@@ -4,8 +4,8 @@ package utils
 import (
 	"encoding/json"
 
-	"github.com/Sirupsen/logrus"
-	"gopkg.in/yaml.v2"
+	"github.com/sirupsen/logrus"
+	"gopkg.in/yaml.v3"
 )
 
 // ConvertByJSON copies compatible data between structures through JSON.

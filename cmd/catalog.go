@@ -7,10 +7,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/rancher/go-rancher/catalog"
-	"github.com/rancher/go-rancher/v2"
-	"github.com/rancher/rancher-compose-executor/utils"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/catalog"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 )
 
 const (
@@ -284,7 +283,10 @@ func (c *CatalogOperator) Install() error {
 
 	stackName := c.context.String("name")
 	if stackName == "" {
-		stackName = strings.Title(strings.Split(templateVersion.Id, ":")[1])
+		templateName := strings.Split(templateVersion.Id, ":")[1]
+		if templateName != "" {
+			stackName = strings.ToUpper(templateName[:1]) + templateName[1:]
+		}
 	}
 
 	externalID := fmt.Sprintf("%s%s", catalogProto, templateVersion.Id)
@@ -313,7 +315,7 @@ func (c *CatalogOperator) Install() error {
 	case "kubernetes":
 		stack, err := c.client.KubernetesStack.Create(&client.KubernetesStack{
 			Name:        stackName,
-			Templates:   utils.ToMapInterface(templateVersion.Files),
+			Templates:   stringMapToInterface(templateVersion.Files),
 			ExternalId:  externalID,
 			Environment: answers,
 			System:      c.context.Bool("system"),
@@ -403,7 +405,7 @@ func (c *CatalogOperator) Upgrade() error {
 		}
 
 		stackup := &client.KubernetesStackUpgrade{
-			Templates:   utils.ToMapInterface(templateVersion.Files),
+			Templates:   stringMapToInterface(templateVersion.Files),
 			ExternalId:  externalID,
 			Environment: answers,
 		}
@@ -707,4 +709,12 @@ func NewCatalogOperator(ctx *cli.Context) (*CatalogOperator, error) {
 	}
 
 	return c, nil
+}
+
+func stringMapToInterface(values map[string]string) map[string]interface{} {
+	result := make(map[string]interface{}, len(values))
+	for key, value := range values {
+		result[key] = value
+	}
+	return result
 }

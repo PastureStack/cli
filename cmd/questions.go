@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/mitchellh/mapstructure"
-	"github.com/rancher/go-rancher/catalog"
+	"github.com/PastureStack/cli/internal/rancherclient/catalog"
+	"github.com/go-viper/mapstructure/v2"
 )
 
 func askQuestions(answers map[string]interface{}, templateVersion catalog.TemplateVersion) (map[string]interface{}, error) {

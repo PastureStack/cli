@@ -4,13 +4,12 @@ import (
 	"archive/tar"
 	"bytes"
 	"io"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/rancher/go-rancher/v2"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
+	"github.com/sirupsen/logrus"
 )
 
 func ExportCommand() cli.Command {
@@ -150,7 +149,7 @@ func addToTar(archive *tar.Writer, stackName, name string, stringContent string)
 			return err
 		}
 		logrus.Infof("Creating %s", f)
-		return ioutil.WriteFile(f, []byte(stringContent), 0600)
+		return os.WriteFile(f, []byte(stringContent), 0600)
 	}
 
 	content := []byte(stringContent)

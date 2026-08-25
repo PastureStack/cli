@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/rancher/go-rancher/v2"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
+	"github.com/sirupsen/logrus"
 )
 
 func VolumeCommand() cli.Command {

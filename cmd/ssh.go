@@ -5,15 +5,15 @@ import (
 	"bytes"
 	"compress/gzip"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"os"
 	"os/exec"
 	"path"
 	"strings"
 
-	"github.com/rancher/go-rancher/v2"
-	"github.com/urfave/cli"
+	cli "github.com/PastureStack/cli/internal/legacycli"
+	"github.com/PastureStack/cli/internal/rancherclient/v2"
 )
 
 func SSHCommand() cli.Command {
@@ -90,7 +90,7 @@ func callSSH(content []byte, ip string, args []string) error {
 		}
 	}
 
-	tmpfile, err := ioutil.TempFile("", "ssh")
+	tmpfile, err := os.CreateTemp("", "ssh")
 	if err != nil {
 		return err
 	}
@@ -134,7 +134,7 @@ func getSSHKey(hostname string, host client.Host, accessKey, secretKey string) (
 	}
 	defer resp.Body.Close()
 
-	tarGz, err := ioutil.ReadAll(resp.Body)
+	tarGz, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}
@@ -156,7 +156,7 @@ func getSSHKey(hostname string, host client.Host, accessKey, secretKey string) (
 		}
 
 		if path.Base(header.Name) == "id_rsa" {
-			return ioutil.ReadAll(tar)
+			return io.ReadAll(tar)
 		}
 	}
 }

@@ -8,9 +8,9 @@ PastureStack is an independent community effort to preserve, audit, and moderniz
 
 ## Project status
 
-This is a migration proof of concept based on the latest reviewed upstream `v1.6` branch. Candidate `0.6.15` uses a digest-pinned Ubuntu 26.04 base, the `20260808T000000Z` Ubuntu package snapshot, Go 1.26.5, Docker 29.6.2, non-root runtime packaging, and reproducible archives. The maintained binary and image name is `pasturestack`.
+This is a migration proof of concept based on the latest reviewed upstream `v1.6` branch. Candidate `0.6.16` uses a digest-pinned Ubuntu 26.04 base, the `20260808T000000Z` Ubuntu package snapshot, Go 1.27.0, Docker 29.7.2, Go Modules with a checked-in vendor lock, non-root runtime packaging, and reproducible archives. The maintained binary and image name is `pasturestack`.
 
-The archived `docker/libcompose` source tree has been removed. The small conversion, logging, and Compose-label contracts still required by the bundled executor are maintained and tested locally in this repository.
+The archived `docker/libcompose` source tree and duplicated Compose executor have been removed. The `up` command delegates to the matching maintained `pasturestack-compose` binary; set `PASTURESTACK_COMPOSE_BINARY` only when it is not on `PATH`. API keys are passed through the child environment rather than command-line arguments.
 
 The GitHub security release gate builds and packages twice, runs tests with the race detector, validates source contracts, produces review SBOMs, and scans the source, binary, build image, and runtime image. It does not publish binaries or images, create a release, or deploy software.
 
@@ -26,7 +26,7 @@ make test
 make package
 ```
 
-Packaging is local only and does not publish an image. Candidate archives use the numeric version `0.6.15`; the upstream-boundary `v0.6.14` tag remains immutable. See [COMPATIBILITY.md](COMPATIBILITY.md), [SECURITY.md](SECURITY.md), and [ORIGIN.md](ORIGIN.md).
+Packaging is local only and does not publish an image. Candidate archives use the numeric version `0.6.16`; the upstream-boundary `v0.6.14` tag remains immutable. See [COMPATIBILITY.md](COMPATIBILITY.md), [SECURITY.md](SECURITY.md), and [ORIGIN.md](ORIGIN.md).
 
 ## License and attribution
 
