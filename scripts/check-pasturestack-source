@@ -47,7 +47,7 @@ module_packages=$(go list -mod=vendor -deps -f '{{with .Module}}{{.Path}} {{.Ver
 printf '%s\n' "$module_packages" | grep -Fx 'github.com/urfave/cli/v3 v3.11.0' >/dev/null || fail urfave_v3_missing
 printf '%s\n' "$module_packages" | grep -Fx 'github.com/gorilla/websocket v1.5.3' >/dev/null || fail websocket_version_mismatch
 printf '%s\n' "$module_packages" | grep -Fx 'github.com/go-viper/mapstructure/v2 v2.5.0' >/dev/null || fail mapstructure_v2_missing
-printf '%s\n' "$module_packages" | grep -Fx 'github.com/sirupsen/logrus v1.10.1' >/dev/null || fail logrus_version_mismatch
+printf '%s\n' "$module_packages" | grep -Fx 'github.com/sirupsen/logrus v1.10.2' >/dev/null || fail logrus_version_mismatch
 
 require_line go.mod 'go 1.26.0'
 require_line go.mod 'toolchain go1.27.0'
