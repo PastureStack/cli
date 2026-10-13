@@ -12,6 +12,8 @@ This is a migration proof of concept based on the latest reviewed upstream `v1.6
 
 CLI `0.6.17` removes a duplicated `/schemas` suffix during client setup and makes `inspect` flush successful JSON and return setup or HTTP errors. Environment URL normalization and Compose delegation remain unchanged. See [release notes](RELEASE-0.6.17.md).
 
+The vendored Logrus path also matches its lowercase import path on case-sensitive Linux filesystems, with file contents and logging behavior unchanged.
+
 The archived `docker/libcompose` source tree and duplicated Compose executor have been removed. The `up` command delegates to the matching maintained `pasturestack-compose` binary; set `PASTURESTACK_COMPOSE_BINARY` only when it is not on `PATH`. API keys are passed through the child environment rather than command-line arguments.
 
 The GitHub security release gate builds and packages twice, runs tests with the race detector, validates source contracts, produces review SBOMs, and scans the source, binary, build image, and runtime image. Successful runs retain the complete numeric candidate archives, checksum manifest, and source revision for reviewed publication. The gate does not create a release, publish an image, or deploy software.

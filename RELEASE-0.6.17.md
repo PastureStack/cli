@@ -8,6 +8,7 @@ broader CLI compatibility contract and migration-review state are unchanged.
 - Use the environment's existing schema URL directly; do not append a second
   `/schemas` segment.
 - Flush successful `inspect` output and return setup, HTTP, or output errors.
+- Match the vendored Logrus directory's case to its Linux import path without changing file contents or logging behavior.
 - Preserve `EnvironmentURL`, `NormalizeUrl`, API payloads, server-provided links,
   configuration aliases, and `up` delegation to the maintained Compose binary.
 
