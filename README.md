@@ -8,7 +8,7 @@ PastureStack is an independent community effort to preserve, audit, and moderniz
 
 ## Project status
 
-This is a migration proof of concept based on the latest reviewed upstream `v1.6` branch. Candidate CLI `0.6.17` uses a digest-pinned Ubuntu 26.04 base, the `20260808T000000Z` Ubuntu package snapshot, Go 1.27.0, Docker 29.7.2, Go Modules with a checked-in vendor lock, non-root runtime packaging, and reproducible archives. The maintained binary and image name is `pasturestack`.
+This is a migration proof of concept based on the latest reviewed upstream `v1.6` branch. Candidate CLI `0.6.17` uses a digest-pinned Ubuntu 26.04 base, the `20260808T000000Z` Ubuntu package snapshot, Go 1.27.2, Docker 29.7.2, Go Modules with a checked-in vendor lock, non-root runtime packaging, and reproducible archives. The maintained binary and image name is `pasturestack`.
 
 CLI `0.6.17` removes a duplicated `/schemas` suffix during client setup and makes `inspect` flush successful JSON and return setup or HTTP errors. Environment URL normalization and Compose delegation remain unchanged. See [release notes](RELEASE-0.6.17.md).
 
