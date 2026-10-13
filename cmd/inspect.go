@@ -40,7 +40,7 @@ Example:
 
 func inspectResources(ctx *cli.Context) error {
 	writer := NewTableWriter(nil, ctx)
-	forEachResource(ctx, inspectTypes, func(c *client.RancherClient, resource *client.Resource) (string, error) {
+	operationErr := forEachResource(ctx, inspectTypes, func(c *client.RancherClient, resource *client.Resource) (string, error) {
 		mapResource := map[string]interface{}{}
 		err := c.ById(resource.Type, resource.Id, &mapResource)
 		if err != nil {
@@ -53,5 +53,9 @@ func inspectResources(ctx *cli.Context) error {
 		writer.Write(mapResource)
 		return "-", nil
 	})
-	return writer.Err()
+	closeErr := writer.Close()
+	if operationErr != nil {
+		return operationErr
+	}
+	return closeErr
 }

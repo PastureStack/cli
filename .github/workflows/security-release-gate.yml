@@ -21,7 +21,7 @@ jobs:
       DAPPER_IMAGE: pasturestack/cli-dapper:${{ github.sha }}
       RUNTIME_IMAGE: pasturestack/cli-runtime:${{ github.sha }}
       TRIVY_IMAGE: aquasec/trivy:0.74.0@sha256:62b1e65e8869bc4b4c6aa4fa2b21595256c7c2f6018a9d9ad61caf87187c1969
-      VERSION_OVERRIDE: 0.6.16
+      VERSION_OVERRIDE: 0.6.17
       CROSS: 'true'
       SKIP_IMAGE_BUILD: 'true'
 
@@ -72,15 +72,15 @@ jobs:
           }
 
           run_ci
-          artifact="dist/artifacts/0.6.16/pasturestack-linux-amd64-0.6.16.tar.gz"
+          artifact="dist/artifacts/0.6.17/pasturestack-linux-amd64-0.6.17.tar.gz"
           test -s "$artifact"
-          find dist/artifacts/0.6.16 -type f -print0 \
+          find dist/artifacts/0.6.17 -type f -print0 \
             | LC_ALL=C sort -z \
             | xargs -0 sha256sum > /tmp/first-artifacts.sha256
 
           rm -rf bin build dist
           run_ci
-          find dist/artifacts/0.6.16 -type f -print0 \
+          find dist/artifacts/0.6.17 -type f -print0 \
             | LC_ALL=C sort -z \
             | xargs -0 sha256sum > /tmp/second-artifacts.sha256
           diff -u /tmp/first-artifacts.sha256 /tmp/second-artifacts.sha256
@@ -89,8 +89,8 @@ jobs:
           mkdir -p evidence/product
           tar -xzf "$artifact" -C evidence/product --strip-components=1
           test -x evidence/product/pasturestack
-          evidence/product/pasturestack --version | grep -F '0.6.16' >/dev/null
-          find dist/artifacts/0.6.16 -type f -print0 \
+          evidence/product/pasturestack --version | grep -F '0.6.17' >/dev/null
+          find dist/artifacts/0.6.17 -type f -print0 \
             | LC_ALL=C sort -z \
             | xargs -0 sha256sum > evidence/artifacts.sha256
           docker run --rm --entrypoint go \
@@ -108,7 +108,7 @@ jobs:
             --tag "$RUNTIME_IMAGE" \
             --file package/Dockerfile \
             .
-          docker run --rm "$RUNTIME_IMAGE" --version | grep -F '0.6.16' >/dev/null
+          docker run --rm "$RUNTIME_IMAGE" --version | grep -F '0.6.17' >/dev/null
 
       - name: Record resolved build inputs
         shell: bash
@@ -306,6 +306,18 @@ jobs:
           path: evidence/
           if-no-files-found: error
           retention-days: 30
+
+      - name: Preserve numeric CLI candidate archives
+        if: success()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: cli-release-candidate-0.6.17-${{ github.sha }}
+          path: |
+            dist/artifacts/0.6.17/
+            evidence/artifacts.sha256
+            evidence/source-revision.txt
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Clean runner resources
         if: always()

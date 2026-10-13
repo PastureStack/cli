@@ -8,11 +8,13 @@ PastureStack is an independent community effort to preserve, audit, and moderniz
 
 ## Project status
 
-This is a migration proof of concept based on the latest reviewed upstream `v1.6` branch. Candidate `0.6.16` uses a digest-pinned Ubuntu 26.04 base, the `20260808T000000Z` Ubuntu package snapshot, Go 1.27.0, Docker 29.7.2, Go Modules with a checked-in vendor lock, non-root runtime packaging, and reproducible archives. The maintained binary and image name is `pasturestack`.
+This is a migration proof of concept based on the latest reviewed upstream `v1.6` branch. Candidate CLI `0.6.17` uses a digest-pinned Ubuntu 26.04 base, the `20260808T000000Z` Ubuntu package snapshot, Go 1.27.0, Docker 29.7.2, Go Modules with a checked-in vendor lock, non-root runtime packaging, and reproducible archives. The maintained binary and image name is `pasturestack`.
+
+CLI `0.6.17` removes a duplicated `/schemas` suffix during client setup and makes `inspect` flush successful JSON and return setup or HTTP errors. Environment URL normalization and Compose delegation remain unchanged. See [release notes](RELEASE-0.6.17.md).
 
 The archived `docker/libcompose` source tree and duplicated Compose executor have been removed. The `up` command delegates to the matching maintained `pasturestack-compose` binary; set `PASTURESTACK_COMPOSE_BINARY` only when it is not on `PATH`. API keys are passed through the child environment rather than command-line arguments.
 
-The GitHub security release gate builds and packages twice, runs tests with the race detector, validates source contracts, produces review SBOMs, and scans the source, binary, build image, and runtime image. It does not publish binaries or images, create a release, or deploy software.
+The GitHub security release gate builds and packages twice, runs tests with the race detector, validates source contracts, produces review SBOMs, and scans the source, binary, build image, and runtime image. Successful runs retain the complete numeric candidate archives, checksum manifest, and source revision for reviewed publication. The gate does not create a release, publish an image, or deploy software.
 
 ## Configuration
 
@@ -26,7 +28,7 @@ make test
 make package
 ```
 
-Packaging is local only and does not publish an image. Candidate archives use the numeric version `0.6.16`; the upstream-boundary `v0.6.14` tag remains immutable. See [COMPATIBILITY.md](COMPATIBILITY.md), [SECURITY.md](SECURITY.md), and [ORIGIN.md](ORIGIN.md).
+Packaging is local only and does not publish an image. Candidate CLI archives use the numeric version `0.6.17`; the upstream-boundary `v0.6.14` tag remains immutable. A reviewed numeric release remains a candidate/prerelease, not a stable-quality claim. See [COMPATIBILITY.md](COMPATIBILITY.md), [SECURITY.md](SECURITY.md), and [ORIGIN.md](ORIGIN.md).
 
 ## License and attribution
 
