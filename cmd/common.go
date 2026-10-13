@@ -90,7 +90,7 @@ func GetClient(ctx *cli.Context) (*client.RancherClient, error) {
 	}
 
 	return client.NewRancherClient(&client.ClientOpts{
-		Url:       url + "/schemas",
+		Url:       url,
 		AccessKey: config.AccessKey,
 		SecretKey: config.SecretKey,
 	})
