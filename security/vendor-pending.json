@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "release": "0.6.18",
+  "policy": {"allowedSeverities": ["LOW", "MEDIUM"], "requiresEmptyFixedVersion": true},
+  "findings": []
+}

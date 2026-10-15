@@ -36,7 +36,7 @@ for binary in build/bin/*; do
     install -m 0755 "${binary}" "${binary_directory}/pasturestack${extension}"
     install -m 0755 "${binary}" "${latest_binary_directory}/pasturestack${extension}"
 
-    archive_base="pasturestack-${platform}"
+    archive_base="pasturestack-cli-${platform}"
     if [ -z "${extension}" ]; then
         gzip -n -9 -c "${binary}" > "${binary_directory}/pasturestack.gz"
         xz -T1 -9e -c "${binary}" > "${binary_directory}/pasturestack.xz"
