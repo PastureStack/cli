@@ -2,7 +2,8 @@
 
 ## Supported state
 
-This repository is under migration review and is not release-ready.
+Numeric releases require the complete reviewed release gate below. Broader
+compatibility and native-acceptance results remain separately evidenced.
 
 ## Security boundaries
 

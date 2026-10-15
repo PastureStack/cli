@@ -8,7 +8,7 @@ PastureStack is an independent community effort to preserve, audit, and moderniz
 
 ## Project status
 
-This is a migration proof of concept based on the latest reviewed upstream `v1.6` branch. Candidate CLI `0.6.18` uses a digest-pinned Ubuntu 26.04 base, the `20261015T000000Z` signed Ubuntu snapshot, Go 1.27.2, Docker 29.9.1, Go Modules with a checked-in vendor lock, non-root runtime packaging, and reproducible archives. The maintained binary and image name is `pasturestack`.
+CLI `0.6.18` is maintained from the latest reviewed upstream `v1.6` branch. It uses a digest-pinned Ubuntu 26.04 base, the `20261015T000000Z` signed Ubuntu snapshot, Go 1.27.2, Docker 29.9.1, Go Modules with a checked-in vendor lock, non-root runtime packaging, and reproducible archives. The maintained binary and image name is `pasturestack`.
 
 CLI `0.6.18` retains the reviewed `0.6.17` fix: use the existing schema URL and make `inspect` flush successful JSON and return setup or HTTP errors. This addresses the older downloaded `0.6.14` client's silent success after a denied schema request. Environment URL normalization and Compose delegation remain unchanged. See [release notes](RELEASE-0.6.18.md).
 
@@ -30,7 +30,7 @@ make test
 make package
 ```
 
-Packaging is local only and does not publish an image. Candidate archives use numeric version `0.6.18` and Server-compatible names such as `pasturestack-cli-linux-amd64-0.6.18.tar.gz`; the upstream-boundary `v0.6.14` tag remains immutable. A reviewed numeric release remains a candidate/prerelease, not a stable-quality claim. See [COMPATIBILITY.md](COMPATIBILITY.md), [SECURITY.md](SECURITY.md), and [ORIGIN.md](ORIGIN.md).
+Packaging is local only and does not publish an image. Official numeric release archives use names such as `pasturestack-cli-linux-amd64-0.6.18.tar.gz`; the upstream-boundary `v0.6.14` tag remains immutable. After a normal protected merge and a successful exact-main security release run, `python3 scripts/publish-reviewed-release.py --execute --expected-source <commit> --run-id <run> --receipt <new-file>` publishes the checked bytes as an immutable, non-prerelease `v0.6.18`, with `SHA256SUMS`, raw reports, SBOMs and source-producer proof. Without `--execute` it only prints an offline plan. Publication is not a claim that the whole compatibility or BE18 acceptance matrix has passed. See [COMPATIBILITY.md](COMPATIBILITY.md), [SECURITY.md](SECURITY.md), and [ORIGIN.md](ORIGIN.md).
 
 ## License and attribution
 

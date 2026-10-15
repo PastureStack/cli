@@ -1,6 +1,2856 @@
 {
   "schemaVersion": 1,
   "release": "0.6.18",
-  "policy": {"allowedSeverities": ["LOW", "MEDIUM"], "requiresEmptyFixedVersion": true},
-  "findings": []
+  "generatedAt": "2026-10-15T03:53:56Z",
+  "policy": {
+    "allowedSeverities": [
+      "LOW",
+      "MEDIUM"
+    ],
+    "requiresEmptyFixedVersion": true
+  },
+  "findings": [
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2017-13716",
+      "purl": "pkg:deb/ubuntu/binutils-common@2.46-3ubuntu2?arch=amd64&distro=ubuntu-26.04",
+      "package": "binutils-common",
+      "installedVersion": "2.46-3ubuntu2",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V2Score": 7.1,
+          "V3Score": 5.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "low",
+      "sourcePackage": "binutils",
+      "source": "https://ubuntu.com/security/CVE-2017-13716",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
+      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2017-13716",
+      "purl": "pkg:deb/ubuntu/binutils-x86-64-linux-gnu@2.46-3ubuntu2?arch=amd64&distro=ubuntu-26.04",
+      "package": "binutils-x86-64-linux-gnu",
+      "installedVersion": "2.46-3ubuntu2",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V2Score": 7.1,
+          "V3Score": 5.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "low",
+      "sourcePackage": "binutils",
+      "source": "https://ubuntu.com/security/CVE-2017-13716",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
+      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2017-13716",
+      "purl": "pkg:deb/ubuntu/binutils@2.46-3ubuntu2?arch=amd64&distro=ubuntu-26.04",
+      "package": "binutils",
+      "installedVersion": "2.46-3ubuntu2",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V2Score": 7.1,
+          "V3Score": 5.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "low",
+      "sourcePackage": "binutils",
+      "source": "https://ubuntu.com/security/CVE-2017-13716",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
+      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2017-13716",
+      "purl": "pkg:deb/ubuntu/libbinutils@2.46-3ubuntu2?arch=amd64&distro=ubuntu-26.04",
+      "package": "libbinutils",
+      "installedVersion": "2.46-3ubuntu2",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V2Score": 7.1,
+          "V3Score": 5.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "low",
+      "sourcePackage": "binutils",
+      "source": "https://ubuntu.com/security/CVE-2017-13716",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
+      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2017-13716",
+      "purl": "pkg:deb/ubuntu/libctf-nobfd0@2.46-3ubuntu2?arch=amd64&distro=ubuntu-26.04",
+      "package": "libctf-nobfd0",
+      "installedVersion": "2.46-3ubuntu2",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V2Score": 7.1,
+          "V3Score": 5.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "low",
+      "sourcePackage": "binutils",
+      "source": "https://ubuntu.com/security/CVE-2017-13716",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
+      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2017-13716",
+      "purl": "pkg:deb/ubuntu/libctf0@2.46-3ubuntu2?arch=amd64&distro=ubuntu-26.04",
+      "package": "libctf0",
+      "installedVersion": "2.46-3ubuntu2",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V2Score": 7.1,
+          "V3Score": 5.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "low",
+      "sourcePackage": "binutils",
+      "source": "https://ubuntu.com/security/CVE-2017-13716",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
+      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2017-13716",
+      "purl": "pkg:deb/ubuntu/libgprofng0@2.46-3ubuntu2?arch=amd64&distro=ubuntu-26.04",
+      "package": "libgprofng0",
+      "installedVersion": "2.46-3ubuntu2",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V2Score": 7.1,
+          "V3Score": 5.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "low",
+      "sourcePackage": "binutils",
+      "source": "https://ubuntu.com/security/CVE-2017-13716",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
+      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2017-13716",
+      "purl": "pkg:deb/ubuntu/libsframe3@2.46-3ubuntu2?arch=amd64&distro=ubuntu-26.04",
+      "package": "libsframe3",
+      "installedVersion": "2.46-3ubuntu2",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V2Score": 7.1,
+          "V3Score": 5.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "low",
+      "sourcePackage": "binutils",
+      "source": "https://ubuntu.com/security/CVE-2017-13716",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
+      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2024-52005",
+      "purl": "pkg:deb/ubuntu/git-man@2.53.0-1ubuntu1?arch=all&distro=ubuntu-26.04&epoch=1",
+      "package": "git-man",
+      "installedVersion": "1:2.53.0-1ubuntu1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "bitnami": {
+          "V40Vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+          "V40Score": 7.5
+        },
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "V3Score": 8.8
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "V3Score": 7.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "git",
+      "source": "https://ubuntu.com/security/CVE-2024-52005",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-52005",
+      "officialTrackerSha256": "e867064dd62789d5b1e713954b48b89d9397ea7ed71838b136433b2266e1b270",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2024-52005",
+      "purl": "pkg:deb/ubuntu/git@2.53.0-1ubuntu1?arch=amd64&distro=ubuntu-26.04&epoch=1",
+      "package": "git",
+      "installedVersion": "1:2.53.0-1ubuntu1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "bitnami": {
+          "V40Vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+          "V40Score": 7.5
+        },
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "V3Score": 8.8
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "V3Score": 7.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "git",
+      "source": "https://ubuntu.com/security/CVE-2024-52005",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-52005",
+      "officialTrackerSha256": "e867064dd62789d5b1e713954b48b89d9397ea7ed71838b136433b2266e1b270",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2024-56433",
+      "purl": "pkg:deb/ubuntu/login.defs@4.17.4-2ubuntu3?arch=all&distro=ubuntu-26.04&epoch=1",
+      "package": "login.defs",
+      "installedVersion": "1:4.17.4-2ubuntu3",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "V3Score": 3.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-08-31)",
+      "ubuntuPriority": "low",
+      "sourcePackage": "shadow",
+      "source": "https://ubuntu.com/security/CVE-2024-56433",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-56433",
+      "officialTrackerSha256": "4cad3bae38d6920b5135ade486f7f73fd7811e0c82bcd74cfa8bdd7a0b9316f4",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2024-56433",
+      "purl": "pkg:deb/ubuntu/passwd@4.17.4-2ubuntu3?arch=amd64&distro=ubuntu-26.04&epoch=1",
+      "package": "passwd",
+      "installedVersion": "1:4.17.4-2ubuntu3",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "V3Score": 3.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-08-31)",
+      "ubuntuPriority": "low",
+      "sourcePackage": "shadow",
+      "source": "https://ubuntu.com/security/CVE-2024-56433",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-56433",
+      "officialTrackerSha256": "4cad3bae38d6920b5135ade486f7f73fd7811e0c82bcd74cfa8bdd7a0b9316f4",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2025-66382",
+      "purl": "pkg:deb/ubuntu/libexpat1@2.7.4-1ubuntu0.2?arch=amd64&distro=ubuntu-26.04",
+      "package": "libexpat1",
+      "installedVersion": "2.7.4-1ubuntu0.2",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "julia": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V3Score": 5.5
+        },
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "V3Score": 5.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 2.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-09-28)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "expat",
+      "source": "https://ubuntu.com/security/CVE-2025-66382",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2025-66382",
+      "officialTrackerSha256": "ab531b3977cb2a2d8916eaf2d7732ed3b6b08b160eb0806a20139e98e2d310bd",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-103111",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+          "V3Score": 7.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-103111",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-103111",
+      "officialTrackerSha256": "d6767ce5a9a71f8bb24dc97e083aa738303355889e84eb1fbc3f881dd06210c2",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-107161",
+      "purl": "pkg:deb/ubuntu/libsasl2-2@2.1.28%2Bdfsg1-9ubuntu3?arch=amd64&distro=ubuntu-26.04",
+      "package": "libsasl2-2",
+      "installedVersion": "2.1.28+dfsg1-9ubuntu3",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "V3Score": 7.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-14)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "cyrus-sasl2",
+      "source": "https://ubuntu.com/security/CVE-2026-107161",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-107161",
+      "officialTrackerSha256": "b8944f4380c18a8440b585e47701988536e65f3389e83da1c01fc0cea93686ac",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-107161",
+      "purl": "pkg:deb/ubuntu/libsasl2-modules-db@2.1.28%2Bdfsg1-9ubuntu3?arch=amd64&distro=ubuntu-26.04",
+      "package": "libsasl2-modules-db",
+      "installedVersion": "2.1.28+dfsg1-9ubuntu3",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "V3Score": 7.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-14)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "cyrus-sasl2",
+      "source": "https://ubuntu.com/security/CVE-2026-107161",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-107161",
+      "officialTrackerSha256": "b8944f4380c18a8440b585e47701988536e65f3389e83da1c01fc0cea93686ac",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-13757",
+      "purl": "pkg:deb/ubuntu/libp11-kit0@0.26.2-2?arch=amd64&distro=ubuntu-26.04",
+      "package": "libp11-kit0",
+      "installedVersion": "0.26.2-2",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "V3Score": 6.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "p11-kit",
+      "source": "https://ubuntu.com/security/CVE-2026-13757",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-13757",
+      "officialTrackerSha256": "d261e9b54579aab9033f65cb0ae5a868c8165e0b7bcdae7e0e9d32b1a492a72b",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-18374",
+      "purl": "pkg:deb/ubuntu/libc-bin@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-bin",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-18374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
+      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-18374",
+      "purl": "pkg:deb/ubuntu/libc-dev-bin@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-dev-bin",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-18374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
+      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-18374",
+      "purl": "pkg:deb/ubuntu/libc-gconv-modules-extra@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-gconv-modules-extra",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-18374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
+      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-18374",
+      "purl": "pkg:deb/ubuntu/libc6-dev@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc6-dev",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-18374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
+      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-18374",
+      "purl": "pkg:deb/ubuntu/libc6@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc6",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-18374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
+      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-18477",
+      "purl": "pkg:deb/ubuntu/tar@1.35%2Bdfsg-4ubuntu0.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "tar",
+      "installedVersion": "1.35+dfsg-4ubuntu0.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "julia": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+          "V3Score": 4.4
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+          "V3Score": 4.4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "tar",
+      "source": "https://ubuntu.com/security/CVE-2026-18477",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18477",
+      "officialTrackerSha256": "5a14bb33fa1ac2456d24b4e2a58e5af4e1d376611447ec6ff0becce29ca83ee1",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-18508",
+      "purl": "pkg:deb/ubuntu/tar@1.35%2Bdfsg-4ubuntu0.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "tar",
+      "installedVersion": "1.35+dfsg-4ubuntu0.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "V3Score": 4.4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "tar",
+      "source": "https://ubuntu.com/security/CVE-2026-18508",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18508",
+      "officialTrackerSha256": "5eb06b53f4e6dea3e8afdfc243d9d59b3c49d904ee7529a60720c70d96122c4c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35341",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+          "V3Score": 7.1
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35341",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35341",
+      "officialTrackerSha256": "34f2b4fcf74077836d449a5c75ac0889bca6347e145aecfd899aab62a3c5762f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35344",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35344",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35344",
+      "officialTrackerSha256": "b0bb504cd6f2684174a17abc0aa4c16b8353c083ac4808bb34fa772da5cd6523",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35345",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N",
+          "V3Score": 5.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35345",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35345",
+      "officialTrackerSha256": "59c290d073a801555570acdddcfcb785db60d047e15411488d3bdcb31db13f0c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35348",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "V3Score": 5.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35348",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35348",
+      "officialTrackerSha256": "9becdd73fd5a99b4591a9390c79e0f5ff70d7156c0ca603a513528e244c6f3bf",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35350",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+          "V3Score": 6.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35350",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35350",
+      "officialTrackerSha256": "1c8af99479aa67e13e437a55946190505f8020d9dc8fad62545fba868158f5aa",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35351",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35351",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35351",
+      "officialTrackerSha256": "e6f481232dd909954f6426aa97f51bb26e330a2a862615eefa19e11849159495",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35352",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "V3Score": 7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35352",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35352",
+      "officialTrackerSha256": "4d3b4cb251c440f3c1002452ea59369eff43e6a9c2d7e830eb256a97be07c66c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35354",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "V3Score": 4.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35354",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35354",
+      "officialTrackerSha256": "25486fb082e400aafcd0c97a56ba13d9b03e95bf0a3b4760e202bbefbe7a43a3",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35357",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "V3Score": 4.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35357",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35357",
+      "officialTrackerSha256": "bff5c04043a9e5ba6c596bb394286033e8616f8d07f9ce12b8a8a26ba2285647",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35359",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "V3Score": 4.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35359",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35359",
+      "officialTrackerSha256": "1eeda951a482863fca2a3be53a2fa9c4810e7dd53f064abb42303d2369a0c132",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35360",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+          "V3Score": 6.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35360",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35360",
+      "officialTrackerSha256": "b6b509b97b56cfe6320f20b60ba2c5c588fa0a167ee99cd4dabbc0e3123eb97e",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35363",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:L",
+          "V3Score": 5.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35363",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35363",
+      "officialTrackerSha256": "744dd0a5a1eb928e06ce65fe5dfc3365a6df1dfbc0e453a907087b7e92cc760c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35364",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+          "V3Score": 6.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35364",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35364",
+      "officialTrackerSha256": "fa9cadd32bec57e4377643e4a0dad6613d65107d4f2de13b74709af11df00c20",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35367",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35367",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35367",
+      "officialTrackerSha256": "cef8d8f78f7451a4678bbb996b74bf0ed09b657db8eaadc99537661d6bc06c4f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35368",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+          "V3Score": 7.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35368",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35368",
+      "officialTrackerSha256": "300292cde0780383fe59fb6090ea408ee6862d78af0963e0b3bcde19a2d65649",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35370",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "V3Score": 4.4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35370",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35370",
+      "officialTrackerSha256": "8daa3c91b6b59038aa048395d7ba09826f26e856323546a7b19229767b28259c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35371",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35371",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35371",
+      "officialTrackerSha256": "af63dbb8042657e66e04e98f2fea9e529f90f672114ccbcdaf116ab6c7226865",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35373",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        },
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "V3Score": 5.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35373",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35373",
+      "officialTrackerSha256": "cf2688cc1b6a44be2987437d30e4c8f8d595956f679c651ed358bd6e4a3c53a2",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35374",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+          "V3Score": 6.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35374",
+      "officialTrackerSha256": "d13dd911afb911e0357bbfbaa53b3e579f0c9028288cf3fbbfb40c659b7d70ad",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-35377",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35377",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35377",
+      "officialTrackerSha256": "a09cf6fdde2851289b4611e3f30845d76932cc44f439b2f59b0297e1c1509246",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-40228",
+      "purl": "pkg:deb/ubuntu/libsystemd0@259.5-0ubuntu3.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libsystemd0",
+      "installedVersion": "259.5-0ubuntu3.4",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 3.3
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 2.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-06-05)",
+      "ubuntuPriority": "low",
+      "sourcePackage": "systemd",
+      "source": "https://ubuntu.com/security/CVE-2026-40228",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-40228",
+      "officialTrackerSha256": "13bae99932a99d59359144b89a6f9de5b061ed6a7ae6ddf8cd7a7bb5ada71bb2",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-40228",
+      "purl": "pkg:deb/ubuntu/libudev1@259.5-0ubuntu3.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libudev1",
+      "installedVersion": "259.5-0ubuntu3.4",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 3.3
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 2.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-06-05)",
+      "ubuntuPriority": "low",
+      "sourcePackage": "systemd",
+      "source": "https://ubuntu.com/security/CVE-2026-40228",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-40228",
+      "officialTrackerSha256": "13bae99932a99d59359144b89a6f9de5b061ed6a7ae6ddf8cd7a7bb5ada71bb2",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-85091",
+      "purl": "pkg:deb/ubuntu/zlib1g@1.3.dfsg%2Breally1.3.1-1ubuntu3.1?arch=amd64&distro=ubuntu-26.04&epoch=1",
+      "package": "zlib1g",
+      "installedVersion": "1:1.3.dfsg+really1.3.1-1ubuntu3.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {},
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-09-11)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "zlib",
+      "source": "https://ubuntu.com/security/CVE-2026-85091",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-85091",
+      "officialTrackerSha256": "e38984e9acbc49498f991f12d98e8ef234164e0db25ae9a2d655faf1ad39a1fc",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-86145",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+          "V3Score": 8.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-86145",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-86145",
+      "officialTrackerSha256": "d75b677dfed95a52c3b0f75b97477dc33dc5db4e5634c4ce67d3f2b86dcfb893",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89092",
+      "purl": "pkg:deb/ubuntu/libc-bin@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-bin",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-89092",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
+      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89092",
+      "purl": "pkg:deb/ubuntu/libc-dev-bin@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-dev-bin",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-89092",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
+      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89092",
+      "purl": "pkg:deb/ubuntu/libc-gconv-modules-extra@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-gconv-modules-extra",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-89092",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
+      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89092",
+      "purl": "pkg:deb/ubuntu/libc6-dev@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc6-dev",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-89092",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
+      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89092",
+      "purl": "pkg:deb/ubuntu/libc6@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc6",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-89092",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
+      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89156",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "V3Score": 5.9
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 2.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89156",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89156",
+      "officialTrackerSha256": "89b59d428a0472dceb239856088d6b21824633681ceb9b9bcdc973be330f63a8",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89157",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
+          "V3Score": 7.4
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L",
+          "V3Score": 5.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89157",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89157",
+      "officialTrackerSha256": "213ba54479ec014ad2826a8a785fa6c7b21ba3db2749a39f2a17a1b654fb3202",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89158",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L",
+          "V3Score": 6.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L",
+          "V3Score": 6.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89158",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89158",
+      "officialTrackerSha256": "496674acda52d21249c138b3d3d7e79dcc41d265f2a66315bd3ed19cc23993cb",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89160",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+          "V3Score": 6.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 3.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89160",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89160",
+      "officialTrackerSha256": "5fc3cf822ec4735345cbaaad122c94ecf6a4808345fb5fd70910e6ebfbc4cdf4",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89161",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "V3Score": 7.8
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "V3Score": 7.4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89161",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89161",
+      "officialTrackerSha256": "6ea12bc74a4da750cfb3b61b8ea8fcbeaaa575d26154b506020c11662205a97c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-89162",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "V3Score": 3.3
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "V3Score": 2.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89162",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89162",
+      "officialTrackerSha256": "b1e88c5ed8fecdd7e55e76e47fe8ef32624508c5bf3302f36520fe561dc031eb",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2024-56433",
+      "purl": "pkg:deb/ubuntu/login.defs@4.17.4-2ubuntu3?arch=all&distro=ubuntu-26.04&epoch=1",
+      "package": "login.defs",
+      "installedVersion": "1:4.17.4-2ubuntu3",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "V3Score": 3.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-08-31)",
+      "ubuntuPriority": "low",
+      "sourcePackage": "shadow",
+      "source": "https://ubuntu.com/security/CVE-2024-56433",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-56433",
+      "officialTrackerSha256": "4cad3bae38d6920b5135ade486f7f73fd7811e0c82bcd74cfa8bdd7a0b9316f4",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2024-56433",
+      "purl": "pkg:deb/ubuntu/passwd@4.17.4-2ubuntu3?arch=amd64&distro=ubuntu-26.04&epoch=1",
+      "package": "passwd",
+      "installedVersion": "1:4.17.4-2ubuntu3",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "V3Score": 3.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-08-31)",
+      "ubuntuPriority": "low",
+      "sourcePackage": "shadow",
+      "source": "https://ubuntu.com/security/CVE-2024-56433",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-56433",
+      "officialTrackerSha256": "4cad3bae38d6920b5135ade486f7f73fd7811e0c82bcd74cfa8bdd7a0b9316f4",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-103111",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+          "V3Score": 7.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-103111",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-103111",
+      "officialTrackerSha256": "d6767ce5a9a71f8bb24dc97e083aa738303355889e84eb1fbc3f881dd06210c2",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-18374",
+      "purl": "pkg:deb/ubuntu/libc-bin@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-bin",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-18374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
+      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-18374",
+      "purl": "pkg:deb/ubuntu/libc-gconv-modules-extra@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-gconv-modules-extra",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-18374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
+      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-18374",
+      "purl": "pkg:deb/ubuntu/libc6@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc6",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-18374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
+      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-18477",
+      "purl": "pkg:deb/ubuntu/tar@1.35%2Bdfsg-4ubuntu0.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "tar",
+      "installedVersion": "1.35+dfsg-4ubuntu0.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "julia": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+          "V3Score": 4.4
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N",
+          "V3Score": 4.4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "tar",
+      "source": "https://ubuntu.com/security/CVE-2026-18477",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18477",
+      "officialTrackerSha256": "5a14bb33fa1ac2456d24b4e2a58e5af4e1d376611447ec6ff0becce29ca83ee1",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-18508",
+      "purl": "pkg:deb/ubuntu/tar@1.35%2Bdfsg-4ubuntu0.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "tar",
+      "installedVersion": "1.35+dfsg-4ubuntu0.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "V3Score": 4.4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "tar",
+      "source": "https://ubuntu.com/security/CVE-2026-18508",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18508",
+      "officialTrackerSha256": "5eb06b53f4e6dea3e8afdfc243d9d59b3c49d904ee7529a60720c70d96122c4c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35341",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+          "V3Score": 7.1
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35341",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35341",
+      "officialTrackerSha256": "34f2b4fcf74077836d449a5c75ac0889bca6347e145aecfd899aab62a3c5762f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35344",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35344",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35344",
+      "officialTrackerSha256": "b0bb504cd6f2684174a17abc0aa4c16b8353c083ac4808bb34fa772da5cd6523",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35345",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N",
+          "V3Score": 5.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35345",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35345",
+      "officialTrackerSha256": "59c290d073a801555570acdddcfcb785db60d047e15411488d3bdcb31db13f0c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35348",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "V3Score": 5.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35348",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35348",
+      "officialTrackerSha256": "9becdd73fd5a99b4591a9390c79e0f5ff70d7156c0ca603a513528e244c6f3bf",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35350",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+          "V3Score": 6.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35350",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35350",
+      "officialTrackerSha256": "1c8af99479aa67e13e437a55946190505f8020d9dc8fad62545fba868158f5aa",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35351",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35351",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35351",
+      "officialTrackerSha256": "e6f481232dd909954f6426aa97f51bb26e330a2a862615eefa19e11849159495",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35352",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "V3Score": 7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35352",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35352",
+      "officialTrackerSha256": "4d3b4cb251c440f3c1002452ea59369eff43e6a9c2d7e830eb256a97be07c66c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35354",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+          "V3Score": 4.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35354",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35354",
+      "officialTrackerSha256": "25486fb082e400aafcd0c97a56ba13d9b03e95bf0a3b4760e202bbefbe7a43a3",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35357",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "V3Score": 4.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35357",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35357",
+      "officialTrackerSha256": "bff5c04043a9e5ba6c596bb394286033e8616f8d07f9ce12b8a8a26ba2285647",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35359",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "V3Score": 4.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35359",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35359",
+      "officialTrackerSha256": "1eeda951a482863fca2a3be53a2fa9c4810e7dd53f064abb42303d2369a0c132",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35360",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+          "V3Score": 6.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35360",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35360",
+      "officialTrackerSha256": "b6b509b97b56cfe6320f20b60ba2c5c588fa0a167ee99cd4dabbc0e3123eb97e",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35363",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:L",
+          "V3Score": 5.6
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35363",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35363",
+      "officialTrackerSha256": "744dd0a5a1eb928e06ce65fe5dfc3365a6df1dfbc0e453a907087b7e92cc760c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35364",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+          "V3Score": 6.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35364",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35364",
+      "officialTrackerSha256": "fa9cadd32bec57e4377643e4a0dad6613d65107d4f2de13b74709af11df00c20",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35367",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35367",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35367",
+      "officialTrackerSha256": "cef8d8f78f7451a4678bbb996b74bf0ed09b657db8eaadc99537661d6bc06c4f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35368",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+          "V3Score": 7.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35368",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35368",
+      "officialTrackerSha256": "300292cde0780383fe59fb6090ea408ee6862d78af0963e0b3bcde19a2d65649",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35370",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+          "V3Score": 4.4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35370",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35370",
+      "officialTrackerSha256": "8daa3c91b6b59038aa048395d7ba09826f26e856323546a7b19229767b28259c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35371",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35371",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35371",
+      "officialTrackerSha256": "af63dbb8042657e66e04e98f2fea9e529f90f672114ccbcdaf116ab6c7226865",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35373",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        },
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "V3Score": 5.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35373",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35373",
+      "officialTrackerSha256": "cf2688cc1b6a44be2987437d30e4c8f8d595956f679c651ed358bd6e4a3c53a2",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35374",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+          "V3Score": 6.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35374",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35374",
+      "officialTrackerSha256": "d13dd911afb911e0357bbfbaa53b3e579f0c9028288cf3fbbfb40c659b7d70ad",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-35377",
+      "purl": "pkg:deb/ubuntu/rust-coreutils@0.10.0-1ubuntu2~26.04.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "rust-coreutils",
+      "installedVersion": "0.10.0-1ubuntu2~26.04.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "ghsa": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 3.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "rust-coreutils",
+      "source": "https://ubuntu.com/security/CVE-2026-35377",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35377",
+      "officialTrackerSha256": "a09cf6fdde2851289b4611e3f30845d76932cc44f439b2f59b0297e1c1509246",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-40228",
+      "purl": "pkg:deb/ubuntu/libsystemd0@259.5-0ubuntu3.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libsystemd0",
+      "installedVersion": "259.5-0ubuntu3.4",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 3.3
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 2.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-06-05)",
+      "ubuntuPriority": "low",
+      "sourcePackage": "systemd",
+      "source": "https://ubuntu.com/security/CVE-2026-40228",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-40228",
+      "officialTrackerSha256": "13bae99932a99d59359144b89a6f9de5b061ed6a7ae6ddf8cd7a7bb5ada71bb2",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-40228",
+      "purl": "pkg:deb/ubuntu/libudev1@259.5-0ubuntu3.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libudev1",
+      "installedVersion": "259.5-0ubuntu3.4",
+      "severity": "LOW",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 3.3
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 2.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-06-05)",
+      "ubuntuPriority": "low",
+      "sourcePackage": "systemd",
+      "source": "https://ubuntu.com/security/CVE-2026-40228",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-40228",
+      "officialTrackerSha256": "13bae99932a99d59359144b89a6f9de5b061ed6a7ae6ddf8cd7a7bb5ada71bb2",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-85091",
+      "purl": "pkg:deb/ubuntu/zlib1g@1.3.dfsg%2Breally1.3.1-1ubuntu3.1?arch=amd64&distro=ubuntu-26.04&epoch=1",
+      "package": "zlib1g",
+      "installedVersion": "1:1.3.dfsg+really1.3.1-1ubuntu3.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {},
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-09-11)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "zlib",
+      "source": "https://ubuntu.com/security/CVE-2026-85091",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-85091",
+      "officialTrackerSha256": "e38984e9acbc49498f991f12d98e8ef234164e0db25ae9a2d655faf1ad39a1fc",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-86145",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+          "V3Score": 8.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-86145",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-86145",
+      "officialTrackerSha256": "d75b677dfed95a52c3b0f75b97477dc33dc5db4e5634c4ce67d3f2b86dcfb893",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-89092",
+      "purl": "pkg:deb/ubuntu/libc-bin@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-bin",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-89092",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
+      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-89092",
+      "purl": "pkg:deb/ubuntu/libc-gconv-modules-extra@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc-gconv-modules-extra",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-89092",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
+      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-89092",
+      "purl": "pkg:deb/ubuntu/libc6@2.43-2ubuntu2.4?arch=amd64&distro=ubuntu-26.04",
+      "package": "libc6",
+      "installedVersion": "2.43-2ubuntu2.4",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "V3Score": 4.2
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "glibc",
+      "source": "https://ubuntu.com/security/CVE-2026-89092",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
+      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-89156",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "V3Score": 5.9
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 2.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89156",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89156",
+      "officialTrackerSha256": "89b59d428a0472dceb239856088d6b21824633681ceb9b9bcdc973be330f63a8",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-89157",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H",
+          "V3Score": 7.4
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L",
+          "V3Score": 5.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89157",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89157",
+      "officialTrackerSha256": "213ba54479ec014ad2826a8a785fa6c7b21ba3db2749a39f2a17a1b654fb3202",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-89158",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L",
+          "V3Score": 6.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:L",
+          "V3Score": 6.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89158",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89158",
+      "officialTrackerSha256": "496674acda52d21249c138b3d3d7e79dcc41d265f2a66315bd3ed19cc23993cb",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-89160",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+          "V3Score": 6.5
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 3.7
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89160",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89160",
+      "officialTrackerSha256": "5fc3cf822ec4735345cbaaad122c94ecf6a4808345fb5fd70910e6ebfbc4cdf4",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-89161",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "V3Score": 7.8
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "V3Score": 7.4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89161",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89161",
+      "officialTrackerSha256": "6ea12bc74a4da750cfb3b61b8ea8fcbeaaa575d26154b506020c11662205a97c",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-89162",
+      "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libpcre2-8-0",
+      "installedVersion": "10.46-1build1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "nvd": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "V3Score": 3.3
+        },
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "V3Score": 2.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "pcre2",
+      "source": "https://ubuntu.com/security/CVE-2026-89162",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89162",
+      "officialTrackerSha256": "b1e88c5ed8fecdd7e55e76e47fe8ef32624508c5bf3302f36520fe561dc031eb",
+      "verifiedAt": "2026-10-15T03:53:56Z",
+      "reviewAfter": "2026-10-20",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    }
+  ]
 }

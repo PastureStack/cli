@@ -41,10 +41,14 @@ jobs:
           git rev-parse HEAD > evidence/source-revision.txt
           git rev-parse HEAD^{tree} > evidence/source-tree.txt
           python3 scripts/test-security-reports.py -v
+          python3 scripts/test-publish-reviewed-release.py -v
           sha256sum Dockerfile.dapper package/Dockerfile ubuntu-apt.lock \
             go.mod go.sum vendor/modules.txt \
             security/dapper.openvex.json security/vendor-pending.json \
-            scripts/check-security-reports.py > evidence/source-locks.sha256
+            security/cli018-review-evidence.json scripts/check-security-reports.py \
+            scripts/publish-reviewed-release.py > evidence/source-locks.sha256
+          cp security/vendor-pending.json security/dapper.openvex.json \
+            security/cli018-review-evidence.json evidence/
 
       - name: Build, test, validate, and package twice
         shell: bash
@@ -223,6 +227,7 @@ jobs:
             dist/artifacts/0.6.18/
             evidence/artifacts.sha256
             evidence/source-revision.txt
+            evidence/source-tree.txt
           if-no-files-found: error
           retention-days: 14
 

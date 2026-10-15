@@ -1,0 +1,34 @@
+{
+  "reviewedAt": "2026-10-15T03:53:56Z",
+  "firstRun": "https://github.com/PastureStack/cli/actions/runs/38677041850",
+  "firstScanSource": "689350b036f5edfbfa89f12fd5a5a4c9466d93f1",
+  "rawReports": {
+    "source": {
+      "file": "source-security.json",
+      "sha256": "0987b8dc62d9d280737cdeb72649d1b309bd1ad1a08e2904978d3d0aa8707661"
+    },
+    "product": {
+      "file": "product-security.json",
+      "sha256": "7da9052c2257e08ef8cf311da51a8f002d2b9f2d47e072e002bd63c2e2669c66"
+    },
+    "builder": {
+      "file": "dapper-image-raw.json",
+      "sha256": "22328aff5a3dee743a72f8a34f97a4c7d2e464464fd4ccbd93508abc32cb0b60"
+    },
+    "runtime": {
+      "file": "runtime-image-security.json",
+      "sha256": "b3ebcde29750eb47f337caec21c35ba23dc6c237370de2e4cd0d6321d2b628e2"
+    }
+  },
+  "builderPackagesSha256": "0a875c73c3fbeaa0532c23a426404baf80d104d840020b78d1c8c682342e970e",
+  "productGoMetadataSha256": "faa5b227a1a33dfd7e11bbb7814d2bb164769759cba635170786d8ac721a06a1",
+  "builderHeaderPackage": "linux-libc-dev:amd64=7.0.0-38.38",
+  "kernelImageOrModulesInstalled": false,
+  "productCGOEnabled": false,
+  "exactHeaderVexRows": 2691,
+  "exactVendorPendingRows": 100,
+  "officialCveCount": 40,
+  "rawZeroClaim": false,
+  "upstreamCvssRetained": true,
+  "trackerIsNotNotAffected": true
+}
