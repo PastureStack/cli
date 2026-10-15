@@ -7,9 +7,9 @@ ARG DAPPER_HOST_ARCH=amd64
 ARG GO_VERSION=1.27.2
 ARG GO_SHA256_amd64=ecbadb99091a3f46e31f5f934b068b1864eafa7995211b39eaddf76996045fe5
 ARG GO_SHA256_arm64=94f3e30b8e374bc285e7dadc11e0865726b9bc6e85b841ccceaabc0214c6b7c8
-ARG DOCKER_VERSION=29.7.2
-ARG DOCKER_SHA256_amd64=803d433f226db4776e1768fd319fc6c6e4935a456acf84fcc0080818b854bc8f
-ARG DOCKER_SHA256_arm64=43d143448adf2c2787704e7d7704fd6d62d367a54c5edaef0a3f75509cb0938d
+ARG DOCKER_VERSION=29.9.1
+ARG DOCKER_SHA256_amd64=c158ecc55adb3afb01bbd3539ed3b997d20c26dbdc418080506cc1bf5243ff57
+ARG DOCKER_SHA256_arm64=3e93cc6d1a686456a3b18eefdde26467a837a7a2b257af22e27cba1dbc1b2018
 
 ENV HOST_ARCH=${DAPPER_HOST_ARCH} \
     ARCH=${DAPPER_HOST_ARCH} \
@@ -40,6 +40,7 @@ RUN set -eux; \
         "${UBUNTU_APT_SNAPSHOT}" > /etc/apt/sources.list.d/pasturestack-snapshot.sources; \
     printf 'Acquire::Retries "5";\nAcquire::http::Timeout "30";\nAcquire::https::Timeout "30";\nAcquire::http::Pipeline-Depth "0";\nAcquire::https::CaInfo "/etc/ssl/certs/ca-certificates.crt";\nAcquire::https::Verify-Peer "true";\nAcquire::https::Verify-Host "true";\nAcquire::AllowInsecureRepositories "false";\nAPT::Get::AllowUnauthenticated "false";\n' > /etc/apt/apt.conf.d/80pasturestack-retries; \
     apt-get update; \
+    apt-get upgrade -y; \
     apt-get install -y --no-install-recommends \
         bash="${UBUNTU_APT_BASH_VERSION}" \
         ca-certificates="${UBUNTU_APT_CA_CERTIFICATES_VERSION}" \
@@ -48,6 +49,9 @@ RUN set -eux; \
         git="${UBUNTU_APT_GIT_VERSION}" \
         gzip="${UBUNTU_APT_GZIP_VERSION}" \
         libc6-dev="${UBUNTU_APT_LIBC6_DEV_VERSION}" \
+        libssl3t64="${UBUNTU_APT_OPENSSL_VERSION}" \
+        openssl="${UBUNTU_APT_OPENSSL_VERSION}" \
+        openssl-provider-legacy="${UBUNTU_APT_OPENSSL_VERSION}" \
         tar="${UBUNTU_APT_TAR_VERSION}" \
         xz-utils="${UBUNTU_APT_XZ_UTILS_VERSION}" \
         zip="${UBUNTU_APT_ZIP_VERSION}"; \

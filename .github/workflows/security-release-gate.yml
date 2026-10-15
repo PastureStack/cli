@@ -21,7 +21,7 @@ jobs:
       DAPPER_IMAGE: pasturestack/cli-dapper:${{ github.sha }}
       RUNTIME_IMAGE: pasturestack/cli-runtime:${{ github.sha }}
       TRIVY_IMAGE: aquasec/trivy:0.74.0@sha256:62b1e65e8869bc4b4c6aa4fa2b21595256c7c2f6018a9d9ad61caf87187c1969
-      VERSION_OVERRIDE: 0.6.17
+      VERSION_OVERRIDE: 0.6.18
       CROSS: 'true'
       SKIP_IMAGE_BUILD: 'true'
 
@@ -39,9 +39,16 @@ jobs:
           test -z "$(git status --porcelain)"
           mkdir -p evidence
           git rev-parse HEAD > evidence/source-revision.txt
+          git rev-parse HEAD^{tree} > evidence/source-tree.txt
+          python3 scripts/test-security-reports.py -v
+          python3 scripts/test-publish-reviewed-release.py -v
           sha256sum Dockerfile.dapper package/Dockerfile ubuntu-apt.lock \
             go.mod go.sum vendor/modules.txt \
-            security/dapper.openvex.json > evidence/source-locks.sha256
+            security/dapper.openvex.json security/vendor-pending.json \
+            security/cli018-review-evidence.json scripts/check-security-reports.py \
+            scripts/publish-reviewed-release.py > evidence/source-locks.sha256
+          cp security/vendor-pending.json security/dapper.openvex.json \
+            security/cli018-review-evidence.json evidence/
 
       - name: Build, test, validate, and package twice
         shell: bash
@@ -72,15 +79,15 @@ jobs:
           }
 
           run_ci
-          artifact="dist/artifacts/0.6.17/pasturestack-linux-amd64-0.6.17.tar.gz"
+          artifact="dist/artifacts/0.6.18/pasturestack-cli-linux-amd64-0.6.18.tar.gz"
           test -s "$artifact"
-          find dist/artifacts/0.6.17 -type f -print0 \
+          find dist/artifacts/0.6.18 -type f -print0 \
             | LC_ALL=C sort -z \
             | xargs -0 sha256sum > /tmp/first-artifacts.sha256
 
           rm -rf bin build dist
           run_ci
-          find dist/artifacts/0.6.17 -type f -print0 \
+          find dist/artifacts/0.6.18 -type f -print0 \
             | LC_ALL=C sort -z \
             | xargs -0 sha256sum > /tmp/second-artifacts.sha256
           diff -u /tmp/first-artifacts.sha256 /tmp/second-artifacts.sha256
@@ -89,8 +96,8 @@ jobs:
           mkdir -p evidence/product
           tar -xzf "$artifact" -C evidence/product --strip-components=1
           test -x evidence/product/pasturestack
-          evidence/product/pasturestack --version | grep -F '0.6.17' >/dev/null
-          find dist/artifacts/0.6.17 -type f -print0 \
+          evidence/product/pasturestack --version | grep -F '0.6.18' >/dev/null
+          find dist/artifacts/0.6.18 -type f -print0 \
             | LC_ALL=C sort -z \
             | xargs -0 sha256sum > evidence/artifacts.sha256
           docker run --rm --entrypoint go \
@@ -108,7 +115,7 @@ jobs:
             --tag "$RUNTIME_IMAGE" \
             --file package/Dockerfile \
             .
-          docker run --rm "$RUNTIME_IMAGE" --version | grep -F '0.6.17' >/dev/null
+          docker run --rm "$RUNTIME_IMAGE" --version | grep -F '0.6.18' >/dev/null
 
       - name: Record resolved build inputs
         shell: bash
@@ -164,52 +171,11 @@ jobs:
             --scanners vuln,secret --format json \
             --output /work/evidence/runtime-image-security.json "$RUNTIME_IMAGE"
 
-          jq -r '
-            .Results[]?.Vulnerabilities[]?
-            | select(.Severity == "CRITICAL" or .Severity == "HIGH")
-            | [.VulnerabilityID, .PkgIdentifier.PURL]
-            | @tsv
-          ' evidence/dapper-image-raw.json | LC_ALL=C sort -u \
-            > /tmp/dapper-critical-high.tsv
-          jq -r '
-            .statements[]?
-            | select(
-                .status == "not_affected"
-                and .justification == "vulnerable_code_not_present"
-              )
-            | .vulnerability.name as $id
-            | .products[]?
-            | [$id, .["@id"]]
-            | @tsv
-          ' security/dapper.openvex.json | LC_ALL=C sort -u \
-            > /tmp/dapper-vex.tsv
-          test -s /tmp/dapper-critical-high.tsv
-          diff -u /tmp/dapper-critical-high.tsv /tmp/dapper-vex.tsv
-          test "$(jq '.statements | length' security/dapper.openvex.json)" \
-            -eq "$(wc -l < /tmp/dapper-vex.tsv)"
-          jq -e '
-            all(
-              .statements[];
-              .status == "not_affected"
-              and .justification == "vulnerable_code_not_present"
-              and ((.impact_statement | type) == "string")
-              and ((.impact_statement | length) > 0)
-            )
-          ' security/dapper.openvex.json >/dev/null
           grep -F $'build\tCGO_ENABLED=0' evidence/product-go-version.txt >/dev/null
           if grep -Eq '^linux-(image|modules)([-:]|[[:space:]])' evidence/dapper-dpkg.tsv; then
             printf 'Unexpected Linux kernel runtime package in Dapper image\n' >&2
             exit 1
           fi
-          docker run --rm \
-            -v /var/run/docker.sock:/var/run/docker.sock \
-            -v "$PWD:/work" -w /work \
-            -v "$trivy_cache:/root/.cache/trivy" \
-            "$TRIVY_IMAGE" image \
-            --scanners vuln,secret \
-            --vex /work/security/dapper.openvex.json --show-suppressed \
-            --format json \
-            --output /work/evidence/dapper-image-applicable.json "$DAPPER_IMAGE"
           docker run --rm \
             -v "$source_tree:/scan:ro" \
             -v "$PWD/evidence:/evidence" \
@@ -233,70 +199,15 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          count() {
-            jq "$2" "$1"
-          }
-          source_secrets=$(count evidence/source-security.json '[.Results[]?.Secrets[]?] | length')
-          source_critical=$(count evidence/source-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "CRITICAL")] | length')
-          source_high=$(count evidence/source-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "HIGH")] | length')
-          source_medium=$(count evidence/source-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "MEDIUM")] | length')
-          source_low=$(count evidence/source-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "LOW")] | length')
-          product_secrets=$(count evidence/product-security.json '[.Results[]?.Secrets[]?] | length')
-          product_critical=$(count evidence/product-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "CRITICAL")] | length')
-          product_high=$(count evidence/product-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "HIGH")] | length')
-          product_medium=$(count evidence/product-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "MEDIUM")] | length')
-          product_low=$(count evidence/product-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "LOW")] | length')
-          dapper_raw_critical=$(count evidence/dapper-image-raw.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "CRITICAL")] | length')
-          dapper_raw_high=$(count evidence/dapper-image-raw.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "HIGH")] | length')
-          dapper_applicable_critical=$(count evidence/dapper-image-applicable.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "CRITICAL" and .Status != "not_affected")] | length')
-          dapper_applicable_high=$(count evidence/dapper-image-applicable.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "HIGH" and .Status != "not_affected")] | length')
-          dapper_secrets=$(count evidence/dapper-image-applicable.json '[.Results[]?.Secrets[]?] | length')
-          runtime_secrets=$(count evidence/runtime-image-security.json '[.Results[]?.Secrets[]?] | length')
-          runtime_critical=$(count evidence/runtime-image-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "CRITICAL")] | length')
-          runtime_high=$(count evidence/runtime-image-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "HIGH")] | length')
-          runtime_medium=$(count evidence/runtime-image-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "MEDIUM")] | length')
-          runtime_low=$(count evidence/runtime-image-security.json '[.Results[]?.Vulnerabilities[]? | select(.Severity == "LOW")] | length')
-          {
-            printf 'source_secrets=%s\n' "$source_secrets"
-            printf 'source_critical=%s\n' "$source_critical"
-            printf 'source_high=%s\n' "$source_high"
-            printf 'source_medium=%s\n' "$source_medium"
-            printf 'source_low=%s\n' "$source_low"
-            printf 'product_secrets=%s\n' "$product_secrets"
-            printf 'product_critical=%s\n' "$product_critical"
-            printf 'product_high=%s\n' "$product_high"
-            printf 'product_medium=%s\n' "$product_medium"
-            printf 'product_low=%s\n' "$product_low"
-            printf 'dapper_raw_critical=%s\n' "$dapper_raw_critical"
-            printf 'dapper_raw_high=%s\n' "$dapper_raw_high"
-            printf 'dapper_applicable_critical=%s\n' "$dapper_applicable_critical"
-            printf 'dapper_applicable_high=%s\n' "$dapper_applicable_high"
-            printf 'dapper_secrets=%s\n' "$dapper_secrets"
-            printf 'runtime_secrets=%s\n' "$runtime_secrets"
-            printf 'runtime_critical=%s\n' "$runtime_critical"
-            printf 'runtime_high=%s\n' "$runtime_high"
-            printf 'runtime_medium=%s\n' "$runtime_medium"
-            printf 'runtime_low=%s\n' "$runtime_low"
-          } | tee evidence/security-summary.txt
-
-          test "$source_secrets" -eq 0
-          test "$source_critical" -eq 0
-          test "$source_high" -eq 0
-          test "$source_medium" -eq 0
-          test "$source_low" -eq 0
-          test "$product_secrets" -eq 0
-          test "$product_critical" -eq 0
-          test "$product_high" -eq 0
-          test "$product_medium" -eq 0
-          test "$product_low" -eq 0
-          test "$dapper_applicable_critical" -eq 0
-          test "$dapper_applicable_high" -eq 0
-          test "$dapper_secrets" -eq 0
-          test "$runtime_secrets" -eq 0
-          test "$runtime_critical" -eq 0
-          test "$runtime_high" -eq 0
-          test "$runtime_medium" -eq 0
-          test "$runtime_low" -eq 0
+          python3 scripts/check-security-reports.py \
+            --release "$VERSION_OVERRIDE" \
+            --tracker security/vendor-pending.json \
+            --vex security/dapper.openvex.json \
+            --report source=evidence/source-security.json \
+            --report product=evidence/product-security.json \
+            --report builder=evidence/dapper-image-raw.json \
+            --report runtime=evidence/runtime-image-security.json \
+            --output evidence/security-summary.json
 
       - name: Upload review evidence
         if: always()
@@ -311,11 +222,12 @@ jobs:
         if: success()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: cli-release-candidate-0.6.17-${{ github.sha }}
+          name: cli-release-candidate-0.6.18-${{ github.sha }}
           path: |
-            dist/artifacts/0.6.17/
+            dist/artifacts/0.6.18/
             evidence/artifacts.sha256
             evidence/source-revision.txt
+            evidence/source-tree.txt
           if-no-files-found: error
           retention-days: 14
 
