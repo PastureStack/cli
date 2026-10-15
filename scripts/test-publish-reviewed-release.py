@@ -23,9 +23,28 @@ class PublisherTests(unittest.TestCase):
 
     def test_publish_explicitly_clears_both_flags(self):
         with patch.object(publisher, 'command') as command:
-            publisher.publish_draft()
-        self.assertIn('--draft=false', command.call_args.args)
-        self.assertIn('--prerelease=false', command.call_args.args)
+            publisher.publish_draft(123)
+        self.assertEqual(command.call_args.args,
+                         ('gh', 'api', '--method', 'PATCH', 'repos/PastureStack/cli/releases/123',
+                          '-F', 'draft=false', '-F', 'prerelease=false'))
+
+    def test_lookup_uses_numeric_id_before_tag_exists(self):
+        draft = dict(id=123, tag_name=publisher.TAG, target_commitish='a' * 40,
+                     draft=True, prerelease=False)
+        with patch.object(publisher, 'api', side_effect=[[draft], draft]) as api:
+            self.assertEqual(publisher.find_draft('a' * 40), draft)
+        self.assertEqual([call.args[0] for call in api.call_args_list],
+                         ['releases?per_page=100', 'releases/123'])
+
+    def test_lookup_rejects_duplicates_and_wrong_source(self):
+        draft = dict(id=123, tag_name=publisher.TAG, target_commitish='a' * 40,
+                     draft=True, prerelease=False)
+        with patch.object(publisher, 'api', return_value=[draft, draft]):
+            with self.assertRaisesRegex(RuntimeError, 'EXACT_DRAFT_RELEASE'):
+                publisher.find_draft('a' * 40)
+        with patch.object(publisher, 'api', side_effect=[[draft], draft]):
+            with self.assertRaisesRegex(RuntimeError, 'EXACT_DRAFT_SOURCE'):
+                publisher.find_draft('b' * 40)
 
     def test_published_prerelease_is_rejected(self):
         release = dict(immutable=True, draft=False, prerelease=False, tag_name=publisher.TAG,

@@ -55,8 +55,20 @@ def create_draft(source, assets, hashes, notes):
             '--target', source, '--draft', '--title', 'CLI ' + VERSION, '--notes-file', str(notes))
 
 
-def publish_draft():
-    command('gh', 'release', 'edit', TAG, '--repo', REPO, '--draft=false', '--prerelease=false')
+def find_draft(source):
+    # GitHub's by-tag endpoint returns404 until a newly created draft creates
+    # its tag at publication. Resolve its unique numeric ID instead.
+    matches = [item for item in api('releases?per_page=100') if item['tag_name'] == TAG]
+    need(len(matches) == 1, 'EXACT_DRAFT_RELEASE')
+    draft = api('releases/' + str(matches[0]['id']))
+    need(draft['tag_name'] == TAG and draft['target_commitish'] == source and
+         draft['draft'] is True and draft['prerelease'] is False, 'EXACT_DRAFT_SOURCE')
+    return draft
+
+
+def publish_draft(release_id):
+    command('gh', 'api', '--method', 'PATCH', 'repos/' + REPO + '/releases/' + str(release_id),
+            '-F', 'draft=false', '-F', 'prerelease=false')
 
 
 def require_published(published, hashes):
@@ -166,15 +178,15 @@ def main():
         hashes['SHA256SUMS'] = digest(assets / 'SHA256SUMS')
         checked_source(source, args.run_id)
         create_draft(source, assets, hashes, root / ('RELEASE-' + VERSION + '.md'))
-        draft = api('releases/tags/' + TAG)
+        draft = find_draft(source)
         actual = {item['name']: item for item in draft['assets']}
         need(draft['draft'] and set(actual) == set(hashes), 'DRAFT_ASSET_SET')
         for name, expected in hashes.items():
             need(actual[name]['digest'] == 'sha256:' + expected and actual[name]['size'] == (assets / name).stat().st_size,
                  'DRAFT_ASSET_DIGEST')
         checked_source(source, args.run_id)
-        publish_draft()
-        published = api('releases/tags/' + TAG)
+        publish_draft(draft['id'])
+        published = api('releases/' + str(draft['id']))
         require_published(published, hashes)
         need(api('commits/' + TAG)['sha'] == source, 'PUBLISHED_TAG_SOURCE')
         receipt_assets = []
