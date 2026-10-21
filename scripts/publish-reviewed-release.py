@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish only checked numeric CLI0.6.18 bytes from an exact successful main run.
+"""Publish only checked numeric CLI0.6.19 bytes from an exact successful main run.
 
 Default --plan has no network activity. Explicit --execute requires normal
 protected/signed merge, exact required checks, complete security/repro gate,
@@ -17,7 +17,7 @@ import tarfile
 import tempfile
 from urllib.request import Request, urlopen
 
-REPO, VERSION, TAG = 'PastureStack/cli', '0.6.18', 'v0.6.18'
+REPO, VERSION, TAG = 'PastureStack/cli', '0.6.19', 'v0.6.19'
 
 
 def need(ok, code):
@@ -127,7 +127,7 @@ def main():
          not command('git', '-C', str(root), 'status', '--porcelain').stdout, 'CLEAN_EXACT_SOURCE_CHECKOUT')
     tree, merged_pr, workflow = checked_source(source, args.run_id)
     need(not api('git/matching-refs/tags/' + TAG), 'IMMUTABLE_TAG_ALREADY_EXISTS')
-    with tempfile.TemporaryDirectory(prefix='pasturestack-cli018-release-') as temporary:
+    with tempfile.TemporaryDirectory(prefix='pasturestack-cli019-release-') as temporary:
         staging = Path(temporary)
         candidate, evidence, assets = [staging / name for name in ('candidate', 'evidence', 'assets')]
         for directory in (candidate, evidence, assets): directory.mkdir()
@@ -157,7 +157,7 @@ def main():
             need(original.is_file(), 'SERVER_PLATFORM_ASSET_REQUIRED')
         for name in ('security-summary.json', 'source.cdx.json', 'product.cdx.json', 'runtime.cdx.json',
                      'source-security.json', 'product-security.json', 'dapper-image-raw.json', 'runtime-image-security.json',
-                     'dapper-dpkg.tsv', 'runtime-dpkg.tsv', 'product-go-version.txt', 'source-locks.sha256',
+                     'dapper-dpkg.tsv', 'runtime-dpkg.tsv', 'product-go-version.txt', 'docker-cli-go-version.txt', 'source-locks.sha256',
                      'vendor-pending.json', 'dapper.openvex.json', 'cli018-review-evidence.json'):
             shutil.copyfile(unique(evidence, name), assets / ('cli-' + name))
         binary_archive = assets / ('pasturestack-cli-linux-amd64-' + VERSION + '.tar.gz')
