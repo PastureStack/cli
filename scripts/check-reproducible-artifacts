@@ -2,7 +2,7 @@
 set -euo pipefail
 
 repo=$(cd "$(dirname "$0")/.." && pwd)
-version=${VERSION_OVERRIDE:-0.6.18}
+version=${VERSION_OVERRIDE:-0.6.19}
 : "${SOURCE_DATE_EPOCH:?SOURCE_DATE_EPOCH must be set to the authoritative commit epoch}"
 
 workspace=$(mktemp -d)

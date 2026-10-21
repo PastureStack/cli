@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "release": "0.6.18",
-  "generatedAt": "2026-10-15T03:53:56Z",
+  "release": "0.6.19",
+  "generatedAt": "2026-10-21T21:17:55.028968Z",
   "policy": {
     "allowedSeverities": [
       "LOW",
@@ -38,9 +38,9 @@
       "sourcePackage": "binutils",
       "source": "https://ubuntu.com/security/CVE-2017-13716",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
-      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "2005b37781d8253c7c147b07b921c5b060c293e8129d709cfedab9a7ce633646",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -71,9 +71,9 @@
       "sourcePackage": "binutils",
       "source": "https://ubuntu.com/security/CVE-2017-13716",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
-      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "2005b37781d8253c7c147b07b921c5b060c293e8129d709cfedab9a7ce633646",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -104,9 +104,9 @@
       "sourcePackage": "binutils",
       "source": "https://ubuntu.com/security/CVE-2017-13716",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
-      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "2005b37781d8253c7c147b07b921c5b060c293e8129d709cfedab9a7ce633646",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -137,9 +137,9 @@
       "sourcePackage": "binutils",
       "source": "https://ubuntu.com/security/CVE-2017-13716",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
-      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "2005b37781d8253c7c147b07b921c5b060c293e8129d709cfedab9a7ce633646",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -170,9 +170,9 @@
       "sourcePackage": "binutils",
       "source": "https://ubuntu.com/security/CVE-2017-13716",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
-      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "2005b37781d8253c7c147b07b921c5b060c293e8129d709cfedab9a7ce633646",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -203,9 +203,9 @@
       "sourcePackage": "binutils",
       "source": "https://ubuntu.com/security/CVE-2017-13716",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
-      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "2005b37781d8253c7c147b07b921c5b060c293e8129d709cfedab9a7ce633646",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -236,9 +236,9 @@
       "sourcePackage": "binutils",
       "source": "https://ubuntu.com/security/CVE-2017-13716",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
-      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "2005b37781d8253c7c147b07b921c5b060c293e8129d709cfedab9a7ce633646",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -269,9 +269,9 @@
       "sourcePackage": "binutils",
       "source": "https://ubuntu.com/security/CVE-2017-13716",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2017-13716",
-      "officialTrackerSha256": "a00acadb89338590f6c71a11460e6a22e5eb87938f36fa783fa92ed1126b6070",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "2005b37781d8253c7c147b07b921c5b060c293e8129d709cfedab9a7ce633646",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -304,9 +304,9 @@
       "sourcePackage": "git",
       "source": "https://ubuntu.com/security/CVE-2024-52005",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-52005",
-      "officialTrackerSha256": "e867064dd62789d5b1e713954b48b89d9397ea7ed71838b136433b2266e1b270",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "f36c678fea1defe6c2414b0550e3be610050f7af13b716da4ecfe32da54eb7d2",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -339,9 +339,9 @@
       "sourcePackage": "git",
       "source": "https://ubuntu.com/security/CVE-2024-52005",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-52005",
-      "officialTrackerSha256": "e867064dd62789d5b1e713954b48b89d9397ea7ed71838b136433b2266e1b270",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "f36c678fea1defe6c2414b0550e3be610050f7af13b716da4ecfe32da54eb7d2",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -366,9 +366,9 @@
       "sourcePackage": "shadow",
       "source": "https://ubuntu.com/security/CVE-2024-56433",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-56433",
-      "officialTrackerSha256": "4cad3bae38d6920b5135ade486f7f73fd7811e0c82bcd74cfa8bdd7a0b9316f4",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "dfddd29f0a283f12826ac166981949fd124bfe2a20abac56ae4c90762cf31d3d",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -393,9 +393,9 @@
       "sourcePackage": "shadow",
       "source": "https://ubuntu.com/security/CVE-2024-56433",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-56433",
-      "officialTrackerSha256": "4cad3bae38d6920b5135ade486f7f73fd7811e0c82bcd74cfa8bdd7a0b9316f4",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "dfddd29f0a283f12826ac166981949fd124bfe2a20abac56ae4c90762cf31d3d",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -428,9 +428,63 @@
       "sourcePackage": "expat",
       "source": "https://ubuntu.com/security/CVE-2025-66382",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2025-66382",
-      "officialTrackerSha256": "ab531b3977cb2a2d8916eaf2d7732ed3b6b08b160eb0806a20139e98e2d310bd",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "d840d13c8916c14a4c949566ffb09382ac1e52a8a573a07053fe5082b949e2bb",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-102473",
+      "purl": "pkg:deb/ubuntu/dash@0.5.12-12ubuntu3?arch=amd64&distro=ubuntu-26.04",
+      "package": "dash",
+      "installedVersion": "0.5.12-12ubuntu3",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "V3Score": 5.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-15)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "dash",
+      "source": "https://ubuntu.com/security/CVE-2026-102473",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-102473",
+      "officialTrackerSha256": "48f87377bf37cae7992bb45cb62ad78ab4665eff2bc0f2bbdc0cae208ad55d72",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-102474",
+      "purl": "pkg:deb/ubuntu/dash@0.5.12-12ubuntu3?arch=amd64&distro=ubuntu-26.04",
+      "package": "dash",
+      "installedVersion": "0.5.12-12ubuntu3",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-15)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "dash",
+      "source": "https://ubuntu.com/security/CVE-2026-102474",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-102474",
+      "officialTrackerSha256": "1c9a093cbdb9b3e5072721f9b1db5636f51b72776b4b9e36a16dea4b54f4482b",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -455,9 +509,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-103111",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-103111",
-      "officialTrackerSha256": "d6767ce5a9a71f8bb24dc97e083aa738303355889e84eb1fbc3f881dd06210c2",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "d8f7629321ebc9dbf3abb851d33ff5162bd3ab46840376b9623aa57bb2686bc4",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -482,9 +536,9 @@
       "sourcePackage": "cyrus-sasl2",
       "source": "https://ubuntu.com/security/CVE-2026-107161",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-107161",
-      "officialTrackerSha256": "b8944f4380c18a8440b585e47701988536e65f3389e83da1c01fc0cea93686ac",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "647886d588a950baa5bae09e46ce1eb1a9f9836d10ff3d3d57bf2fca68221dfa",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -509,9 +563,9 @@
       "sourcePackage": "cyrus-sasl2",
       "source": "https://ubuntu.com/security/CVE-2026-107161",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-107161",
-      "officialTrackerSha256": "b8944f4380c18a8440b585e47701988536e65f3389e83da1c01fc0cea93686ac",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "647886d588a950baa5bae09e46ce1eb1a9f9836d10ff3d3d57bf2fca68221dfa",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -536,9 +590,9 @@
       "sourcePackage": "p11-kit",
       "source": "https://ubuntu.com/security/CVE-2026-13757",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-13757",
-      "officialTrackerSha256": "d261e9b54579aab9033f65cb0ae5a868c8165e0b7bcdae7e0e9d32b1a492a72b",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "c8bfc367f6f40fba9b326f99d637dc166dcb1a806577a50e2206b7a81f4aced5",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -563,9 +617,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-18374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
-      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4e59cfd08625669f17f8241970e5bfa448b4dc7ead59a6facda014463fa87d50",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -590,9 +644,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-18374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
-      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4e59cfd08625669f17f8241970e5bfa448b4dc7ead59a6facda014463fa87d50",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -617,9 +671,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-18374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
-      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4e59cfd08625669f17f8241970e5bfa448b4dc7ead59a6facda014463fa87d50",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -644,9 +698,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-18374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
-      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4e59cfd08625669f17f8241970e5bfa448b4dc7ead59a6facda014463fa87d50",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -671,9 +725,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-18374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
-      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4e59cfd08625669f17f8241970e5bfa448b4dc7ead59a6facda014463fa87d50",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -702,9 +756,9 @@
       "sourcePackage": "tar",
       "source": "https://ubuntu.com/security/CVE-2026-18477",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18477",
-      "officialTrackerSha256": "5a14bb33fa1ac2456d24b4e2a58e5af4e1d376611447ec6ff0becce29ca83ee1",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "065a876a6718a674e9b851bac79246f584c36b2193784d31580d5b995e5bc32e",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -729,9 +783,9 @@
       "sourcePackage": "tar",
       "source": "https://ubuntu.com/security/CVE-2026-18508",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18508",
-      "officialTrackerSha256": "5eb06b53f4e6dea3e8afdfc243d9d59b3c49d904ee7529a60720c70d96122c4c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4cc1b8b7f60f55d32e8426846fc81b7ea454ade1acf4011ea7dbc027a354e66f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -756,9 +810,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35341",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35341",
-      "officialTrackerSha256": "34f2b4fcf74077836d449a5c75ac0889bca6347e145aecfd899aab62a3c5762f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "69996b97862b23961bedb61dd6c57a2076a80656d1e270816cd1181b7c634d5d",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -783,9 +837,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35344",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35344",
-      "officialTrackerSha256": "b0bb504cd6f2684174a17abc0aa4c16b8353c083ac4808bb34fa772da5cd6523",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "dda7559c8b77edea870e33d637eec340f2d3e412dbfe07fa3bbb45dcbada3bf8",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -810,9 +864,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35345",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35345",
-      "officialTrackerSha256": "59c290d073a801555570acdddcfcb785db60d047e15411488d3bdcb31db13f0c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "81ddde61aaf1a17b28fad68f83b6e93712d579bce9afe3c7c7a1bd62f634c756",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -837,9 +891,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35348",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35348",
-      "officialTrackerSha256": "9becdd73fd5a99b4591a9390c79e0f5ff70d7156c0ca603a513528e244c6f3bf",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "190affe2a842f812081f1be0e23bd3eb3e9e1107ca029a9b5129c46eecfd9a0f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -864,9 +918,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35350",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35350",
-      "officialTrackerSha256": "1c8af99479aa67e13e437a55946190505f8020d9dc8fad62545fba868158f5aa",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "0775ab670745b02d0e2da43efd9ffa4023ab384c4fd8f2ec581f95ba924716a2",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -891,9 +945,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35351",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35351",
-      "officialTrackerSha256": "e6f481232dd909954f6426aa97f51bb26e330a2a862615eefa19e11849159495",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "038a6c19779dcb3aa638dfc365aac752e1d4652f69962f6f22226fddf392db4e",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -918,9 +972,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35352",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35352",
-      "officialTrackerSha256": "4d3b4cb251c440f3c1002452ea59369eff43e6a9c2d7e830eb256a97be07c66c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "fa9a2e2580f0d99ecbb9dd2fb28b035ac9306ead9eb9eb0755c1eec235468c74",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -945,9 +999,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35354",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35354",
-      "officialTrackerSha256": "25486fb082e400aafcd0c97a56ba13d9b03e95bf0a3b4760e202bbefbe7a43a3",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "1f1c39aaedd10b74d9eb83bd3ab2237f09d4ab31cda7961e5b7f67bb3e1bb79f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -972,9 +1026,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35357",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35357",
-      "officialTrackerSha256": "bff5c04043a9e5ba6c596bb394286033e8616f8d07f9ce12b8a8a26ba2285647",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "fd16b0e26bf8c37a3668b12a697e58bbf14f02e3cc74e9451c98dbeefb6ddd05",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -999,9 +1053,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35359",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35359",
-      "officialTrackerSha256": "1eeda951a482863fca2a3be53a2fa9c4810e7dd53f064abb42303d2369a0c132",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4164e18cda157b48e3356ba00fd0669f4d28008e97add656bc4a73323e9a5ae7",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1026,9 +1080,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35360",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35360",
-      "officialTrackerSha256": "b6b509b97b56cfe6320f20b60ba2c5c588fa0a167ee99cd4dabbc0e3123eb97e",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "fb01a4f6b1c27e1b0d6de0f87abcd3b5caa64c885fdda81331484323b72daa98",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1053,9 +1107,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35363",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35363",
-      "officialTrackerSha256": "744dd0a5a1eb928e06ce65fe5dfc3365a6df1dfbc0e453a907087b7e92cc760c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "c9bf3031df140ec339b158dfb838be7de5f7c5d2591f4a2337a13c44d3b01ace",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1080,9 +1134,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35364",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35364",
-      "officialTrackerSha256": "fa9cadd32bec57e4377643e4a0dad6613d65107d4f2de13b74709af11df00c20",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "a71f68a673924601a4d9c4109de426f07136eece4d7863f3f48960541321ff6b",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1107,9 +1161,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35367",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35367",
-      "officialTrackerSha256": "cef8d8f78f7451a4678bbb996b74bf0ed09b657db8eaadc99537661d6bc06c4f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "b3984104e6eacff62cb0ba25506c94f63f487da52d243930bfd017ba3dcbd83e",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1134,9 +1188,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35368",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35368",
-      "officialTrackerSha256": "300292cde0780383fe59fb6090ea408ee6862d78af0963e0b3bcde19a2d65649",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "aadef4057282e8395bb8a3b7fb756fc37027342b68938f62024938b75f5af19f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1161,9 +1215,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35370",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35370",
-      "officialTrackerSha256": "8daa3c91b6b59038aa048395d7ba09826f26e856323546a7b19229767b28259c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "94e5212f84da7f8fd2f6bae5d356986ea2ee44accdd2570e062c53d942c05272",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1188,9 +1242,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35371",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35371",
-      "officialTrackerSha256": "af63dbb8042657e66e04e98f2fea9e529f90f672114ccbcdaf116ab6c7226865",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "6093723013dfe4a032dc9aa1315e9caef83a0d907f7b5292a208f115a2798bd6",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1219,9 +1273,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35373",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35373",
-      "officialTrackerSha256": "cf2688cc1b6a44be2987437d30e4c8f8d595956f679c651ed358bd6e4a3c53a2",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4949652b7c06a08d1417377a6f3f7ffdbc516b5662be0d4268db1f0eb3acc02d",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1246,9 +1300,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35374",
-      "officialTrackerSha256": "d13dd911afb911e0357bbfbaa53b3e579f0c9028288cf3fbbfb40c659b7d70ad",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "770d8fab38c0c35b6cc9b4df8c65d46bfb5a334d915aedf7939f705a1bb0d47f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1273,9 +1327,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35377",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35377",
-      "officialTrackerSha256": "a09cf6fdde2851289b4611e3f30845d76932cc44f439b2f59b0297e1c1509246",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "820c33785f24e2665a8ced62803ba651b7a3584892d1c50ebf770ffbb93724ca",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1304,9 +1358,9 @@
       "sourcePackage": "systemd",
       "source": "https://ubuntu.com/security/CVE-2026-40228",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-40228",
-      "officialTrackerSha256": "13bae99932a99d59359144b89a6f9de5b061ed6a7ae6ddf8cd7a7bb5ada71bb2",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "774bbae5aa41f4c6fa54e5012b034d00d4fcd370965cbcce8e704206c919d66a",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1335,9 +1389,36 @@
       "sourcePackage": "systemd",
       "source": "https://ubuntu.com/security/CVE-2026-40228",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-40228",
-      "officialTrackerSha256": "13bae99932a99d59359144b89a6f9de5b061ed6a7ae6ddf8cd7a7bb5ada71bb2",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "774bbae5aa41f4c6fa54e5012b034d00d4fcd370965cbcce8e704206c919d66a",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-67693",
+      "purl": "pkg:deb/ubuntu/libgnutls30t64@3.8.12-2ubuntu1.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libgnutls30t64",
+      "installedVersion": "3.8.12-2ubuntu1.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "V3Score": 5.9
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-15)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "gnutls28",
+      "source": "https://ubuntu.com/security/CVE-2026-67693",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-67693",
+      "officialTrackerSha256": "3e0ee604fa342279d4eede82d1109e89aceaccfcad595347fc6d3f359f40f030",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1351,15 +1432,15 @@
       "scannerSeveritySource": "ubuntu",
       "upstreamCVSS": {},
       "status": "vendor-pending",
-      "upstreamVendorStatus": "Deferred",
-      "officialUbuntuStatus": "deferred (2026-09-11)",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
       "ubuntuPriority": "medium",
       "sourcePackage": "zlib",
       "source": "https://ubuntu.com/security/CVE-2026-85091",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-85091",
-      "officialTrackerSha256": "e38984e9acbc49498f991f12d98e8ef234164e0db25ae9a2d655faf1ad39a1fc",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "de6b49f86b59e7c1f7553d9f0f730240e1ef8320325719f1ee912902abbf8276",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1384,9 +1465,36 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-86145",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-86145",
-      "officialTrackerSha256": "d75b677dfed95a52c3b0f75b97477dc33dc5db4e5634c4ce67d3f2b86dcfb893",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "e9cfec8357d45fc35afda1362a94363b4252384570387ad3da6775207e3fc60a",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-88647",
+      "purl": "pkg:deb/ubuntu/libgnutls30t64@3.8.12-2ubuntu1.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libgnutls30t64",
+      "installedVersion": "3.8.12-2ubuntu1.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "V3Score": 7.4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-15)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "gnutls28",
+      "source": "https://ubuntu.com/security/CVE-2026-88647",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-88647",
+      "officialTrackerSha256": "21d312f005680a805ac5430e3ba58a6558f84c1befc7058a19c508e83ab9bcc2",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1411,9 +1519,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-89092",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
-      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "86420b8685d02a65c7764f5b95ad6699350d6186bce2075a36921bd50d49e613",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1438,9 +1546,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-89092",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
-      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "86420b8685d02a65c7764f5b95ad6699350d6186bce2075a36921bd50d49e613",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1465,9 +1573,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-89092",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
-      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "86420b8685d02a65c7764f5b95ad6699350d6186bce2075a36921bd50d49e613",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1492,9 +1600,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-89092",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
-      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "86420b8685d02a65c7764f5b95ad6699350d6186bce2075a36921bd50d49e613",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1519,9 +1627,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-89092",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
-      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "86420b8685d02a65c7764f5b95ad6699350d6186bce2075a36921bd50d49e613",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1550,9 +1658,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89156",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89156",
-      "officialTrackerSha256": "89b59d428a0472dceb239856088d6b21824633681ceb9b9bcdc973be330f63a8",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "ad2423ad6bb91b80582dbce8e04388781f64b241a639497a1a6d79f1c0f8ce92",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1581,9 +1689,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89157",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89157",
-      "officialTrackerSha256": "213ba54479ec014ad2826a8a785fa6c7b21ba3db2749a39f2a17a1b654fb3202",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "1810a755ecd94a480ab887af7ef6b830f44baabecf4979c81ed9e4fd1ade1e8e",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1612,9 +1720,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89158",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89158",
-      "officialTrackerSha256": "496674acda52d21249c138b3d3d7e79dcc41d265f2a66315bd3ed19cc23993cb",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "f02a0d71e0be19431aec58ba75c77dd5ea8077ee1a01d182f66de62cc359ff7f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1643,9 +1751,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89160",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89160",
-      "officialTrackerSha256": "5fc3cf822ec4735345cbaaad122c94ecf6a4808345fb5fd70910e6ebfbc4cdf4",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "757a07d9f0fc5811a6bb50b8eca6b58ad73a66e6641c66fc25692f203e2326c6",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1674,9 +1782,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89161",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89161",
-      "officialTrackerSha256": "6ea12bc74a4da750cfb3b61b8ea8fcbeaaa575d26154b506020c11662205a97c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "260774ef3d325465ee098a4a36caa9beb5b31363ffa9076ee536266b0e340d6a",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1705,9 +1813,80 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89162",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89162",
-      "officialTrackerSha256": "b1e88c5ed8fecdd7e55e76e47fe8ef32624508c5bf3302f36520fe561dc031eb",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "c9247ab37fc2f2aa6c8d08283933e5c87ba2e40a1fa6383ca8fe4818dbc5f202",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-95184",
+      "purl": "pkg:deb/ubuntu/libgnutls30t64@3.8.12-2ubuntu1.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libgnutls30t64",
+      "installedVersion": "3.8.12-2ubuntu1.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "V3Score": 5.3
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-15)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "gnutls28",
+      "source": "https://ubuntu.com/security/CVE-2026-95184",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-95184",
+      "officialTrackerSha256": "efa12abfd9c0ab94892c078a98f9505c77e53e8b100c8a766c513f6870b97dc5",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-95209",
+      "purl": "pkg:deb/ubuntu/libgnutls30t64@3.8.12-2ubuntu1.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libgnutls30t64",
+      "installedVersion": "3.8.12-2ubuntu1.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {},
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-15)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "gnutls28",
+      "source": "https://ubuntu.com/security/CVE-2026-95209",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-95209",
+      "officialTrackerSha256": "b073ae4c2e034d076377d799f8ecb05acdf5715a1fd193924750071ba3f2b242",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-95210",
+      "purl": "pkg:deb/ubuntu/libgnutls30t64@3.8.12-2ubuntu1.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libgnutls30t64",
+      "installedVersion": "3.8.12-2ubuntu1.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {},
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-15)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "gnutls28",
+      "source": "https://ubuntu.com/security/CVE-2026-95210",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-95210",
+      "officialTrackerSha256": "a39583546dc3239bf6bee0edb41035fb5e53a6eb0d6aab5e0a5ed1456ce6a2bf",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1732,9 +1911,9 @@
       "sourcePackage": "shadow",
       "source": "https://ubuntu.com/security/CVE-2024-56433",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-56433",
-      "officialTrackerSha256": "4cad3bae38d6920b5135ade486f7f73fd7811e0c82bcd74cfa8bdd7a0b9316f4",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "dfddd29f0a283f12826ac166981949fd124bfe2a20abac56ae4c90762cf31d3d",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1759,9 +1938,63 @@
       "sourcePackage": "shadow",
       "source": "https://ubuntu.com/security/CVE-2024-56433",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2024-56433",
-      "officialTrackerSha256": "4cad3bae38d6920b5135ade486f7f73fd7811e0c82bcd74cfa8bdd7a0b9316f4",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "dfddd29f0a283f12826ac166981949fd124bfe2a20abac56ae4c90762cf31d3d",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-102473",
+      "purl": "pkg:deb/ubuntu/dash@0.5.12-12ubuntu3?arch=amd64&distro=ubuntu-26.04",
+      "package": "dash",
+      "installedVersion": "0.5.12-12ubuntu3",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "V3Score": 5.5
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-15)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "dash",
+      "source": "https://ubuntu.com/security/CVE-2026-102473",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-102473",
+      "officialTrackerSha256": "48f87377bf37cae7992bb45cb62ad78ab4665eff2bc0f2bbdc0cae208ad55d72",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
+    },
+    {
+      "scope": "runtime",
+      "vulnerabilityId": "CVE-2026-102474",
+      "purl": "pkg:deb/ubuntu/dash@0.5.12-12ubuntu3?arch=amd64&distro=ubuntu-26.04",
+      "package": "dash",
+      "installedVersion": "0.5.12-12ubuntu3",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "scannerSeveritySource": "ubuntu",
+      "upstreamCVSS": {
+        "redhat": {
+          "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "V3Score": 4
+        }
+      },
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred (2026-10-15)",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "dash",
+      "source": "https://ubuntu.com/security/CVE-2026-102474",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-102474",
+      "officialTrackerSha256": "1c9a093cbdb9b3e5072721f9b1db5636f51b72776b4b9e36a16dea4b54f4482b",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1786,9 +2019,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-103111",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-103111",
-      "officialTrackerSha256": "d6767ce5a9a71f8bb24dc97e083aa738303355889e84eb1fbc3f881dd06210c2",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "d8f7629321ebc9dbf3abb851d33ff5162bd3ab46840376b9623aa57bb2686bc4",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1813,9 +2046,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-18374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
-      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4e59cfd08625669f17f8241970e5bfa448b4dc7ead59a6facda014463fa87d50",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1840,9 +2073,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-18374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
-      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4e59cfd08625669f17f8241970e5bfa448b4dc7ead59a6facda014463fa87d50",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1867,9 +2100,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-18374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18374",
-      "officialTrackerSha256": "3548401794e71c21f5e6c65b8bc93031c74f6e49744ed343e7271b8fb0414550",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4e59cfd08625669f17f8241970e5bfa448b4dc7ead59a6facda014463fa87d50",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1898,9 +2131,9 @@
       "sourcePackage": "tar",
       "source": "https://ubuntu.com/security/CVE-2026-18477",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18477",
-      "officialTrackerSha256": "5a14bb33fa1ac2456d24b4e2a58e5af4e1d376611447ec6ff0becce29ca83ee1",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "065a876a6718a674e9b851bac79246f584c36b2193784d31580d5b995e5bc32e",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1925,9 +2158,9 @@
       "sourcePackage": "tar",
       "source": "https://ubuntu.com/security/CVE-2026-18508",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-18508",
-      "officialTrackerSha256": "5eb06b53f4e6dea3e8afdfc243d9d59b3c49d904ee7529a60720c70d96122c4c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4cc1b8b7f60f55d32e8426846fc81b7ea454ade1acf4011ea7dbc027a354e66f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1952,9 +2185,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35341",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35341",
-      "officialTrackerSha256": "34f2b4fcf74077836d449a5c75ac0889bca6347e145aecfd899aab62a3c5762f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "69996b97862b23961bedb61dd6c57a2076a80656d1e270816cd1181b7c634d5d",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -1979,9 +2212,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35344",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35344",
-      "officialTrackerSha256": "b0bb504cd6f2684174a17abc0aa4c16b8353c083ac4808bb34fa772da5cd6523",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "dda7559c8b77edea870e33d637eec340f2d3e412dbfe07fa3bbb45dcbada3bf8",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2006,9 +2239,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35345",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35345",
-      "officialTrackerSha256": "59c290d073a801555570acdddcfcb785db60d047e15411488d3bdcb31db13f0c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "81ddde61aaf1a17b28fad68f83b6e93712d579bce9afe3c7c7a1bd62f634c756",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2033,9 +2266,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35348",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35348",
-      "officialTrackerSha256": "9becdd73fd5a99b4591a9390c79e0f5ff70d7156c0ca603a513528e244c6f3bf",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "190affe2a842f812081f1be0e23bd3eb3e9e1107ca029a9b5129c46eecfd9a0f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2060,9 +2293,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35350",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35350",
-      "officialTrackerSha256": "1c8af99479aa67e13e437a55946190505f8020d9dc8fad62545fba868158f5aa",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "0775ab670745b02d0e2da43efd9ffa4023ab384c4fd8f2ec581f95ba924716a2",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2087,9 +2320,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35351",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35351",
-      "officialTrackerSha256": "e6f481232dd909954f6426aa97f51bb26e330a2a862615eefa19e11849159495",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "038a6c19779dcb3aa638dfc365aac752e1d4652f69962f6f22226fddf392db4e",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2114,9 +2347,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35352",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35352",
-      "officialTrackerSha256": "4d3b4cb251c440f3c1002452ea59369eff43e6a9c2d7e830eb256a97be07c66c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "fa9a2e2580f0d99ecbb9dd2fb28b035ac9306ead9eb9eb0755c1eec235468c74",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2141,9 +2374,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35354",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35354",
-      "officialTrackerSha256": "25486fb082e400aafcd0c97a56ba13d9b03e95bf0a3b4760e202bbefbe7a43a3",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "1f1c39aaedd10b74d9eb83bd3ab2237f09d4ab31cda7961e5b7f67bb3e1bb79f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2168,9 +2401,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35357",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35357",
-      "officialTrackerSha256": "bff5c04043a9e5ba6c596bb394286033e8616f8d07f9ce12b8a8a26ba2285647",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "fd16b0e26bf8c37a3668b12a697e58bbf14f02e3cc74e9451c98dbeefb6ddd05",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2195,9 +2428,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35359",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35359",
-      "officialTrackerSha256": "1eeda951a482863fca2a3be53a2fa9c4810e7dd53f064abb42303d2369a0c132",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4164e18cda157b48e3356ba00fd0669f4d28008e97add656bc4a73323e9a5ae7",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2222,9 +2455,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35360",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35360",
-      "officialTrackerSha256": "b6b509b97b56cfe6320f20b60ba2c5c588fa0a167ee99cd4dabbc0e3123eb97e",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "fb01a4f6b1c27e1b0d6de0f87abcd3b5caa64c885fdda81331484323b72daa98",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2249,9 +2482,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35363",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35363",
-      "officialTrackerSha256": "744dd0a5a1eb928e06ce65fe5dfc3365a6df1dfbc0e453a907087b7e92cc760c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "c9bf3031df140ec339b158dfb838be7de5f7c5d2591f4a2337a13c44d3b01ace",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2276,9 +2509,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35364",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35364",
-      "officialTrackerSha256": "fa9cadd32bec57e4377643e4a0dad6613d65107d4f2de13b74709af11df00c20",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "a71f68a673924601a4d9c4109de426f07136eece4d7863f3f48960541321ff6b",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2303,9 +2536,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35367",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35367",
-      "officialTrackerSha256": "cef8d8f78f7451a4678bbb996b74bf0ed09b657db8eaadc99537661d6bc06c4f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "b3984104e6eacff62cb0ba25506c94f63f487da52d243930bfd017ba3dcbd83e",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2330,9 +2563,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35368",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35368",
-      "officialTrackerSha256": "300292cde0780383fe59fb6090ea408ee6862d78af0963e0b3bcde19a2d65649",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "aadef4057282e8395bb8a3b7fb756fc37027342b68938f62024938b75f5af19f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2357,9 +2590,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35370",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35370",
-      "officialTrackerSha256": "8daa3c91b6b59038aa048395d7ba09826f26e856323546a7b19229767b28259c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "94e5212f84da7f8fd2f6bae5d356986ea2ee44accdd2570e062c53d942c05272",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2384,9 +2617,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35371",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35371",
-      "officialTrackerSha256": "af63dbb8042657e66e04e98f2fea9e529f90f672114ccbcdaf116ab6c7226865",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "6093723013dfe4a032dc9aa1315e9caef83a0d907f7b5292a208f115a2798bd6",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2415,9 +2648,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35373",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35373",
-      "officialTrackerSha256": "cf2688cc1b6a44be2987437d30e4c8f8d595956f679c651ed358bd6e4a3c53a2",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "4949652b7c06a08d1417377a6f3f7ffdbc516b5662be0d4268db1f0eb3acc02d",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2442,9 +2675,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35374",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35374",
-      "officialTrackerSha256": "d13dd911afb911e0357bbfbaa53b3e579f0c9028288cf3fbbfb40c659b7d70ad",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "770d8fab38c0c35b6cc9b4df8c65d46bfb5a334d915aedf7939f705a1bb0d47f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2469,9 +2702,9 @@
       "sourcePackage": "rust-coreutils",
       "source": "https://ubuntu.com/security/CVE-2026-35377",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-35377",
-      "officialTrackerSha256": "a09cf6fdde2851289b4611e3f30845d76932cc44f439b2f59b0297e1c1509246",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "820c33785f24e2665a8ced62803ba651b7a3584892d1c50ebf770ffbb93724ca",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2500,9 +2733,9 @@
       "sourcePackage": "systemd",
       "source": "https://ubuntu.com/security/CVE-2026-40228",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-40228",
-      "officialTrackerSha256": "13bae99932a99d59359144b89a6f9de5b061ed6a7ae6ddf8cd7a7bb5ada71bb2",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "774bbae5aa41f4c6fa54e5012b034d00d4fcd370965cbcce8e704206c919d66a",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2531,9 +2764,9 @@
       "sourcePackage": "systemd",
       "source": "https://ubuntu.com/security/CVE-2026-40228",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-40228",
-      "officialTrackerSha256": "13bae99932a99d59359144b89a6f9de5b061ed6a7ae6ddf8cd7a7bb5ada71bb2",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "774bbae5aa41f4c6fa54e5012b034d00d4fcd370965cbcce8e704206c919d66a",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2547,15 +2780,15 @@
       "scannerSeveritySource": "ubuntu",
       "upstreamCVSS": {},
       "status": "vendor-pending",
-      "upstreamVendorStatus": "Deferred",
-      "officialUbuntuStatus": "deferred (2026-09-11)",
+      "upstreamVendorStatus": "Vulnerable",
+      "officialUbuntuStatus": "needed",
       "ubuntuPriority": "medium",
       "sourcePackage": "zlib",
       "source": "https://ubuntu.com/security/CVE-2026-85091",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-85091",
-      "officialTrackerSha256": "e38984e9acbc49498f991f12d98e8ef234164e0db25ae9a2d655faf1ad39a1fc",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "de6b49f86b59e7c1f7553d9f0f730240e1ef8320325719f1ee912902abbf8276",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2580,9 +2813,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-86145",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-86145",
-      "officialTrackerSha256": "d75b677dfed95a52c3b0f75b97477dc33dc5db4e5634c4ce67d3f2b86dcfb893",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "e9cfec8357d45fc35afda1362a94363b4252384570387ad3da6775207e3fc60a",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2607,9 +2840,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-89092",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
-      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "86420b8685d02a65c7764f5b95ad6699350d6186bce2075a36921bd50d49e613",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2634,9 +2867,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-89092",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
-      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "86420b8685d02a65c7764f5b95ad6699350d6186bce2075a36921bd50d49e613",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2661,9 +2894,9 @@
       "sourcePackage": "glibc",
       "source": "https://ubuntu.com/security/CVE-2026-89092",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89092",
-      "officialTrackerSha256": "8263f490f448864f6e6b25f85dab3d72a79b705ab175d7760c29ad87c9d9e30f",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "86420b8685d02a65c7764f5b95ad6699350d6186bce2075a36921bd50d49e613",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2692,9 +2925,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89156",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89156",
-      "officialTrackerSha256": "89b59d428a0472dceb239856088d6b21824633681ceb9b9bcdc973be330f63a8",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "ad2423ad6bb91b80582dbce8e04388781f64b241a639497a1a6d79f1c0f8ce92",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2723,9 +2956,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89157",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89157",
-      "officialTrackerSha256": "213ba54479ec014ad2826a8a785fa6c7b21ba3db2749a39f2a17a1b654fb3202",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "1810a755ecd94a480ab887af7ef6b830f44baabecf4979c81ed9e4fd1ade1e8e",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2754,9 +2987,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89158",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89158",
-      "officialTrackerSha256": "496674acda52d21249c138b3d3d7e79dcc41d265f2a66315bd3ed19cc23993cb",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "f02a0d71e0be19431aec58ba75c77dd5ea8077ee1a01d182f66de62cc359ff7f",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2785,9 +3018,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89160",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89160",
-      "officialTrackerSha256": "5fc3cf822ec4735345cbaaad122c94ecf6a4808345fb5fd70910e6ebfbc4cdf4",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "757a07d9f0fc5811a6bb50b8eca6b58ad73a66e6641c66fc25692f203e2326c6",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2816,9 +3049,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89161",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89161",
-      "officialTrackerSha256": "6ea12bc74a4da750cfb3b61b8ea8fcbeaaa575d26154b506020c11662205a97c",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "260774ef3d325465ee098a4a36caa9beb5b31363ffa9076ee536266b0e340d6a",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     },
     {
@@ -2847,9 +3080,9 @@
       "sourcePackage": "pcre2",
       "source": "https://ubuntu.com/security/CVE-2026-89162",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-89162",
-      "officialTrackerSha256": "b1e88c5ed8fecdd7e55e76e47fe8ef32624508c5bf3302f36520fe561dc031eb",
-      "verifiedAt": "2026-10-15T03:53:56Z",
-      "reviewAfter": "2026-10-20",
+      "officialTrackerSha256": "c9247ab37fc2f2aa6c8d08283933e5c87ba2e40a1fa6383ca8fe4818dbc5f202",
+      "verifiedAt": "2026-10-21T21:17:55.028968Z",
+      "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
     }
   ]

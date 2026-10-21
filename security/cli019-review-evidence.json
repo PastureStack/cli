@@ -1,0 +1,49 @@
+{
+  "reviewedAt": "2026-10-21T21:17:55.028968Z",
+  "firstRun": "https://github.com/PastureStack/cli/actions/runs/39676062137",
+  "firstScanSource": "01bf8a740bb0ddd48e587cc72ff672e45bf38e58",
+  "rawReports": {
+    "source": {
+      "file": "source-security.json",
+      "sha256": "2f2996784e141dabc0e1926691497bf0e841e283a4912dc2d33f1774debc0dff"
+    },
+    "product": {
+      "file": "product-security.json",
+      "sha256": "67e993b7dfe8e4177532c59bb8dc0a3f608245fc172b2226544ed87c4d1ddd37"
+    },
+    "builder": {
+      "file": "dapper-image-raw.json",
+      "sha256": "10a951d2e83745bb7c3792be9095a6448164f0525115953989c4941f9642baa0"
+    },
+    "runtime": {
+      "file": "runtime-image-security.json",
+      "sha256": "6bd1d9ac185e9e86ad47388d51e2b54b5bedf162603b6ab3440db655ae1de4a8"
+    }
+  },
+  "builderPackagesSha256": "0a875c73c3fbeaa0532c23a426404baf80d104d840020b78d1c8c682342e970e",
+  "productGoMetadataSha256": "882aef1b506000db31ea6473b94d532c52ed97f8a5074bd19bb4efda6200c3e8",
+  "dockerCliGoMetadataSha256": "1ad8e98adcacb43471727a9f8878481c9ebc11db991ab4cebba67f2607ada1c1",
+  "builderHeaderPackage": "linux-libc-dev:amd64=7.0.0-38.38",
+  "kernelImageOrModulesInstalled": false,
+  "productCGOEnabled": false,
+  "exactHeaderVexRows": 3150,
+  "previousHeaderVexRows": 2691,
+  "headerRowsAdded": 466,
+  "headerRowsRemoved": 7,
+  "exactVendorPendingRows": 109,
+  "officialCveCount": 47,
+  "officialReviewEvidenceSha256": [
+    "ff80ce6542aee93075ee56f58c22cb9b6e136edbbdc0dd28e8bb88204659e575",
+    "0fe2734670469465e19aedfa3272e710e30dd39c31793b56db202ad7386f3226"
+  ],
+  "rawCounts": {
+    "source": 0,
+    "product": 0,
+    "builder": 3216,
+    "runtime": 43
+  },
+  "rawZeroClaim": false,
+  "upstreamCvssRetained": true,
+  "trackerIsNotNotAffected": true,
+  "runtimeImageOfficialPublication": false
+}
