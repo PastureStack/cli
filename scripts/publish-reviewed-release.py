@@ -158,7 +158,7 @@ def main():
         for name in ('security-summary.json', 'source.cdx.json', 'product.cdx.json', 'runtime.cdx.json',
                      'source-security.json', 'product-security.json', 'dapper-image-raw.json', 'runtime-image-security.json',
                      'dapper-dpkg.tsv', 'runtime-dpkg.tsv', 'product-go-version.txt', 'docker-cli-go-version.txt', 'source-locks.sha256',
-                     'vendor-pending.json', 'dapper.openvex.json', 'cli018-review-evidence.json'):
+                     'vendor-pending.json', 'dapper.openvex.json', 'cli019-review-evidence.json'):
             shutil.copyfile(unique(evidence, name), assets / ('cli-' + name))
         binary_archive = assets / ('pasturestack-cli-linux-amd64-' + VERSION + '.tar.gz')
         with tarfile.open(binary_archive, 'r:gz') as tar:
