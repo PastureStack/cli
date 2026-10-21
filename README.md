@@ -8,11 +8,11 @@ PastureStack is an independent community effort to preserve, audit, and moderniz
 
 ## Project status
 
-Published CLI [`0.6.18`](https://github.com/PastureStack/cli/releases/tag/v0.6.18) is maintained from the latest reviewed upstream `v1.6` branch. It uses a digest-pinned Ubuntu 26.04 base, the `20261015T000000Z` signed Ubuntu snapshot, Go 1.27.2, Docker 29.9.1, Go Modules with a checked-in vendor lock, non-root runtime packaging, and reproducible archives. The maintained binary and image name is `pasturestack`.
+Published CLI [`0.6.19`](https://github.com/PastureStack/cli/releases/tag/v0.6.19) is maintained from the latest reviewed upstream `v1.6` branch. It uses Go 1.27.3, the checksum-pinned official Docker 29.9.2 builder input, Go Modules with a checked-in vendor lock, and reproducible archives. Runtime packaging uses a digest-pinned Ubuntu 26.04 base, the `20261015T000000Z` signed Ubuntu snapshot and a non-root user. It is CI-qualified, not a published registry image. The maintained command name is `pasturestack`.
 
-The immutable, non-prerelease archives were produced from signed, normally merged source [`2fd1298ffdc25e17008cb089fccf7780ed8728d5`](https://github.com/PastureStack/cli/commit/2fd1298ffdc25e17008cb089fccf7780ed8728d5), after the complete [exact-main release gate](https://github.com/PastureStack/cli/actions/runs/38679414281). All 25 assets were anonymously downloaded and matched their recorded bytes and SHA-256. Later documentation or publisher-helper commits are not a different producer and do not rebuild or overwrite these assets.
+The immutable, non-prerelease archives were produced from signed, normally merged source [`60a13c6ef8e60018e6409fb7b510bcf0d44c5030`](https://github.com/PastureStack/cli/commit/60a13c6ef8e60018e6409fb7b510bcf0d44c5030), after the complete [exact-main release gate](https://github.com/PastureStack/cli/actions/runs/39679384298). All 26 assets were anonymously downloaded and matched their recorded bytes and SHA-256. Later documentation commits are not a different producer and do not rebuild or overwrite these assets.
 
-CLI `0.6.18` retains the reviewed `0.6.17` fix: use the existing schema URL and make `inspect` flush successful JSON and return setup or HTTP errors. This addresses the older downloaded `0.6.14` client's silent success after a denied schema request. Environment URL normalization and Compose delegation remain unchanged. See [release notes](RELEASE-0.6.18.md).
+CLI `0.6.19` applies the Go crypto/x509 security fix without changing CLI functionality or API-key permissions. `inspect` uses the existing schema URL, flushes successful JSON and returns setup or HTTP errors. Environment URL normalization and Compose delegation remain unchanged. See [release notes](RELEASE-0.6.19.md).
 
 The vendored Logrus path also matches its lowercase import path on case-sensitive Linux filesystems, with file contents and logging behavior unchanged.
 
@@ -20,7 +20,7 @@ The archived `docker/libcompose` source tree and duplicated Compose executor hav
 
 The GitHub security release gate builds and packages twice, runs tests with the race detector, validates source contracts, produces SBOMs, and preserves raw source, binary, build-image and runtime-image scans. Critical/High, available fixes, secrets, and unregistered findings block publication. Only unfixed Medium/Low records may use the exact package/version/CVE tracker with an official vendor source and review date. Reviewed builder kernel-header VEX records do not apply to the shipped runtime. Numeric archives, checksums and source identity are retained for reviewed publication; a green source check alone is not a release or native-acceptance receipt.
 
-For this release, source and shipped-binary vulnerability scans are zero; raw builder/runtime findings are not zero. The exact reviewed set contains 100 vendor-pending Medium/Low rows across 40 CVEs, due for review on 2026-10-20, with upstream CVSS retained separately from Ubuntu's policy severity. The separate 2,691 exact builder `linux-libc-dev` header VEX rows are supported by retained package inventory (no kernel image/modules) and CGO-disabled binary metadata. Native CLI/Server interoperability and the broader compatibility matrix remain separately evidenced; publication alone is not a whole-matrix PASS.
+For this release, source and shipped-binary vulnerability scans are zero; raw builder/runtime findings are not zero. Exact findings, current vendor-review dates and upstream CVSS are retained in the immutable release's [tracker](https://github.com/PastureStack/cli/releases/download/v0.6.19/cli-vendor-pending.json) and [security summary](https://github.com/PastureStack/cli/releases/download/v0.6.19/cli-security-summary.json). Builder `linux-libc-dev` header VEX rows are supported by retained package inventory (no kernel image/modules) and CGO-disabled binary metadata; they do not exempt runtime packages or executable code. Native CLI/Server interoperability and the broader compatibility matrix remain separately evidenced; publication alone is not a whole-matrix PASS.
 
 ## Configuration
 
@@ -34,7 +34,7 @@ make test
 make package
 ```
 
-Packaging is local only and does not publish an image. Official numeric release archives use names such as `pasturestack-cli-linux-amd64-0.6.18.tar.gz`; the upstream-boundary `v0.6.14` tag remains immutable. The reviewed `scripts/publish-reviewed-release.py` entry verifies the normal protected source merge, required checks and exact-main gate; it publishes source-bound checked bytes with `SHA256SUMS`, raw reports, SBOMs and producer proof, then anonymously verifies them. Without `--execute` it only prints an offline plan. An existing tag is never overwritten. See [COMPATIBILITY.md](COMPATIBILITY.md), [SECURITY.md](SECURITY.md), and [ORIGIN.md](ORIGIN.md).
+Packaging is local only and does not publish an image. Official numeric release archives use names such as `pasturestack-cli-linux-amd64-0.6.19.tar.gz`; the upstream-boundary `v0.6.14` tag remains immutable. The reviewed `scripts/publish-reviewed-release.py` entry verifies the normal protected source merge, required checks and exact-main gate; it publishes source-bound checked bytes with `SHA256SUMS`, raw reports, SBOMs and producer proof, then anonymously verifies them. Without `--execute` it only prints an offline plan. An existing tag is never overwritten. See [COMPATIBILITY.md](COMPATIBILITY.md), [SECURITY.md](SECURITY.md), and [ORIGIN.md](ORIGIN.md).
 
 ## License and attribution
 
