@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "release": "0.6.19",
+  "release": "0.6.20",
   "generatedAt": "2026-10-21T21:17:55.028968Z",
   "policy": {
     "allowedSeverities": [
@@ -10,6 +10,26 @@
     "requiresEmptyFixedVersion": true
   },
   "findings": [
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-88648",
+      "purl": "pkg:deb/ubuntu/libgnutls30t64@3.8.12-2ubuntu1.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libgnutls30t64",
+      "installedVersion": "3.8.12-2ubuntu1.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "gnutls28",
+      "source": "https://ubuntu.com/security/CVE-2026-88648",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-88648",
+      "officialTrackerSha256": "cb1512620746c8e042146d560c0e90feafc22627ce704c818cf76e173539911e",
+      "verifiedAt": "2026-10-23T13:00:00Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Ubuntu classifies this as medium and deferred; its official tracker records no upstream fix as of the review. This record does not suppress the raw finding or claim remediation."
+    },
     {
       "scope": "builder",
       "vulnerabilityId": "CVE-2017-13716",
