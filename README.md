@@ -42,4 +42,6 @@ The inherited project remains licensed under [Apache License 2.0](LICENSE). Copy
 
 ## October 2026 security maintenance
 
+Both builder and runtime apply Ubuntu's fixed `zlib1g 1:1.3.dfsg+really1.3.1-1ubuntu3.2` package for CVE-2026-85091. The fixed finding is removed from the vendor-pending register rather than suppressed.
+
 Maintained Go builds select the patched Go 1.27.3 compiler without raising the existing Go language requirement. Ubuntu build/runtime stages apply the checksum-pinned `ca-certificates 20260816ubuntu0.26.04.1` security package after their frozen APT baseline; the final trust store and installed version are verified. Release artifacts must pass the repository's existing checks before publication.
