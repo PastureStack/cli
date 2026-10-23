@@ -13,6 +13,30 @@ SPEC.loader.exec_module(publisher)
 
 
 class PublisherTests(unittest.TestCase):
+    def test_notes_must_exist_and_be_nonempty(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            with self.assertRaisesRegex(RuntimeError, 'RELEASE_NOTES_REQUIRED'):
+                publisher.checked_release_notes(root)
+            notes = root / ('RELEASE-' + publisher.VERSION + '.md')
+            notes.write_text(' \n', encoding='utf8')
+            with self.assertRaisesRegex(RuntimeError, 'RELEASE_NOTES_REQUIRED'):
+                publisher.checked_release_notes(root)
+            notes.write_text('# CLI ' + publisher.VERSION + '\n', encoding='utf8')
+            self.assertEqual(publisher.checked_release_notes(root), notes)
+
+    def test_missing_notes_stop_before_commands_or_network(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            arguments = ['publisher', '--execute', '--expected-source', 'a' * 40,
+                         '--run-id', '1', '--receipt', str(root / 'receipt.json')]
+            with patch('sys.argv', arguments), patch.object(publisher, '__file__', str(root / 'scripts/publisher.py')), \
+                    patch.object(publisher, 'command') as command, patch.object(publisher, 'api') as api:
+                with self.assertRaisesRegex(RuntimeError, 'RELEASE_NOTES_REQUIRED'):
+                    publisher.main()
+                command.assert_not_called()
+                api.assert_not_called()
+
     def test_create_is_draft_not_prerelease(self):
         with patch.object(publisher, 'command') as command:
             publisher.create_draft('a' * 40, Path('assets'), {'one.zip': 'b' * 64}, Path('notes.md'))

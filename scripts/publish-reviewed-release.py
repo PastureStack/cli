@@ -39,6 +39,12 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def checked_release_notes(root):
+    notes = root / ('RELEASE-' + VERSION + '.md')
+    need(notes.is_file() and bool(notes.read_text(encoding='utf8').strip()), 'RELEASE_NOTES_REQUIRED')
+    return notes
+
+
 def unique(root, name):
     paths = [p for p in root.rglob(name) if p.is_file()]
     need(len(paths) == 1, 'EXACT_CANDIDATE_FILE')
@@ -123,6 +129,7 @@ def main():
     need(source and re.fullmatch('[0-9a-f]{40}', source) and args.run_id and args.receipt and
          not args.receipt.exists(), 'EXPLICIT_RELEASE_INPUTS')
     root = Path(__file__).resolve().parents[1]
+    notes = checked_release_notes(root)
     need(command('git', '-C', str(root), 'rev-parse', 'HEAD').stdout.decode().strip() == source and
          not command('git', '-C', str(root), 'status', '--porcelain').stdout, 'CLEAN_EXACT_SOURCE_CHECKOUT')
     tree, merged_pr, workflow = checked_source(source, args.run_id)
@@ -177,7 +184,7 @@ def main():
         (assets / 'SHA256SUMS').write_text(''.join(value + '  ' + name + '\n' for name, value in hashes.items()), encoding='utf8')
         hashes['SHA256SUMS'] = digest(assets / 'SHA256SUMS')
         checked_source(source, args.run_id)
-        create_draft(source, assets, hashes, root / ('RELEASE-' + VERSION + '.md'))
+        create_draft(source, assets, hashes, notes)
         draft = find_draft(source)
         actual = {item['name']: item for item in draft['assets']}
         need(draft['draft'] and set(actual) == set(hashes), 'DRAFT_ASSET_SET')
