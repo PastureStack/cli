@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish only checked numeric CLI0.6.19 bytes from an exact successful main run.
+"""Publish only checked numeric CLI0.6.20 bytes from an exact successful main run.
 
 Default --plan has no network activity. Explicit --execute requires normal
 protected/signed merge, exact required checks, complete security/repro gate,
@@ -17,7 +17,7 @@ import tarfile
 import tempfile
 from urllib.request import Request, urlopen
 
-REPO, VERSION, TAG = 'PastureStack/cli', '0.6.19', 'v0.6.19'
+REPO, VERSION, TAG = 'PastureStack/cli', '0.6.20', 'v0.6.20'
 
 
 def need(ok, code):

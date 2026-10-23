@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "release": "0.6.19",
+  "release": "0.6.20",
   "generatedAt": "2026-10-21T21:17:55.028968Z",
   "policy": {
     "allowedSeverities": [
@@ -10,6 +10,26 @@
     "requiresEmptyFixedVersion": true
   },
   "findings": [
+    {
+      "scope": "builder",
+      "vulnerabilityId": "CVE-2026-88648",
+      "purl": "pkg:deb/ubuntu/libgnutls30t64@3.8.12-2ubuntu1.1?arch=amd64&distro=ubuntu-26.04",
+      "package": "libgnutls30t64",
+      "installedVersion": "3.8.12-2ubuntu1.1",
+      "severity": "MEDIUM",
+      "fixedVersion": "",
+      "status": "vendor-pending",
+      "upstreamVendorStatus": "Deferred",
+      "officialUbuntuStatus": "deferred",
+      "ubuntuPriority": "medium",
+      "sourcePackage": "gnutls28",
+      "source": "https://ubuntu.com/security/CVE-2026-88648",
+      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-88648",
+      "officialTrackerSha256": "cb1512620746c8e042146d560c0e90feafc22627ce704c818cf76e173539911e",
+      "verifiedAt": "2026-10-23T13:00:00Z",
+      "reviewAfter": "2026-10-27",
+      "severityBasis": "Ubuntu classifies this as medium and deferred; its official tracker records no upstream fix as of the review. This record does not suppress the raw finding or claim remediation."
+    },
     {
       "scope": "builder",
       "vulnerabilityId": "CVE-2017-13716",
@@ -1423,28 +1443,6 @@
     },
     {
       "scope": "builder",
-      "vulnerabilityId": "CVE-2026-85091",
-      "purl": "pkg:deb/ubuntu/zlib1g@1.3.dfsg%2Breally1.3.1-1ubuntu3.1?arch=amd64&distro=ubuntu-26.04&epoch=1",
-      "package": "zlib1g",
-      "installedVersion": "1:1.3.dfsg+really1.3.1-1ubuntu3.1",
-      "severity": "MEDIUM",
-      "fixedVersion": "",
-      "scannerSeveritySource": "ubuntu",
-      "upstreamCVSS": {},
-      "status": "vendor-pending",
-      "upstreamVendorStatus": "Vulnerable",
-      "officialUbuntuStatus": "needed",
-      "ubuntuPriority": "medium",
-      "sourcePackage": "zlib",
-      "source": "https://ubuntu.com/security/CVE-2026-85091",
-      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-85091",
-      "officialTrackerSha256": "de6b49f86b59e7c1f7553d9f0f730240e1ef8320325719f1ee912902abbf8276",
-      "verifiedAt": "2026-10-21T21:17:55.028968Z",
-      "reviewAfter": "2026-10-27",
-      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
-    },
-    {
-      "scope": "builder",
       "vulnerabilityId": "CVE-2026-86145",
       "purl": "pkg:deb/ubuntu/libpcre2-8-0@10.46-1build1?arch=amd64&distro=ubuntu-26.04",
       "package": "libpcre2-8-0",
@@ -2765,28 +2763,6 @@
       "source": "https://ubuntu.com/security/CVE-2026-40228",
       "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-40228",
       "officialTrackerSha256": "774bbae5aa41f4c6fa54e5012b034d00d4fcd370965cbcce8e704206c919d66a",
-      "verifiedAt": "2026-10-21T21:17:55.028968Z",
-      "reviewAfter": "2026-10-27",
-      "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
-    },
-    {
-      "scope": "runtime",
-      "vulnerabilityId": "CVE-2026-85091",
-      "purl": "pkg:deb/ubuntu/zlib1g@1.3.dfsg%2Breally1.3.1-1ubuntu3.1?arch=amd64&distro=ubuntu-26.04&epoch=1",
-      "package": "zlib1g",
-      "installedVersion": "1:1.3.dfsg+really1.3.1-1ubuntu3.1",
-      "severity": "MEDIUM",
-      "fixedVersion": "",
-      "scannerSeveritySource": "ubuntu",
-      "upstreamCVSS": {},
-      "status": "vendor-pending",
-      "upstreamVendorStatus": "Vulnerable",
-      "officialUbuntuStatus": "needed",
-      "ubuntuPriority": "medium",
-      "sourcePackage": "zlib",
-      "source": "https://ubuntu.com/security/CVE-2026-85091",
-      "officialTrackerSource": "https://git.launchpad.net/ubuntu-cve-tracker/plain/active/CVE-2026-85091",
-      "officialTrackerSha256": "de6b49f86b59e7c1f7553d9f0f730240e1ef8320325719f1ee912902abbf8276",
       "verifiedAt": "2026-10-21T21:17:55.028968Z",
       "reviewAfter": "2026-10-27",
       "severityBasis": "Gate uses the Ubuntu scanner/vendor severity; upstream CVSS is retained separately and is not downgraded."
